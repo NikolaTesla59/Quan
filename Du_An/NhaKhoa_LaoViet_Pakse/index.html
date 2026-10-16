@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nha Khoa Quốc Tế Lào - Việt (Pakse) | Thẩm Mỹ Răng & Cấy Ghép Implant</title>
+  <meta name="description" content="Hệ thống Nha khoa Quốc tế Lào - Việt tại Pakse, Champasak. Dẫn đầu về trồng răng Implant, bọc răng sứ thẩm mỹ, dán veneer, niềng răng. Bác sĩ đầu ngành, công nghệ chuẩn Châu Âu.">
+
+  <!-- Google Fonts: Roboto & Noto Sans Lao for Lao typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandTeal: '#037481',      // Màu Teal đậm đặc trưng Việt Pháp
+            brandCyan: '#3cadaf',      // Màu Cyan tươi sáng
+            brandLightIce: '#d0eded',  // Nền thẻ xanh băng vô trùng
+            brandBorderIce: '#9dd0d0', // Viền thẻ xanh băng
+            brandRed: '#e60808',       // Đỏ hotline / CTA nổi bật
+            brandDark: '#1a202c',
+          },
+          fontFamily: {
+            sans: ['Roboto', 'Noto Sans Lao', 'sans-serif'],
+            lao: ['Noto Sans Lao', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Hiệu ứng rung chuông & sóng xung quanh nút gọi giống web Việt Pháp */
+    @keyframes pulse-ring {
+      0% { transform: scale(0.9); opacity: 0.8; }
+      50% { transform: scale(1.3); opacity: 0.2; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+    .pulse-animation {
+      animation: pulse-ring 2s infinite ease-out;
+    }
+    .shake-animation:hover {
+      animation: shake 0.5s ease-in-out;
+    }
+    @keyframes shake {
+      0%, 100% { transform: rotate(0); }
+      20%, 60% { transform: rotate(-10deg); }
+      40%, 80% { transform: rotate(10deg); }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-slate-50 antialiased selection:bg-teal-200">
+
+  <!-- 1. TOP BAR -->
+  <div class="bg-white border-b border-gray-200 text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-4 text-brandTeal font-medium">
+        <span class="flex items-center gap-1.5">
+          <i class="fa-solid fa-location-dot text-brandRed"></i>
+          <span data-i18n="topbar_address">Trung tâm TP. Pakse, Tỉnh Champasak, Lào</span>
+        </span>
+        <span class="hidden md:inline-flex items-center gap-1.5">
+          <i class="fa-regular fa-clock text-brandTeal"></i>
+          <span>08:00 - 19:30 (Mở cửa tất cả các ngày)</span>
+        </span>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <!-- Hotline badge -->
+        <a href="tel:+8562099998888" class="inline-flex items-center gap-1.5 bg-brandRed text-white px-3 py-1 rounded-full font-bold hover:bg-red-700 transition">
+          <i class="fa-solid fa-phone-volume"></i>
+          <span>HOTLINE: (+856) 20 9999 8888</span>
+        </a>
+
+        <!-- Bộ chuyển đổi ngôn ngữ -->
+        <div class="flex items-center bg-gray-100 rounded-full p-0.5 border border-brandCyan">
+          <button onclick="setLanguage('vi')" id="btn-vi" class="px-2.5 py-0.5 rounded-full font-bold text-xs bg-brandTeal text-white transition">VN</button>
+          <button onclick="setLanguage('la')" id="btn-la" class="px-2.5 py-0.5 rounded-full font-bold text-xs text-gray-600 hover:text-brandTeal transition">ລາວ</button>
+          <button onclick="setLanguage('en')" id="btn-en" class="px-2.5 py-0.5 rounded-full font-bold text-xs text-gray-600 hover:text-brandTeal transition">EN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. MAIN NAVIGATION -->
+  <header class="bg-brandTeal text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Logo thương hiệu -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-11 h-11 bg-white rounded-full flex items-center justify-center text-brandTeal shadow-md">
+          <i class="fa-solid fa-tooth text-2xl"></i>
+        </div>
+        <div>
+          <div class="text-xl md:text-2xl font-black tracking-wide leading-none uppercase">
+            LÀO - VIỆT <span class="text-brandCyan">DENTAL</span>
+          </div>
+          <div class="text-[11px] tracking-wider text-slate-200 uppercase mt-0.5" data-i18n="logo_sub">
+            Nha Khoa Quốc Tế Tại Pakse
+          </div>
+        </div>
+      </a>
+
+      <!-- Menu máy tính -->
+      <nav class="hidden lg:flex items-center gap-6 font-medium text-sm uppercase">
+        <a href="index.html" class="hover:text-cyan-200 transition" data-i18n="nav_about">Trang chủ</a>
+        <a href="implant.html" class="hover:text-cyan-200 transition" data-i18n="nav_implant">Cấy Ghép Implant</a>
+        <a href="rang-su-veneer.html" class="hover:text-cyan-200 transition" data-i18n="nav_cosmetic">Thẩm Mỹ Răng Sứ</a>
+        <a href="doi-ngu-bac-si.html" class="hover:text-cyan-200 transition" data-i18n="nav_doctors">Đội ngũ Bác sĩ</a>
+        <a href="bang-gia.html" class="hover:text-cyan-200 transition" data-i18n="nav_pricing">Bảng giá</a>
+        <a href="lien-he.html" class="hover:text-cyan-200 transition" data-i18n="nav_contact">Liên hệ & Bản đồ</a>
+      </nav>
+
+      <!-- Nút Đặt lịch hẹn -->
+      <a href="#booking" class="bg-brandRed hover:bg-red-700 text-white font-bold text-xs md:text-sm px-4 py-2.5 rounded-lg shadow uppercase tracking-wider transition transform hover:-translate-y-0.5 flex items-center gap-2">
+        <i class="fa-regular fa-calendar-check text-base"></i>
+        <span data-i18n="btn_book">Đặt Hẹn Khám</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- 3. HERO SECTION (Chuẩn phong cách Việt Pháp) -->
+  <section class="relative bg-gradient-to-r from-teal-900/90 via-brandTeal/85 to-brandCyan/75 text-white py-12 md:py-20 overflow-hidden">
+    <!-- Hình nền mờ -->
+    <div class="absolute inset-0 -z-10 bg-cover bg-center opacity-20" style="background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=80');"></div>
+
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <!-- Cột trái: Thông điệp & Cam kết uy tín -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-cyan-200 border border-white/30">
+          <i class="fa-solid fa-award text-yellow-300"></i>
+          <span data-i18n="hero_badge">Trung Tâm Nha Khoa Chuẩn Quốc Tế Tại Pakse</span>
+        </div>
+
+        <h1 class="text-3xl md:text-5xl font-black uppercase leading-tight tracking-tight" data-i18n="hero_title">
+          Kiến Tạo Nụ Cười Hoàn Hảo <br>
+          <span class="text-yellow-400">Chuyên Sâu Implant & Thẩm Mỹ Răng</span>
+        </h1>
+
+        <p class="text-slate-100 text-sm md:text-base leading-relaxed max-w-xl" data-i18n="hero_desc">
+          Quy tụ đội ngũ Bác sĩ chuyên khoa hơn 15 năm kinh nghiệm từ các Bệnh viện Răng Hàm Mặt hàng đầu Việt Nam. Công nghệ máy móc hiện đại chuẩn Châu Âu, quy trình vô khuẩn tuyệt đối tại Pakse.
+        </p>
+
+        <!-- 4 Điểm uy tín cam kết -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+          <div class="bg-white/10 backdrop-blur-sm p-3 rounded-xl border border-white/20 text-center">
+            <div class="text-2xl font-black text-yellow-300">15+</div>
+            <div class="text-[11px] text-slate-200 uppercase" data-i18n="stat_exp">Năm Kinh Nghiệm</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm p-3 rounded-xl border border-white/20 text-center">
+            <div class="text-2xl font-black text-yellow-300">100%</div>
+            <div class="text-[11px] text-slate-200 uppercase" data-i18n="stat_doctor">Bác Sĩ Chuyên Khoa</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm p-3 rounded-xl border border-white/20 text-center">
+            <div class="text-2xl font-black text-yellow-300">5.000+</div>
+            <div class="text-[11px] text-slate-200 uppercase" data-i18n="stat_cases">Ca Thành Công</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm p-3 rounded-xl border border-white/20 text-center">
+            <div class="text-2xl font-black text-yellow-300">BCEL</div>
+            <div class="text-[11px] text-slate-200 uppercase" data-i18n="stat_onepay">Quét Mã OnePay</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-4 pt-3">
+          <a href="https://wa.me/8562099998888" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-5 py-3 rounded-xl shadow-lg flex items-center gap-2 transition transform hover:-translate-y-0.5">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            <span data-i18n="btn_whatsapp">Chat WhatsApp Tư Vấn</span>
+          </a>
+          <a href="https://m.me/yourfanpage" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-3 rounded-xl shadow-lg flex items-center gap-2 transition transform hover:-translate-y-0.5">
+            <i class="fa-brands fa-facebook-messenger text-xl"></i>
+            <span data-i18n="btn_messenger">Inbox Messenger</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Cột phải: Form đặt lịch nhanh (Bản sao chuẩn card #d0eded của Việt Pháp) -->
+      <div id="booking" class="lg:col-span-5">
+        <div class="bg-brandLightIce border-2 border-brandBorderIce rounded-2xl p-6 sm:p-8 shadow-2xl text-brandTeal">
+          <div class="text-center mb-5">
+            <h3 class="text-2xl font-extrabold uppercase tracking-wide text-brandTeal" data-i18n="form_title">
+              ĐẶT HẸN THĂM KHÁM
+            </h3>
+            <p class="text-xs text-brandTeal/80 mt-1 font-medium" data-i18n="form_subtitle">
+              Miễn phí chụp phim 3D & Tư vấn cùng Bác sĩ Chuyên khoa
+            </p>
+          </div>
+
+          <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold uppercase mb-1" data-i18n="form_name">Họ và tên của bạn</label>
+              <input type="text" required placeholder="Ví dụ: Somchai / Nguyễn Văn A" class="w-full px-3.5 py-2.5 rounded-lg border border-brandBorderIce bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-brandTeal">
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase mb-1" data-i18n="form_phone">Số điện thoại / WhatsApp</label>
+              <input type="tel" required placeholder="020 xxxx xxxx" class="w-full px-3.5 py-2.5 rounded-lg border border-brandBorderIce bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-brandTeal">
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase mb-1" data-i18n="form_service">Dịch vụ quan tâm</label>
+              <select class="w-full px-3.5 py-2.5 rounded-lg border border-brandBorderIce bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-brandTeal">
+                <option value="implant" data-i18n="opt_implant">Trồng Răng Implant Chuyên Sâu</option>
+                <option value="veneer" data-i18n="opt_veneer">Bọc Răng Sứ & Dán Sứ Veneer</option>
+                <option value="niengrang" data-i18n="opt_ortho">Niềng Răng - Chỉnh Nha</option>
+                <option value="taytrang" data-i18n="opt_bleach">Tẩy Trắng Răng Laser</option>
+                <option value="khac" data-i18n="opt_other">Khám & Điều Trị Răng Tổng Quát</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase mb-1" data-i18n="form_date">Ngày dự kiến đến khám</label>
+              <input type="date" class="w-full px-3.5 py-2.5 rounded-lg border border-brandBorderIce bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-brandTeal">
+            </div>
+
+            <button type="submit" class="w-full bg-brandTeal hover:bg-[#025e6b] text-white font-bold py-3 px-4 rounded-xl shadow-lg uppercase tracking-wider text-sm transition transform hover:-translate-y-0.5">
+              <span data-i18n="btn_submit">GỬI YÊU CẦU ĐẶT LỊCH</span>
+            </button>
+
+            <div class="flex items-center justify-center gap-2 text-[11px] text-brandTeal/75 pt-1 font-medium">
+              <i class="fa-solid fa-shield-halved text-emerald-600"></i>
+              <span data-i18n="form_privacy">Thông tin được bảo mật 100% - Nhân viên gọi lại trong 5 phút</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. HAI DỊCH VỤ MŨI NHỌN (Thẩm mỹ & Implant) -->
+  <section id="services" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h4 class="text-brandCyan font-bold uppercase tracking-wider text-sm mb-1" data-i18n="sec_service_sub">DỊCH VỤ TIÊU CHUẨN VÀNG</h4>
+        <h2 class="text-3xl md:text-4xl font-extrabold uppercase text-brandTeal" data-i18n="sec_service_title">CHUYÊN KHOA TRỌNG TÂM TẠI PAKSE</h2>
+        <div class="w-20 h-1 bg-brandRed mx-auto mt-3"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- CARD 1: CẤY GHÉP IMPLANT -->
+        <div id="implant" class="border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group bg-white flex flex-col justify-between">
+          <div>
+            <div class="relative overflow-hidden h-64 bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Cấy ghép Implant" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-4 left-4 bg-brandRed text-white text-xs font-bold uppercase px-3 py-1 rounded-full shadow">
+                Kỹ thuật cao
+              </span>
+            </div>
+            <div class="p-6 md:p-8">
+              <div class="flex items-center gap-3 text-brandTeal mb-2">
+                <i class="fa-solid fa-tooth text-2xl"></i>
+                <h3 class="text-2xl font-bold uppercase" data-i18n="card1_title">Trồng Răng Implant Kỹ Thuật Số</h3>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4" data-i18n="card1_desc">
+                Giải pháp phục hồi răng đã mất hoàn hảo nhất hiện nay. Trụ Implant nhập khẩu chính hãng Thụy Sĩ, Mỹ, Hàn Quốc. Phục hồi 99% khả năng ăn nhai trọn đời, ngăn chặn tiêu xương hàm, không đau buốt nhờ máng định vị 3D.
+              </p>
+              
+              <ul class="space-y-2 text-sm text-gray-700 mb-6 font-medium">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brandTeal"></i> <span data-i18n="card1_f1">Tích hợp xương nhanh chỉ sau 4 - 6 tuần</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brandTeal"></i> <span data-i18n="card1_f2">Thực hiện bởi Bác sĩ thành viên Hiệp hội Implant Quốc tế (ICOI)</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brandTeal"></i> <span data-i18n="card1_f3">Bảo hành trọn đời bằng thẻ điện tử quốc tế</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="px-6 pb-6 md:px-8 md:pb-8 flex items-center justify-between border-t pt-4 border-gray-100 gap-2">
+            <div>
+              <span class="text-xs text-gray-500 uppercase block" data-i18n="price_from">Ưu đãi thăm khám</span>
+              <span class="text-lg font-bold text-brandRed" data-i18n="implant_promo">Tặng chụp phim 3D</span>
+            </div>
+            <div class="flex gap-2">
+              <a href="implant.html" class="border border-brandTeal text-brandTeal hover:bg-brandTeal hover:text-white text-xs font-bold uppercase px-3 py-2.5 rounded-lg shadow-sm transition">
+                Xem Chi Tiết &rarr;
+              </a>
+              <a href="#booking" class="bg-brandTeal hover:bg-[#025e6b] text-white text-xs font-bold uppercase px-3.5 py-2.5 rounded-lg shadow transition">
+                <span data-i18n="btn_consult">Tư Vấn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: THẨM MỸ RĂNG SỨ & VENEER -->
+        <div id="cosmetic" class="border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group bg-white flex flex-col justify-between">
+          <div>
+            <div class="relative overflow-hidden h-64 bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Bọc răng sứ thẩm mỹ" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-4 left-4 bg-brandCyan text-white text-xs font-bold uppercase px-3 py-1 rounded-full shadow">
+                Xu hướng nụ cười
+              </span>
+            </div>
+            <div class="p-6 md:p-8">
+              <div class="flex items-center gap-3 text-brandTeal mb-2">
+                <i class="fa-solid fa-wand-magic-sparkles text-2xl"></i>
+                <h3 class="text-2xl font-bold uppercase" data-i18n="card2_title">Răng Sứ Thẩm Mỹ & Dán Veneer</h3>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4" data-i18n="card2_desc">
+                Kiến tạo nụ cười chuẩn tỷ lệ vàng khuôn mặt. Dòng sứ chính hãng Đức & Thụy Sĩ (Cercon, Emax, Lava Plus). Trắng trong tự nhiên, kháng khuẩn, không đen viền nướu, bảo tồn tối đa răng gốc với công nghệ dán sứ không mài nhỏ.
+              </p>
+              
+              <ul class="space-y-2 text-sm text-gray-700 mb-6 font-medium">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brandTeal"></i> <span data-i18n="card2_f1">Thiết kế dáng răng nụ cười bằng công nghệ Digital Smile Design</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brandTeal"></i> <span data-i18n="card2_f2">Màu sắc trong bóng tự nhiên như răng thật</span></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brandTeal"></i> <span data-i18n="card2_f3">Cam kết bảo hành chính hãng từ 10 - 19 năm</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="px-6 pb-6 md:px-8 md:pb-8 flex items-center justify-between border-t pt-4 border-gray-100 gap-2">
+            <div>
+              <span class="text-xs text-gray-500 uppercase block" data-i18n="price_from">Ưu đãi trong tháng</span>
+              <span class="text-lg font-bold text-brandRed" data-i18n="cosmetic_promo">Giảm 20% gói trọn gói</span>
+            </div>
+            <div class="flex gap-2">
+              <a href="rang-su-veneer.html" class="border border-brandTeal text-brandTeal hover:bg-brandTeal hover:text-white text-xs font-bold uppercase px-3 py-2.5 rounded-lg shadow-sm transition">
+                Xem Chi Tiết &rarr;
+              </a>
+              <a href="#booking" class="bg-brandTeal hover:bg-[#025e6b] text-white text-xs font-bold uppercase px-3.5 py-2.5 rounded-lg shadow transition">
+                <span data-i18n="btn_consult">Tư Vấn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. ĐỘI NGŨ BÁC SĨ CHUYÊN GIA (Tái hiện chuẩn khối Doctor & Credentials của Việt Pháp) -->
+  <section id="doctors" class="py-16 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h4 class="text-brandCyan font-bold uppercase tracking-wider text-sm mb-1" data-i18n="sec_doc_sub">TẬP HỢP TAY NGHỀ VÀNG</h4>
+        <h2 class="text-3xl md:text-4xl font-extrabold uppercase text-brandTeal" data-i18n="sec_doc_title">ĐỘI NGŨ BÁC SĨ CHUYÊN KHOA</h2>
+        <div class="w-20 h-1 bg-brandRed mx-auto mt-3"></div>
+        <p class="text-sm text-gray-600 mt-4" data-i18n="sec_doc_desc">100% Bác sĩ tốt nghiệp Đại học Y danh tiếng, có chứng chỉ hành nghề chuyên sâu và tu nghiệp tại nước ngoài.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        
+        <!-- Bác sĩ 1: Chuyên gia Implant -->
+        <div class="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col sm:flex-row">
+          <div class="sm:w-2/5 bg-gradient-to-t from-teal-900 to-teal-700 flex items-center justify-center p-4">
+            <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full border-4 border-white/50 overflow-hidden shadow-inner">
+              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=500&q=80" alt="Bác sĩ Implant" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <div class="sm:w-3/5 p-6 flex flex-col justify-between">
+            <div>
+              <div class="text-xs font-bold text-brandCyan uppercase" data-i18n="doc1_role">Chuyên Gia Cấy Ghép Implant</div>
+              <h3 class="text-xl font-extrabold text-brandTeal uppercase mt-1">BS. NGUYỄN VĂN ĐỨC</h3>
+              <p class="text-xs text-gray-500 font-medium mb-3" data-i18n="doc1_exp">15+ Năm kinh nghiệm | Thực hiện hơn 3.000 ca cấy ghép</p>
+              
+              <div class="border-t border-gray-100 pt-3">
+                <span class="text-xs font-bold text-brandTeal uppercase block mb-1.5" data-i18n="doc_certs">Chứng chỉ chuyên môn:</span>
+                <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                  <li>Tốt nghiệp Bác sĩ Răng Hàm Mặt - ĐH Y Hà Nội</li>
+                  <li>Thành viên Hiệp hội Implant Quốc Tế (ICOI)</li>
+                  <li>Chứng chỉ Cấy ghép All-on-4 / All-on-6 từ Nobel Biocare</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3 border-t border-gray-100 flex gap-2">
+              <a href="doi-ngu-bac-si.html" class="flex-1 border border-brandTeal text-brandTeal hover:bg-brandTeal hover:text-white text-xs font-bold uppercase py-2 px-3 rounded text-center transition">
+                Xem Bằng Cấp &rarr;
+              </a>
+              <a href="#booking" class="flex-1 bg-brandTeal hover:bg-[#025e6b] text-white text-xs font-bold uppercase py-2 px-3 rounded text-center transition">
+                <span data-i18n="btn_book_doc">Đặt Lịch Ngay</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bác sĩ 2: Chuyên gia Răng sứ & Thẩm mỹ -->
+        <div class="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden flex flex-col sm:flex-row">
+          <div class="sm:w-2/5 bg-gradient-to-t from-teal-900 to-teal-700 flex items-center justify-center p-4">
+            <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full border-4 border-white/50 overflow-hidden shadow-inner">
+              <img src="https://images.unsplash.com/photo-1594824813576-a0589d97b055?auto=format&fit=crop&w=500&q=80" alt="Bác sĩ Răng Sứ" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <div class="sm:w-3/5 p-6 flex flex-col justify-between">
+            <div>
+              <div class="text-xs font-bold text-brandCyan uppercase" data-i18n="doc2_role">Trưởng Khoa Răng Sứ Thẩm Mỹ</div>
+              <h3 class="text-xl font-extrabold text-brandTeal uppercase mt-1">THS. BS. TRẦN THỊ MAI</h3>
+              <p class="text-xs text-gray-500 font-medium mb-3" data-i18n="doc2_exp">12+ Năm kinh nghiệm kiến tạo nụ cười</p>
+              
+              <div class="border-t border-gray-100 pt-3">
+                <span class="text-xs font-bold text-brandTeal uppercase block mb-1.5" data-i18n="doc_certs">Chứng chỉ chuyên môn:</span>
+                <ul class="text-xs text-gray-600 space-y-1 list-disc pl-4">
+                  <li>Thạc sĩ Phục hình Răng Hàm Mặt - ĐH Y Dược TP.HCM</li>
+                  <li>Chứng nhận Thiết kế Nụ cười Kỹ thuật số (DSD) Thụy Sĩ</li>
+                  <li>Chuyên gia phục hình sứ Veneer không mài nhỏ răng</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3 border-t border-gray-100 flex gap-2">
+              <a href="doi-ngu-bac-si.html" class="flex-1 border border-brandTeal text-brandTeal hover:bg-brandTeal hover:text-white text-xs font-bold uppercase py-2 px-3 rounded text-center transition">
+                Xem Bằng Cấp &rarr;
+              </a>
+              <a href="#booking" class="flex-1 bg-brandTeal hover:bg-[#025e6b] text-white text-xs font-bold uppercase py-2 px-3 rounded text-center transition">
+                <span data-i18n="btn_book_doc">Đặt Lịch Ngay</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. KHÁCH HÀNG THỰC TẾ & BEFORE / AFTER -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h4 class="text-brandCyan font-bold uppercase tracking-wider text-sm mb-1" data-i18n="sec_ba_sub">HIỆU QUẢ THỰC TẾ</h4>
+        <h2 class="text-3xl md:text-4xl font-extrabold uppercase text-brandTeal" data-i18n="sec_ba_title">HÌNH ẢNH TRƯỚC VÀ SAU ĐIỀU TRỊ</h2>
+        <div class="w-20 h-1 bg-brandRed mx-auto mt-3"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Ca 1 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden shadow hover:shadow-lg transition bg-white p-4">
+          <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden mb-3 relative">
+            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover">
+            <div class="absolute bottom-2 left-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded">Khách hàng tại Pakse</div>
+          </div>
+          <h4 class="font-bold text-brandTeal uppercase text-sm" data-i18n="case1_title">Bọc 16 Răng Sứ Emax Cao Cấp</h4>
+          <p class="text-xs text-gray-500 mt-1" data-i18n="case1_desc">Tình trạng: Răng xỉn màu tetracycline, thưa kẽ. Kết quả: Nụ cười trắng sáng tự nhiên sau 3 ngày.</p>
+        </div>
+
+        <!-- Ca 2 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden shadow hover:shadow-lg transition bg-white p-4">
+          <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden mb-3 relative">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover">
+            <div class="absolute bottom-2 left-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded">Khách hàng người Lào</div>
+          </div>
+          <h4 class="font-bold text-brandTeal uppercase text-sm" data-i18n="case2_title">Cấy Ghép Implant Thụy Sĩ</h4>
+          <p class="text-xs text-gray-500 mt-1" data-i18n="case2_desc">Tình trạng: Mất răng hàm lâu năm, tiêu xương. Kết quả: Khôi phục ăn nhai vững chắc như răng thật.</p>
+        </div>
+
+        <!-- Ca 3 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden shadow hover:shadow-lg transition bg-white p-4">
+          <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden mb-3 relative">
+            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover">
+            <div class="absolute bottom-2 left-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded">Khách hàng Việt kiều</div>
+          </div>
+          <h4 class="font-bold text-brandTeal uppercase text-sm" data-i18n="case3_title">Dán Sứ Veneer Không Mài</h4>
+          <p class="text-xs text-gray-500 mt-1" data-i18n="case3_desc">Tình trạng: Răng ố vàng, khớp cắn hở nhẹ. Kết quả: Bảo tồn 100% tủy răng, đều đẹp rạng rỡ.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. BẢNG GIÁ & PHƯƠNG THỨC THANH TOÁN (Tích hợp BCEL One) -->
+  <section id="pricing" class="py-16 bg-slate-100">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h4 class="text-brandCyan font-bold uppercase tracking-wider text-sm mb-1" data-i18n="sec_price_sub">MINH BẠCH & HỢP LÝ</h4>
+        <h2 class="text-3xl font-extrabold uppercase text-brandTeal" data-i18n="sec_price_title">BẢNG GIÁ THAM KHẢO DỊCH VỤ</h2>
+        <p class="text-xs text-gray-500 mt-2" data-i18n="sec_price_note">* Cam kết không phát sinh chi phí trong suốt quá trình điều trị</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200">
+        <div class="divide-y divide-gray-200 text-sm">
+          <div class="flex justify-between items-center p-4 hover:bg-slate-50">
+            <div>
+              <div class="font-bold text-gray-800" data-i18n="pr_item1">Thăm khám tổng quát & Chụp phim Cone Beam 3D</div>
+              <div class="text-xs text-emerald-600 font-semibold" data-i18n="pr_free">Miễn phí 100% trong tháng này</div>
+            </div>
+            <span class="font-extrabold text-brandTeal text-base">FREE</span>
+          </div>
+
+          <div class="flex justify-between items-center p-4 hover:bg-slate-50">
+            <div>
+              <div class="font-bold text-gray-800" data-i18n="pr_item2">Cấy Ghép Implant Hàn Quốc Chính Hãng</div>
+              <div class="text-xs text-gray-500">Trụ Implant + Khớp nối Abutment + Răng sứ</div>
+            </div>
+            <span class="font-bold text-brandRed text-sm md:text-base">Liên hệ báo giá ưu đãi</span>
+          </div>
+
+          <div class="flex justify-between items-center p-4 hover:bg-slate-50">
+            <div>
+              <div class="font-bold text-gray-800" data-i18n="pr_item3">Cấy Ghép Implant Thụy Sĩ / Mỹ Cao Cấp</div>
+              <div class="text-xs text-gray-500">Tích hợp xương cấp tốc, bảo hành trọn đời</div>
+            </div>
+            <span class="font-bold text-brandRed text-sm md:text-base">Liên hệ báo giá ưu đãi</span>
+          </div>
+
+          <div class="flex justify-between items-center p-4 hover:bg-slate-50">
+            <div>
+              <div class="font-bold text-gray-800" data-i18n="pr_item4">Răng Toàn Sứ Đức (Cercon / Zirconia)</div>
+              <div class="text-xs text-gray-500">Bảo hành chính hãng 10 năm</div>
+            </div>
+            <span class="font-bold text-brandRed text-sm md:text-base">Liên hệ báo giá ưu đãi</span>
+          </div>
+
+          <div class="flex justify-between items-center p-4 hover:bg-slate-50">
+            <div>
+              <div class="font-bold text-gray-800" data-i18n="pr_item5">Dán Sứ Veneer Thụy Sĩ Siêu Mỏng</div>
+              <div class="text-xs text-gray-500">Không mài nhỏ răng, form răng ngọc trai</div>
+            </div>
+            <span class="font-bold text-brandRed text-sm md:text-base">Liên hệ báo giá ưu đãi</span>
+          </div>
+        </div>
+
+        <!-- Khối thanh toán BCEL One -->
+        <div class="bg-brandLightIce p-5 border-t border-brandBorderIce flex flex-wrap items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center text-white font-black text-xs shadow">
+              BCEL
+            </div>
+            <div>
+              <div class="font-bold text-brandTeal text-xs uppercase" data-i18n="bcel_title">Chấp nhận thanh toán quét mã QR OnePay (BCEL One)</div>
+              <div class="text-[11px] text-brandTeal/75" data-i18n="bcel_desc">Thanh toán tiền LAK, VND hoặc USD tiện lợi, an toàn, hỗ trợ trả góp linh hoạt.</div>
+            </div>
+          </div>
+          <a href="bang-gia.html" class="bg-brandRed text-white text-xs font-bold uppercase px-4 py-2.5 rounded-lg shadow hover:bg-red-700 transition flex items-center gap-1.5">
+            <span data-i18n="btn_price_quote">Xem Bảng Giá Chi Tiết</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FOOTER & THÔNG TIN LIÊN HỆ TẠI PAKSE -->
+  <footer id="contact" class="bg-slate-900 text-slate-300 pt-12 pb-24 md:pb-12 border-t border-slate-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-2 text-white font-black text-xl uppercase mb-3">
+          <i class="fa-solid fa-tooth text-brandCyan text-2xl"></i>
+          <span>LÀO - VIỆT <span class="text-brandCyan">DENTAL</span></span>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed mb-4" data-i18n="footer_intro">
+          Hệ thống Nha khoa Quốc tế Lào - Việt tại Pakse mang sứ mệnh cung cấp các dịch vụ nha khoa thẩm mỹ và điều trị chuyên sâu đạt tiêu chuẩn quốc tế, bảo vệ nụ cười khỏe đẹp cho cộng đồng.
+        </p>
+        <div class="text-xs text-slate-400">
+          <div><strong class="text-slate-200">Giấy phép hoạt động:</strong> Sở Y Tế Champasak cấp phép</div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold uppercase text-sm mb-4 border-l-2 border-brandCyan pl-2.5" data-i18n="footer_contact_title">Thông Tin Liên Hệ</h4>
+        <ul class="space-y-2.5 text-xs">
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-location-dot text-brandCyan mt-0.5"></i>
+            <span data-i18n="footer_loc">Khu vực trung tâm TP. Pakse, Tỉnh Champasak, CHDCND Lào</span>
+          </li>
+          <li class="flex items-center gap-2.5">
+            <i class="fa-solid fa-phone text-brandCyan"></i>
+            <span>Hotline: (+856) 20 9999 8888</span>
+          </li>
+          <li class="flex items-center gap-2.5">
+            <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+            <span>WhatsApp: (+856) 20 9999 8888</span>
+          </li>
+          <li class="flex items-center gap-2.5">
+            <i class="fa-regular fa-envelope text-brandCyan"></i>
+            <span>contact@nhakhoalaovietpakse.com</span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold uppercase text-sm mb-4 border-l-2 border-brandCyan pl-2.5" data-i18n="footer_hours_title">Thời Gian Làm Việc</h4>
+        <p class="text-xs text-slate-400 mb-4 leading-relaxed" data-i18n="footer_hours_desc">
+          Thứ Hai - Chủ Nhật: <strong>08:00 - 19:30</strong> (Không nghỉ trưa). <br>
+          Ưu tiên phục vụ khách hàng đặt lịch hẹn trước qua WhatsApp hoặc Fanpage.
+        </p>
+
+        <div class="flex gap-3">
+          <a href="https://wa.me/8562099998888" target="_blank" class="w-9 h-9 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center transition">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-full bg-blue-600 hover:bg-blue-500 text-white flex items-center justify-center transition">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-full bg-black hover:bg-gray-800 text-white flex items-center justify-center transition">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 border-t border-slate-800 mt-8 pt-4 text-center text-xs text-slate-500">
+      © 2026 Nha Khoa Quốc Tế Lào - Việt (Pakse). All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- 9. FLOATING ACTION BUTTONS (ĐẶC TRƯNG VIỆT PHÁP: GỌI ĐIỆN + WHATSAPP + MESSENGER) -->
+  <div class="fixed bottom-6 right-5 z-50 flex flex-col gap-3">
+    
+    <!-- Nút Messenger -->
+    <a href="https://m.me/yourfanpage" target="_blank" title="Nhắn tin Messenger" class="w-13 h-13 w-12 h-12 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-500 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition transform">
+      <i class="fa-brands fa-facebook-messenger text-2xl"></i>
+    </a>
+
+    <!-- Nút WhatsApp (Kênh quan trọng số 1 tại Lào) -->
+    <a href="https://wa.me/8562099998888" target="_blank" title="Chat WhatsApp trực tiếp" class="w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition transform relative">
+      <span class="absolute -inset-1 rounded-full bg-emerald-400 opacity-75 pulse-animation"></span>
+      <i class="fa-brands fa-whatsapp text-2xl relative z-10"></i>
+    </a>
+
+    <!-- Nút Hotline gọi ngay có hiệu ứng rung -->
+    <a href="tel:+8562099998888" title="Gọi Hotline tư vấn" class="w-12 h-12 rounded-full bg-brandRed text-white flex items-center justify-center shadow-2xl hover:scale-110 transition transform shake-animation relative">
+      <span class="absolute -inset-1 rounded-full bg-red-500 opacity-75 pulse-animation"></span>
+      <i class="fa-solid fa-phone text-xl relative z-10"></i>
+    </a>
+
+  </div>
+
+  <!-- JAVASCRIPT: XỬ LÝ ĐA NGÔN NGỮ (VIỆT - LÀO - ANH) & FORM -->
+  <script>
+    // Dữ liệu từ điển đa ngôn ngữ (Tiếng Việt & Tiếng Lào & Tiếng Anh)
+    const translations = {
+      vi: {
+        topbar_address: "Trung tâm TP. Pakse, Tỉnh Champasak, Lào",
+        logo_sub: "Nha Khoa Quốc Tế Tại Pakse",
+        nav_about: "Giới thiệu",
+        nav_implant: "Cấy Ghép Implant",
+        nav_cosmetic: "Thẩm Mỹ Răng Sứ",
+        nav_doctors: "Đội ngũ Bác sĩ",
+        nav_pricing: "Bảng giá",
+        nav_contact: "Liên hệ",
+        btn_book: "Đặt Hẹn Khám",
+        hero_badge: "Trung Tâm Nha Khoa Chuẩn Quốc Tế Tại Pakse",
+        hero_title: "Kiến Tạo Nụ Cười Hoàn Hảo <br><span class='text-yellow-400'>Chuyên Sâu Implant & Thẩm Mỹ Răng</span>",
+        hero_desc: "Quy tụ đội ngũ Bác sĩ chuyên khoa hơn 15 năm kinh nghiệm từ các Bệnh viện Răng Hàm Mặt hàng đầu Việt Nam. Công nghệ máy móc hiện đại chuẩn Châu Âu, quy trình vô khuẩn tuyệt đối tại Pakse.",
+        stat_exp: "Năm Kinh Nghiệm",
+        stat_doctor: "Bác Sĩ Chuyên Khoa",
+        stat_cases: "Ca Thành Công",
+        stat_onepay: "Quét Mã OnePay",
+        btn_whatsapp: "Chat WhatsApp Tư Vấn",
+        btn_messenger: "Inbox Messenger",
+        form_title: "ĐẶT HẸN THĂM KHÁM",
+        form_subtitle: "Miễn phí chụp phim 3D & Tư vấn cùng Bác sĩ Chuyên khoa",
+        form_name: "Họ và tên của bạn",
+        form_phone: "Số điện thoại / WhatsApp",
+        form_service: "Dịch vụ quan tâm",
+        opt_implant: "Trồng Răng Implant Chuyên Sâu",
+        opt_veneer: "Bọc Răng Sứ & Dán Sứ Veneer",
+        opt_ortho: "Niềng Răng - Chỉnh Nha",
+        opt_bleach: "Tẩy Trắng Răng Laser",
+        opt_other: "Khám & Điều Trị Răng Tổng Quát",
+        form_date: "Ngày dự kiến đến khám",
+        btn_submit: "GỬI YÊU CẦU ĐẶT LỊCH",
+        form_privacy: "Thông tin được bảo mật 100% - Nhân viên gọi lại trong 5 phút",
+        sec_service_sub: "DỊCH VỤ TIÊU CHUẨN VÀNG",
+        sec_service_title: "CHUYÊN KHOA TRỌNG TÂM TẠI PAKSE",
+        card1_title: "Trồng Răng Implant Kỹ Thuật Số",
+        card1_desc: "Giải pháp phục hồi răng đã mất hoàn hảo nhất hiện nay. Trụ Implant nhập khẩu chính hãng Thụy Sĩ, Mỹ, Hàn Quốc. Phục hồi 99% khả năng ăn nhai trọn đời, ngăn chặn tiêu xương hàm, không đau buốt nhờ máng định vị 3D.",
+        card1_f1: "Tích hợp xương nhanh chỉ sau 4 - 6 tuần",
+        card1_f2: "Thực hiện bởi Bác sĩ thành viên Hiệp hội Implant Quốc tế (ICOI)",
+        card1_f3: "Bảo hành trọn đời bằng thẻ điện tử quốc tế",
+        card2_title: "Răng Sứ Thẩm Mỹ & Dán Veneer",
+        card2_desc: "Kiến tạo nụ cười chuẩn tỷ lệ vàng khuôn mặt. Dòng sứ chính hãng Đức & Thụy Sĩ (Cercon, Emax, Lava Plus). Trắng trong tự nhiên, kháng khuẩn, không đen viền nướu, bảo tồn tối đa răng gốc với công nghệ dán sứ không mài nhỏ.",
+        card2_f1: "Thiết kế dáng răng nụ cười bằng công nghệ Digital Smile Design",
+        card2_f2: "Màu sắc trong bóng tự nhiên như răng thật",
+        card2_f3: "Cam kết bảo hành chính hãng từ 10 - 19 năm",
+        price_from: "Ưu đãi thăm khám",
+        implant_promo: "Tặng chụp phim 3D",
+        cosmetic_promo: "Giảm 20% gói trọn gói",
+        btn_consult: "Nhận Tư Vấn",
+        sec_doc_sub: "TẬP HỢP TAY NGHỀ VÀNG",
+        sec_doc_title: "ĐỘI NGŨ BÁC SĨ CHUYÊN KHOA",
+        sec_doc_desc: "100% Bác sĩ tốt nghiệp Đại học Y danh tiếng, có chứng chỉ hành nghề chuyên sâu và tu nghiệp tại nước ngoài.",
+        doc1_role: "Chuyên Gia Cấy Ghép Implant",
+        doc1_exp: "15+ Năm kinh nghiệm | Thực hiện hơn 3.000 ca cấy ghép",
+        doc2_role: "Trưởng Khoa Răng Sứ Thẩm Mỹ",
+        doc2_exp: "12+ Năm kinh nghiệm kiến tạo nụ cười",
+        doc_certs: "Chứng chỉ chuyên môn:",
+        btn_book_doc: "Đặt Lịch Với BS",
+        sec_ba_sub: "HIỆU QUẢ THỰC TẾ",
+        sec_ba_title: "HÌNH ẢNH TRƯỚC VÀ SAU ĐIỀU TRỊ",
+        case1_title: "Bọc 16 Răng Sứ Emax Cao Cấp",
+        case1_desc: "Tình trạng: Răng xỉn màu tetracycline, thưa kẽ. Kết quả: Nụ cười trắng sáng tự nhiên sau 3 ngày.",
+        case2_title: "Cấy Ghép Implant Thụy Sĩ",
+        case2_desc: "Tình trạng: Mất răng hàm lâu năm, tiêu xương. Kết quả: Khôi phục ăn nhai vững chắc như răng thật.",
+        case3_title: "Dán Sứ Veneer Không Mài",
+        case3_desc: "Tình trạng: Răng ố vàng, khớp cắn hở nhẹ. Kết quả: Bảo tồn 100% tủy răng, đều đẹp rạng rỡ.",
+        sec_price_sub: "MINH BẠCH & HỢP LÝ",
+        sec_price_title: "BẢNG GIÁ THAM KHẢO DỊCH VỤ",
+        sec_price_note: "* Cam kết không phát sinh chi phí trong suốt quá trình điều trị",
+        pr_item1: "Thăm khám tổng quát & Chụp phim Cone Beam 3D",
+        pr_free: "Miễn phí 100% trong tháng này",
+        pr_item2: "Cấy Ghép Implant Hàn Quốc Chính Hãng",
+        pr_item3: "Cấy Ghép Implant Thụy Sĩ / Mỹ Cao Cấp",
+        pr_item4: "Răng Toàn Sứ Đức (Cercon / Zirconia)",
+        pr_item5: "Dán Sứ Veneer Thụy Sĩ Siêu Mỏng",
+        bcel_title: "Chấp nhận thanh toán quét mã QR OnePay (BCEL One)",
+        bcel_desc: "Thanh toán tiền LAK, VND hoặc USD tiện lợi, an toàn, hỗ trợ trả góp linh hoạt.",
+        btn_price_quote: "Nhận Bảng Giá Chi Tiết",
+        footer_intro: "Hệ thống Nha khoa Quốc tế Lào - Việt tại Pakse mang sứ mệnh cung cấp các dịch vụ nha khoa thẩm mỹ và điều trị chuyên sâu đạt tiêu chuẩn quốc tế, bảo vệ nụ cười khỏe đẹp cho cộng đồng.",
+        footer_contact_title: "Thông Tin Liên Hệ",
+        footer_loc: "Khu vực trung tâm TP. Pakse, Tỉnh Champasak, CHDCND Lào",
+        footer_hours_title: "Thời Gian Làm Việc",
+        footer_hours_desc: "Thứ Hai - Chủ Nhật: 08:00 - 19:30 (Không nghỉ trưa). Ưu tiên phục vụ khách hàng đặt lịch hẹn trước qua WhatsApp hoặc Fanpage."
+      },
+      la: {
+        topbar_address: "ໃຈກາງເມືອງປາກເຊ, ແຂວງຈໍາປາສັກ, ສປປ ລາວ",
+        logo_sub: "ຫ້ອງກວດແຂ້ວສາກົນ ທີ່ ປາກເຊ",
+        nav_about: "ແນະນໍາ",
+        nav_implant: "ປູກແຂ້ວ Implant",
+        nav_cosmetic: "ແຂ້ວປອມເຊລາມິກ",
+        nav_doctors: "ທີມແພດໝໍ",
+        nav_pricing: "ລາຄາ",
+        nav_contact: "ຕິດຕໍ່",
+        btn_book: "ນັດໝາຍດ່ວນ",
+        hero_badge: "ສູນທັນຕະກໍາ ມາດຕະຖານສາກົນ ທີ່ ປາກເຊ",
+        hero_title: "ສ້າງຮອຍຍິ້ມທີ່ສົມບູນແບບ <br><span class='text-yellow-400'>ຊ່ຽວຊານ Implant & ແຂ້ວສວຍງາມ</span>",
+        hero_desc: "ລວບລວມທີມແພດໝໍຊ່ຽວຊານຫຼາຍກວ່າ 15 ປີ ຈາກໂຮງໝໍແຂ້ວຊັ້ນນໍາຫວຽດນາມ. ເຄື່ອງມືທັນສະໄໝມາດຕະຖານເອີຣົບ, ປອດເຊື້ອ 100% ທີ່ ປາກເຊ.",
+        stat_exp: "ປີປະສົບການ",
+        stat_doctor: "ແພດໝໍຊ່ຽວຊານ",
+        stat_cases: "ກໍລະນີສໍາເລັດ",
+        stat_onepay: "ສະແກນ BCEL One",
+        btn_whatsapp: "ແຊັດ WhatsApp ປຶກສາ",
+        btn_messenger: "ສົ່ງຂໍ້ຄວາມ Messenger",
+        form_title: "ລົງທະບຽນນັດກວດແຂ້ວ",
+        form_subtitle: "ຟຣີຖ່າຍຮູບຟິມ 3D ແລະ ປຶກສາກັບແພດໝໍຊ່ຽວຊານ",
+        form_name: "ຊື່ ແລະ ນາມສະກຸນຂອງທ່ານ",
+        form_phone: "ເບີໂທລະສັບ / WhatsApp",
+        form_service: "ບໍລິການທີ່ສົນໃຈ",
+        opt_implant: "ປູກແຂ້ວ Implant ຊ່ຽວຊານ",
+        opt_veneer: "ຫຸ້ມແຂ້ວເຊລາມິກ & ແຜ່ນ Veneer",
+        opt_ortho: "ດັດແຂ້ວ - ຈັດແຂ້ວ",
+        opt_bleach: "ຟອກສີແຂ້ວຂາວ Laser",
+        opt_other: "ກວດ ແລະ ປິ່ນປົວແຂ້ວທົ່ວໄປ",
+        form_date: "ວັນທີຄາດວ່າຈະມາກວດ",
+        btn_submit: "ສົ່ງຂໍ້ມູນນັດໝາຍ",
+        form_privacy: "ຂໍ້ມູນປອດໄພ 100% - ພະນັກງານໂທກັບພາຍໃນ 5 ນາທີ",
+        sec_service_sub: "ບໍລິການມາດຕະຖານຄໍາ",
+        sec_service_title: "ບໍລິການຫຼັກ ທີ່ ປາກເຊ",
+        card1_title: "ປູກແຂ້ວ Implant ດິຈິຕອນ",
+        card1_desc: "ວິທີແກ້ໄຂແຂ້ວຫຼົ່ນທີ່ດີທີ່ສຸດໃນປະຈຸບັນ. ຮາກແຂ້ວນໍາເຂົ້າແທ້ຈາກ ສະວິດ, ອາເມລິກາ, ເກົາຫຼີ. ກິນອາຫານໄດ້ຄືແຂ້ວແທ້ 99%, ບໍ່ເຈັບຍ້ອນເຕັກໂນໂລຊີ 3D.",
+        card1_f1: "ຕິດແໜ້ນກັບກະດູກພາຍໃນ 4 - 6 ອາທິດ",
+        card1_f2: "ປະຕິບັດໂດຍແພດໝໍສະມາຊິກສະມາຄົມ Implant ສາກົນ (ICOI)",
+        card1_f3: "ຮັບປະກັນຕະຫຼອດຊີວິດດ້ວຍບັດເອເລັກໂຕຣນິກສາກົນ",
+        card2_title: "ແຂ້ວປອມເຊລາມິກ & Veneer",
+        card2_desc: "ອອກແບບຮອຍຍິ້ມສວຍງາມມາດຕະຖານ. ເຊລາມິກແທ້ຈາກເຢຍລະມັນ ແລະ ສະວິດ. ຂາວໃສເປັນທໍາມະຊາດ, ບໍ່ດໍາຂອບເຫືອກ, ຮັກສາເນື້ອແຂ້ວແທ້ໄວ້ສູງສຸດ.",
+        card2_f1: "ອອກແບບຮູບຊົງແຂ້ວດ້ວຍ Digital Smile Design",
+        card2_f2: "ສີຂາວໃສເປັນທໍາມະຊາດຄືແຂ້ວແທ້",
+        card2_f3: "ຮັບປະກັນຂອງແທ້ 10 - 19 ປີ",
+        price_from: "ໂປຣໂມຊັ່ນກວດແຂ້ວ",
+        implant_promo: "ຟຣີຖ່າຍຟິມ 3D",
+        cosmetic_promo: "ຫຼຸດ 20% ທຸກແພັກເກັດ",
+        btn_consult: "ຂໍຄໍາປຶກສາ",
+        sec_doc_sub: "ທີມແພດໝໍມືອາຊີບ",
+        sec_doc_title: "ທີມແພດໝໍຊ່ຽວຊານ",
+        sec_doc_desc: "ແພດໝໍຈົບຈາກມະຫາວິທະຍາໄລການແພດຊື່ດັງ, ມີໃບຢັ້ງຢືນຊ່ຽວຊານສະເພາະທາງ.",
+        doc1_role: "ຊ່ຽວຊານປູກແຂ້ວ Implant",
+        doc1_exp: "ປະສົບການ 15+ ປີ | ປິ່ນປົວສໍາເລັດຫຼາຍກວ່າ 3.000 ກໍລະນີ",
+        doc2_role: "ຫົວໜ້າພະແນກແຂ້ວເຊລາມິກສວຍງາມ",
+        doc2_exp: "ປະສົບການ 12+ ປີ ໃນການອອກແບບຮອຍຍິ້ມ",
+        doc_certs: "ໃບຢັ້ງຢືນວິຊາສະເພາະ:",
+        btn_book_doc: "ນັດໝາຍກັບໝໍ",
+        sec_ba_sub: "ຜົນໄດ້ຮັບຕົວຈິງ",
+        sec_ba_title: "ຮູບພາບກ່ອນ ແລະ ຫຼັງການປິ່ນປົວ",
+        case1_title: "ຫຸ້ມ 16 ແຂ້ວເຊລາມິກ Emax",
+        case1_desc: "ສະພາບ: ແຂ້ວສີໝົ່ນ, ຫ່າງ. ຜົນໄດ້ຮັບ: ຮອຍຍິ້ມຂາວໃສເປັນທໍາມະຊາດພາຍໃນ 3 ວັນ.",
+        case2_title: "ປູກແຂ້ວ Implant ສະວິດ",
+        case2_desc: "ສະພາບ: ແຂ້ວກ້າມຫຼົ່ນຫຼາຍປີ. ຜົນໄດ້ຮັບ: ກິນອາຫານແຂງແຮງຄືເກົ່າ.",
+        case3_title: "ແຜ່ນ Veneer ບໍ່ຕ້ອງຝົນແຂ້ວ",
+        case3_desc: "ສະພາບ: ແຂ້ວເຫຼືອງ, ສົບບໍ່ສະເໝີ. ຜົນໄດ້ຮັບ: ຮອຍຍິ້ມງົດງາມ.",
+        sec_price_sub: "ຈະແຈ້ງ & ສົມເຫດສົມຜົນ",
+        sec_price_title: "ຕາຕະລາງລາຄາອ້າງອີງ",
+        sec_price_note: "* ຮັບປະກັນບໍ່ມີຄ່າໃຊ້ຈ່າຍເພີ່ມເຕີມໃນລະຫວ່າງການປິ່ນປົວ",
+        pr_item1: "ກວດສຸຂະພາບແຂ້ວທົ່ວໄປ & ຖ່າຍຟິມ 3D",
+        pr_free: "ຟຣີ 100% ໃນເດືອນນີ້",
+        pr_item2: "Implant ເກົາຫຼີ ຂອງແທ້",
+        pr_item3: "Implant ສະວິດ / ອາເມລິກາ ຊັ້ນນໍາ",
+        pr_item4: "ແຂ້ວເຊລາມິກເຢຍລະມັນ (Cercon)",
+        pr_item5: "Veneer ສະວິດ ບາງພິເສດ",
+        bcel_title: "ຍອມຮັບການຊໍາລະດ້ວຍການສະແກນ QR OnePay (BCEL One)",
+        bcel_desc: "ຊໍາລະເປັນເງິນ ກີບ (LAK), ດົ່ງ (VND) ຫຼື ໂດລາ (USD) ໄດ້ຢ່າງສະດວກ, ປອດໄພ.",
+        btn_price_quote: "ຂໍຕາຕະລາງລາຄາລະອຽດ",
+        footer_intro: "ຫ້ອງກວດແຂ້ວສາກົນ ລາວ - ຫວຽດ ທີ່ ປາກເຊ ມຸ່ງໝັ້ນໃຫ້ບໍລິການທັນຕະກໍາສວຍງາມ ແລະ ປິ່ນປົວມາດຕະຖານສາກົນ.",
+        footer_contact_title: "ຂໍ້ມູນຕິດຕໍ່",
+        footer_loc: "ໃຈກາງເມືອງປາກເຊ, ແຂວງຈໍາປາສັກ, ສປປ ລາວ",
+        footer_hours_title: "ໂມງເຮັດວຽກ",
+        footer_hours_desc: "ວັນຈັນ - ວັນອາທິດ: 08:00 - 19:30 (ບໍ່ພັກທ່ຽງ). ຍິນດີຕ້ອນຮັບລູກຄ້າທີ່ນັດໝາຍລ່ວງໜ້າຜ່ານ WhatsApp ຫຼື Fanpage."
+      },
+      en: {
+        topbar_address: "Central Pakse City, Champasak Province, Laos",
+        logo_sub: "International Dental Clinic In Pakse",
+        nav_about: "About Us",
+        nav_implant: "Dental Implants",
+        nav_cosmetic: "Cosmetic Veneers",
+        nav_doctors: "Specialists",
+        nav_pricing: "Pricing",
+        nav_contact: "Contact",
+        btn_book: "Book Visit",
+        hero_badge: "International Standard Dental Clinic In Pakse",
+        hero_title: "Creating Confident Smiles <br><span class='text-yellow-400'>Dental Implants & Cosmetic Veneers</span>",
+        hero_desc: "Led by top specialists with 15+ years of clinical experience from Vietnam's leading dental hospitals. European sterilization and cutting-edge 3D technology in Pakse.",
+        stat_exp: "Years Experience",
+        stat_doctor: "Certified Doctors",
+        stat_cases: "Successful Cases",
+        stat_onepay: "BCEL One QR Pay",
+        btn_whatsapp: "Chat On WhatsApp",
+        btn_messenger: "Message On Facebook",
+        form_title: "BOOK AN APPOINTMENT",
+        form_subtitle: "Free 3D CT scan & Private consultation with specialist",
+        form_name: "Full Name",
+        form_phone: "Phone / WhatsApp Number",
+        form_service: "Interested Service",
+        opt_implant: "Advanced Dental Implants",
+        opt_veneer: "Cosmetic Crowns & Porcelain Veneers",
+        opt_ortho: "Invisalign & Orthodontics",
+        opt_bleach: "Laser Teeth Whitening",
+        opt_other: "General Dentistry & Checkup",
+        form_date: "Preferred Date",
+        btn_submit: "SUBMIT APPOINTMENT",
+        form_privacy: "100% Confidential - We will call back within 5 minutes",
+        sec_service_sub: "GOLD STANDARD CARE",
+        sec_service_title: "CORE SPECIALTIES IN PAKSE",
+        card1_title: "Digital Dental Implants",
+        card1_desc: "The premier solution for missing teeth. Authentic implants from Switzerland, USA, and Korea. Restores 99% chewing power with zero pain using 3D surgical guides.",
+        card1_f1: "Rapid bone integration in only 4 - 6 weeks",
+        card1_f2: "Conducted by International Congress of Oral Implantologists (ICOI) members",
+        card1_f3: "Lifetime international warranty card",
+        card2_title: "Porcelain Veneers & Crowns",
+        card2_desc: "Bespoke smile makeover tailored to your facial proportions. Premium German & Swiss ceramics (Cercon, Emax). Natural translucency with minimal prep.",
+        card2_f1: "Custom Digital Smile Design (DSD) simulation",
+        card2_f2: "High-translucency natural enamel luster",
+        card2_f3: "Official manufacturer warranty 10 - 19 years",
+        price_from: "Promotional Consultation",
+        implant_promo: "Free 3D Cone Beam Scan",
+        cosmetic_promo: "20% Off Smile Packages",
+        btn_consult: "Free Consultation",
+        sec_doc_sub: "EXCELLENCE IN CLINICAL PRACTICE",
+        sec_doc_title: "OUR DENTAL SPECIALISTS",
+        sec_doc_desc: "100% Doctors graduated from prestigious Medical Universities with advanced overseas training certifications.",
+        doc1_role: "Senior Dental Implantologist",
+        doc1_exp: "15+ Years Experience | Over 3,000 successful implants",
+        doc2_role: "Head of Cosmetic Dentistry",
+        doc2_exp: "12+ Years Experience in Smile Makeovers",
+        doc_certs: "Certifications & Credentials:",
+        btn_book_doc: "Book Consultation",
+        sec_ba_sub: "PROVEN OUTCOMES",
+        sec_ba_title: "PATIENT BEFORE & AFTER GALLERY",
+        case1_title: "Full Arch 16 Emax Crowns",
+        case1_desc: "Condition: Tetracycline staining, gaps. Result: Brilliant natural smile within 3 days.",
+        case2_title: "Swiss Dental Implant",
+        case2_desc: "Condition: Long-term missing molar. Result: Strong bite restored comparable to natural teeth.",
+        case3_title: "No-Prep Porcelain Veneers",
+        case3_desc: "Condition: Tooth discoloration. Result: Complete enamel preservation.",
+        sec_price_sub: "TRANSPARENT & AFFORDABLE",
+        sec_price_title: "ESTIMATED SERVICE PRICING",
+        sec_price_note: "* Guaranteed no hidden fees during treatment",
+        pr_item1: "General Consultation & 3D CT Cone Beam Scan",
+        pr_free: "100% Free This Month",
+        pr_item2: "Authentic Korean Dental Implant",
+        pr_item3: "Premium Swiss / US Dental Implant",
+        pr_item4: "German All-Ceramic Crown (Cercon)",
+        pr_item5: "Ultra-Thin Swiss Porcelain Veneer",
+        bcel_title: "Accepted OnePay QR Code (BCEL One)",
+        bcel_desc: "Convenient payments in LAK, VND, or USD with flexible installment plans.",
+        btn_price_quote: "Get Detailed Quotation",
+        footer_intro: "Lao - Viet International Dental Clinic in Pakse provides international standard aesthetic and restorative dentistry.",
+        footer_contact_title: "Contact Information",
+        footer_loc: "Central Pakse, Champasak Province, Lao PDR",
+        footer_hours_title: "Operating Hours",
+        footer_hours_desc: "Monday - Sunday: 08:00 - 19:30 (Open during lunch). Priority care for WhatsApp and Facebook appointments."
+      }
+    };
+
+    // Hàm chuyển ngôn ngữ linh hoạt
+    function setLanguage(lang) {
+      const data = translations[lang];
+      if (!data) return;
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (data[key]) {
+          el.innerHTML = data[key];
+        }
+      });
+
+      // Highlight nút ngôn ngữ được chọn
+      ['vi', 'la', 'en'].forEach(l => {
+        const btn = document.getElementById('btn-' + l);
+        if (l === lang) {
+          btn.className = "px-2.5 py-0.5 rounded-full font-bold text-xs bg-brandTeal text-white transition";
+        } else {
+          btn.className = "px-2.5 py-0.5 rounded-full font-bold text-xs text-gray-600 hover:text-brandTeal transition";
+        }
+      });
+    }
+
+    // Xử lý gửi form đặt lịch
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      alert("Cảm ơn bạn! Thông tin đặt hẹn đã được ghi nhận. Bác sĩ/Nhân viên phòng khám tại Pakse sẽ liên hệ lại qua số điện thoại/WhatsApp trong ít phút.");
+    }
+  </script>
+</body>
+</html>

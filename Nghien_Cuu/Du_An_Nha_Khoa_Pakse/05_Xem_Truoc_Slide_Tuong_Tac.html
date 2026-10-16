@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide Thuyết Trình Nha Khoa Pakse - Bản Nâng Cấp Chữ To, Rõ Nét</title>
+  <style>
+    :root {
+      --bg-page: #e2e8f0;
+      --bg-slide: #f8fafc;
+      --navy: #0e1e40;
+      --primary: #0284c7;
+      --gold: #d97706;
+      --green: #059669;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --border: #cbd5e1;
+      --border-dark: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
+    body { background: var(--bg-page); color: var(--text-main); padding: 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+    
+    header { width: 100%; max-width: 1140px; display: flex; justify-content: space-between; align-items: center; background: #ffffff; padding: 14px 24px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+    .brand { font-weight: 800; font-size: 1.2rem; color: var(--navy); display: flex; align-items: center; gap: 10px; }
+    .badge { background: #fef3c7; border: 1px solid var(--gold); color: var(--gold); font-size: 0.8rem; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; font-weight: 700; }
+    .controls { display: flex; gap: 10px; align-items: center; }
+    button.btn { background: #f1f5f9; color: var(--text-main); border: 1px solid var(--border); padding: 9px 18px; border-radius: 8px; cursor: pointer; font-weight: 700; font-size: 0.95rem; transition: all 0.2s; }
+    button.btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+    button.btn-primary { background: var(--navy); color: #fff; border: none; }
+    button.btn-primary:hover { background: #172554; }
+
+    .viewport { width: 100%; max-width: 1140px; aspect-ratio: 16 / 9; background: var(--bg-slide); border: 1px solid var(--border-dark); border-radius: 16px; box-shadow: 0 20px 35px rgba(0,0,0,0.15); position: relative; overflow: hidden; display: flex; flex-direction: column; }
+    .slide { display: none; flex: 1; padding: 32px 40px; flex-direction: column; animation: fadeIn 0.2s ease-out; }
+    .slide.active { display: flex; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+    .slide-header { display: flex; justify-content: space-between; align-items: center; background: #ffffff; padding: 10px 18px; border-radius: 10px; border-left: 6px solid var(--navy); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 16px; }
+    .slide-title-wrap h2 { font-size: 1.55rem; font-weight: 800; color: var(--navy); }
+    .slide-title-wrap p { font-size: 0.95rem; color: var(--primary); margin-top: 2px; font-weight: 600; }
+    .slide-meta { font-size: 1rem; font-weight: 800; color: var(--text-muted); }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+
+    .kpi-card { background: #ffffff; border: 1.5px solid var(--border); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+    .kpi-label { font-size: 0.88rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; }
+    .kpi-value { font-size: 1.85rem; font-weight: 900; margin: 4px 0; color: var(--navy); }
+    .kpi-value.gold { color: var(--gold); }
+    .kpi-value.green { color: var(--green); }
+    .kpi-value.primary { color: var(--primary); }
+    .kpi-sub { font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; font-weight: 500; }
+
+    table.fin-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: #ffffff; border-radius: 10px; overflow: hidden; border: 1.5px solid var(--border); }
+    table.fin-table th { background: var(--navy); color: #fff; text-align: left; padding: 10px 12px; font-weight: 700; font-size: 0.95rem; }
+    table.fin-table td { padding: 9px 12px; border-bottom: 1px solid var(--border); color: var(--text-main); font-size: 0.92rem; }
+    table.fin-table tr:last-child td { border-bottom: none; font-weight: 800; color: var(--navy); font-size: 1rem; background: #fefce8; }
+
+    .cover-slide { justify-content: space-between; padding: 32px 40px; }
+    .cover-top { display: flex; gap: 24px; align-items: center; flex: 1; }
+    .cover-left { flex: 1.2; }
+    .cover-right { flex: 0.8; }
+    .cover-right img { width: 100%; border-radius: 12px; border: 2px solid var(--border); box-shadow: 0 8px 16px rgba(0,0,0,0.08); }
+    .cover-badge { font-size: 0.9rem; font-weight: 800; color: var(--gold); letter-spacing: 1px; margin-bottom: 8px; text-transform: uppercase; }
+    .cover-title { font-size: 2.3rem; font-weight: 900; line-height: 1.15; color: var(--navy); margin-bottom: 4px; }
+    .cover-sub { font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-bottom: 12px; }
+    .cover-desc { font-size: 0.98rem; line-height: 1.5; color: var(--text-muted); }
+    .cover-footer { display: flex; gap: 14px; margin-top: 16px; }
+
+    .thumbnails { width: 100%; max-width: 1140px; display: flex; gap: 8px; margin-top: 14px; overflow-x: auto; padding-bottom: 6px; }
+    .thumb-btn { background: #ffffff; border: 1px solid var(--border); color: var(--text-muted); padding: 8px 12px; border-radius: 8px; cursor: pointer; font-size: 0.8rem; white-space: nowrap; font-weight: 600; transition: all 0.2s; }
+    .thumb-btn:hover { background: #f1f5f9; color: var(--navy); }
+    .thumb-btn.active { border-color: var(--navy); color: var(--navy); background: #e0f2fe; font-weight: 800; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <span>🏥 NHA KHOA QUỐC TẾ PAKSE</span>
+      <span class="badge">Bản Nâng Cấp: Chữ To & Siêu Dễ Nhìn</span>
+    </div>
+    <div class="controls">
+      <span id="slideCounter" style="font-size: 0.95rem; font-weight:700; color: var(--text-muted); margin-right: 8px;">Slide 1 / 12</span>
+      <button class="btn" onclick="prevSlide()">❮ Trước</button>
+      <button class="btn btn-primary" onclick="nextSlide()">Tiếp theo ❯</button>
+    </div>
+  </header>
+
+  <div class="viewport">
+
+    <!-- SLIDE 1: COVER -->
+    <div class="slide cover-slide active" id="slide-1">
+      <div class="cover-top">
+        <div class="cover-left">
+          <div class="cover-badge">★ HỒ SƠ KHẢ THI & KẾ HOẠCH ĐẦU TƯ CHIẾN LƯỢC</div>
+          <h1 class="cover-title">PHÒNG KHÁM NHA KHOA<br>QUỐC TẾ PAKSE</h1>
+          <div class="cover-sub">PAKSE INTERNATIONAL DENTAL CLINIC — CHAMPASAK, LÀO</div>
+          <p class="cover-desc">Thẩm định hiệu quả đầu tư, cơ cấu định phí tối ưu ($500/tháng mặt bằng) và dự phóng dòng tiền theo 3 kịch bản doanh thu ngày (Min 80 tr – Kỳ vọng 140 tr – Max 200 tr/ngày). Lộ trình thi công chỉnh trang 15 ngày, khai trương thần tốc trong Tháng 11.</p>
+        </div>
+        <div class="cover-right">
+          <img src="Hinh_Anh_Minh_Hoa/01_Phong_Kham_Nha_Khoa_Pakse.jpg" onerror="this.src='pakse_dental_clinic_1791805598608.jpg'" alt="Phòng khám nha khoa Pakse">
+        </div>
+      </div>
+      <div class="cover-footer">
+        <div class="kpi-card" style="flex:1; border-top: 4px solid var(--navy);">
+          <span class="kpi-label">Tổng mức đầu tư (CAPEX)</span>
+          <span class="kpi-value">3,26 TỶ VNĐ</span>
+          <span class="kpi-sub">$125.798 USD (Máy CT + 1 Năm Nhà)</span>
+        </div>
+        <div class="kpi-card" style="flex:1; border-top: 4px solid var(--green);">
+          <span class="kpi-label">Thời gian hoàn vốn</span>
+          <span class="kpi-value green">3 – 6 THÁNG</span>
+          <span class="kpi-sub">Hoàn 100% vốn ngay Năm thứ 1</span>
+        </div>
+        <div class="kpi-card" style="flex:1; border-top: 4px solid var(--gold);">
+          <span class="kpi-label">EBITDA tháng (Kỳ vọng)</span>
+          <span class="kpi-value gold">2,57 TỶ / THÁNG</span>
+          <span class="kpi-sub">Biên lợi nhuận ròng đạt 70,5%</span>
+        </div>
+        <div class="kpi-card" style="flex:1; border-top: 4px solid var(--primary);">
+          <span class="kpi-label">Khai trương mục tiêu</span>
+          <span class="kpi-value primary">THÁNG 11</span>
+          <span class="kpi-sub">30 ngày thần tốc đón khách</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: BỐI CẢNH THỊ TRƯỜNG -->
+    <div class="slide" id="slide-2">
+      <div class="slide-header">
+        <div class="slide-title-wrap">
+          <h2>01. Bối Cảnh Thị Trường & Cơ Hội 'Khoảng Trống Vàng'</h2>
+          <p>Nhu cầu y tế nha khoa kỹ thuật cao tại Nam Lào & Cơ hội giữ trọn dòng tiền ngoại tệ</p>
+        </div>
+        <div class="slide-meta">SLIDE 01</div>
+      </div>
+      <div class="grid-3" style="flex:1;">
+        <div class="kpi-card" style="border-top: 5px solid var(--navy);">
+          <h3 style="color:var(--navy); font-size:1.15rem; margin-bottom:10px;">📍 THỦ PHỦ KINH TẾ NAM LÀO</h3>
+          <p style="font-size:0.95rem; line-height:1.6; color:var(--text-main);">
+            • <strong>Hạt nhân 4 tỉnh:</strong> Pakse là trung tâm kinh tế của Champasak, Salavan, Sekong, Attapeu với dân số trên 755.000 người.<br><br>
+            • <strong>Vị trí đắc địa:</strong> Mặt tiền Quốc lộ 13 Chợ Đào Hương — khu giao thương sầm uất nhất vùng.<br><br>
+            • <strong>Thực trạng:</strong> Bệnh viện công chỉ nhổ răng trám cơ bản; phòng khám tư bản địa máy móc thô sơ, thiếu máy CT 3D.
+          </p>
+        </div>
+        <div class="kpi-card" style="border-top: 5px solid var(--gold);">
+          <h3 style="color:var(--gold); font-size:1.15rem; margin-bottom:10px;">🚗 CHẢY MÁU NGOẠI TỆ SANG THÁI</h3>
+          <p style="font-size:0.95rem; line-height:1.6; color:var(--text-main);">
+            • <strong>Vấn nạn di chuyển:</strong> Người khá giả, kiều bào khi làm răng sứ thẩm mỹ, Implant phải lái xe 120km vượt biên sang Ubon (Thái Lan).<br><br>
+            • <strong>Chi phí đắt đỏ:</strong> Tốn kém lớn về ăn ở, đi lại, rào cản ngôn ngữ và bất tiện khi tái khám bảo hành định kỳ.<br><br>
+            • <strong>Nhu cầu dồn nén:</strong> Cần một cơ sở chuẩn quốc tế tại chỗ để phục vụ dứt điểm.
+          </p>
+        </div>
+        <div class="kpi-card" style="border-top: 5px solid var(--green);">
+          <h3 style="color:var(--green); font-size:1.15rem; margin-bottom:10px;">🎯 GIỮ TRỌN DÒNG TIỀN NỘI ĐỊA</h3>
+          <p style="font-size:0.95rem; line-height:1.6; color:var(--text-main);">
+            • <strong>Chất lượng cao:</strong> Trang bị máy CT ConeBeam 3D Vatech và Bác sĩ chuyên khoa sâu Việt Nam giàu kinh nghiệm.<br><br>
+            • <strong>Giá rẻ hơn 20% - 30%:</strong> Mức giá cạnh tranh hơn Thái Lan và Vientiane, giữ trọn doanh thu nội địa.<br><br>
+            • <strong>Cộng đồng trung kiên:</strong> Đón đầu >18.000 kiều bào/doanh nhân Việt và tầng lớp trung lưu bản địa đang bùng nổ.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: 4 HÀO KINH TẾ (MOATS) -->
+    <div class="slide" id="slide-3">
+      <div class="slide-header">
+        <div class="slide-title-wrap">
+          <h2>02. Mô Hình Vận Hành & 4 Hào Kinh Tế Cạnh Tranh (Moats)</h2>
+          <p>Lợi thế công nghệ số hóa độc quyền, vô trùng Châu Âu và chất lượng lâm sàng vượt trội</p>
+        </div>
+        <div class="slide-meta">SLIDE 02</div>
+      </div>
+      <div style="display:flex; gap:20px; flex:1;">
+        <div style="flex:0.85;">
+          <img src="Hinh_Anh_Minh_Hoa/02_May_Chup_CT_Xquang_3D.jpg" onerror="this.src='pakse_ct_machine_1791805620533.jpg'" alt="Máy chụp CT X-quang" style="width:100%; height:100%; object-fit:cover; border-radius:12px; border:2px solid var(--border);">
+        </div>
+        <div style="flex:1.15; display:flex; flex-direction:column; gap:10px;">
+          <div class="kpi-card" style="padding:12px; border-left:5px solid var(--primary);">
+            <h4 style="color:var(--primary); font-size:1.05rem; margin-bottom:3px;">01. Hào Công Nghệ Chẩn Đoán Số 3D</h4>
+            <p style="font-size:0.9rem; line-height:1.45; color:var(--text-main);">Hệ thống CT ConeBeam Panorama 3D toàn cảnh ($40.000 USD). Phòng khám tư đầu tiên tại Nam Lào lập phác đồ Implant & chỉnh nha 3D chuẩn xác chỉ trong 5 phút.</p>
+          </div>
+          <div class="kpi-card" style="padding:12px; border-left:5px solid var(--green);">
+            <h4 style="color:var(--green); font-size:1.05rem; margin-bottom:3px;">02. Hào Vô Trùng Chuẩn Châu Âu Class B</h4>
+            <p style="font-size:0.9rem; line-height:1.45; color:var(--text-main);">Trạm tiệt trùng 1 chiều khép kín với Nồi hấp chân không Class B 23L đạt chuẩn EN 13060 — tiêu chuẩn bắt buộc cho tay khoan rỗng, triệt tiêu lây nhiễm chéo.</p>
+          </div>
+          <div class="kpi-card" style="padding:12px; border-left:5px solid var(--gold);">
+            <h4 style="color:var(--gold); font-size:1.05rem; margin-bottom:3px;">03. Hào Bác Sĩ Chuyên Khoa Sâu Việt Nam</h4>
+            <p style="font-size:0.9rem; line-height:1.45; color:var(--text-main);">Bác sĩ Trưởng (CMO) từ Việt Nam >7 năm kinh nghiệm cấy ghép Implant & răng sứ, cấp phép HPC Lào. Chính sách chia sẻ doanh thu 15-25% và vesting cổ phần gắn kết.</p>
+          </div>
+          <div class="kpi-card" style="padding:12px; border-left:5px solid var(--navy);">
+            <h4 style="color:var(--navy); font-size:1.05rem; margin-bottom:3px;">04. Quản Trị Cloud PMS & Phòng Vệ Tỷ Giá</h4>
+            <p style="font-size:0.9rem; line-height:1.45; color:var(--text-main);">Hồ sơ bệnh án điện tử Cloud PMS theo thời gian thực. Bảng giá niêm yết neo chuẩn USD/THB, quy đổi Kip theo ngày, triệt tiêu hoàn toàn rủi ro tỷ giá.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: TỔNG MỨC ĐẦU TƯ (CAPEX) -->
+    <div class="slide" id="slide-4">
+      <div class="slide-header">
+        <div class="slide-title-wrap">
+          <h2>03. Dự Toán Tổng Mức Đầu Tư Ban Đầu (CAPEX)</h2>
+          <p>Quy mô đầu tư chuẩn xác: 125.798 USD (~3,26 Tỷ VNĐ) — Tiền nhà trả trước 1 năm ($6.000 USD)</p>
+        </div>
+        <div class="slide-meta">SLIDE 03</div>
+      </div>
+      <div class="grid-2" style="flex:1;">
+        <table class="fin-table">
+          <tr><th>Nhóm hạng mục đầu tư</th><th>Giá trị (USD)</th><th>Quy đổi (VNĐ)</th><th>Tỷ trọng</th></tr>
+          <tr><td>A. Pháp lý, đăng ký WFOE, GP Y tế</td><td>$8.000</td><td>207,1 Triệu</td><td>6,4%</td></tr>
+          <tr><td>B. Mặt bằng trả trước 1 năm ($500/th) & Cải tạo</td><td>$9.000</td><td>232,9 Triệu</td><td>7,2%</td></tr>
+          <tr><td>C. Máy móc thiết bị (Máy CT 3D $40k, 3 Ghế...)</td><td>$61.700</td><td>1.597,0 Triệu</td><td>49,0%</td></tr>
+          <tr><td>D. Nội thất sảnh đón, CNTT, Biển bảng OOH</td><td>$13.000</td><td>336,5 Triệu</td><td>10,3%</td></tr>
+          <tr><td>E. Lương & Đào tạo 1 tháng trước khai trương</td><td>$6.455</td><td>167,1 Triệu</td><td>5,1%</td></tr>
+          <tr><td>F. Dự phòng phí 10% & Đệm vốn lưu động</td><td>$27.643</td><td>715,5 Triệu</td><td>22,0%</td></tr>
+          <tr><td>TỔNG MỨC ĐẦU TƯ BAN ĐẦU (CAPEX)</td><td>$125.798</td><td>3.256,0 Triệu</td><td>100,0%</td></tr>
+        </table>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div class="kpi-card" style="border-left: 6px solid var(--primary); padding:14px;">
+            <div style="font-size:0.85rem; color:var(--text-muted); font-weight:700;">TIỀN NHÀ TRẢ THẲNG 1 NĂM</div>
+            <div style="font-size:1.4rem; font-weight:800; color:var(--primary); margin:2px 0;">$6.000 USD (155,3 Tr)</div>
+            <div style="font-size:0.88rem; color:var(--text-main);">Đã thanh toán trọn gói trong vốn ban đầu ($500/th x 12). Suốt Năm 1, phòng khám KHÔNG phải trả tiền thuê hàng tháng, dòng tiền tự do dôi dư đẩy nhanh hoàn vốn.</div>
+          </div>
+          <div class="kpi-card" style="border-left: 6px solid var(--navy); padding:14px;">
+            <div style="font-size:0.85rem; color:var(--text-muted); font-weight:700;">CƠ SỞ TÍNH KHẤU HAO TÀI SẢN</div>
+            <div style="font-size:1.4rem; font-weight:800; color:var(--navy); margin:2px 0;">$82.700 USD (2.140 Tr)</div>
+            <div style="font-size:0.88rem; color:var(--text-main);">Bao gồm máy móc, máy CT 3D, chi phí thi công phòng chì và pháp lý. Khấu hao đường thẳng 60 tháng: 35,67 triệu VNĐ/tháng.</div>
+          </div>
+          <div class="kpi-card" style="border-left: 6px solid var(--green); padding:14px;">
+            <div style="font-size:0.85rem; color:var(--text-muted); font-weight:700;">ĐỆM AN TOÀN VỐN LƯU ĐỘNG</div>
+            <div style="font-size:1.4rem; font-weight:800; color:var(--green); margin:2px 0;">$27.643 USD (715,5 Tr)</div>
+            <div style="font-size:0.88rem; color:var(--text-main);">Gồm vốn lưu động dự trữ $16.018 USD và dự phòng phí phát sinh 10% ($11.625 USD), bảo đảm an toàn vận hành tuyệt đối.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: ĐỊNH PHÍ VẬN HÀNH & CHI PHÍ TỰ NUÔI -->
+    <div class="slide" id="slide-5">
+      <div class="slide-header">
+        <div class="slide-title-wrap">
+          <h2>04. Định Mức Chi Phí Vận Hành (OPEX) & Chi Phí Tự Nuôi</h2>
+          <p>Định phí bộ máy 345,3 Triệu VNĐ/tháng ($13.342 USD) & Cơ chế chi phí biến đổi tự nuôi sau thu</p>
+        </div>
+        <div class="slide-meta">SLIDE 04</div>
+      </div>
+      <div class="grid-2" style="flex:1;">
+        <table class="fin-table">
+          <tr><th>Hạng mục chi phí cố định</th><th>Số lượng</th><th>Đơn giá gốc</th><th>Thành tiền / Tháng</th></tr>
+          <tr><td>2 Bác sĩ nha khoa (Việt Nam)</td><td>2 người</td><td>$2.000 USD</td><td>103,5 Tr / tháng</td></tr>
+          <tr><td>3 Phụ tá nha khoa, tiệt trùng</td><td>3 người</td><td>8M LAK/người</td><td>27,7 Tr / tháng</td></tr>
+          <tr><td>Lễ tân, CSKH & Chuyên viên Sale</td><td>2 người</td><td>8M LAK/người</td><td>18,5 Tr / tháng</td></tr>
+          <tr><td>Quản lý phòng khám (Store Mgr)</td><td>1 người</td><td>15M LAK/tháng</td><td>17,3 Tr / tháng</td></tr>
+          <tr><td>Thuê mặt bằng ($500) + Điện nước</td><td>100m²</td><td>$900 USD</td><td>23,3 Tr / tháng</td></tr>
+          <tr><td>Ngân sách Marketing liên tục</td><td>Thường xuyên</td><td>$5.000 USD</td><td>129,4 Tr / tháng</td></tr>
+          <tr><td>TỔNG CHI PHÍ CỐ ĐỊNH / THÁNG</td><td>8 nhân sự</td><td>$13.342 USD</td><td>345,3 Tr / tháng</td></tr>
+        </table>
+        <div class="kpi-card" style="border: 2px solid var(--gold); padding:20px;">
+          <h4 style="color:var(--gold); font-size:1.15rem; margin-bottom:10px;">💡 NGUYÊN TẮC QUẢN TRỊ DÒNG TIỀN THỰC CHIẾN</h4>
+          <p style="font-size:0.92rem; line-height:1.6; color:var(--text-main);">
+            • <strong>Chi phí biến đổi tự nuôi sau thu:</strong> Tiền vật tư tiêu hao, tiền xưởng Labo răng sứ, tiền trụ Implant và hoa hồng bác sĩ là các khoản phát sinh SAU KHI ĐÃ CÓ DOANH THU.<br><br>
+            • <strong>Bệnh nhân đặt cọc 50% - 70%:</strong> Khách hàng làm kỹ thuật cao bắt buộc cọc tiền trước. Phòng khám dùng chính tiền mặt bệnh nhân đặt cọc để thanh toán Labo và trích thưởng bác sĩ cuối tháng.<br><br>
+            • <strong>Giải phóng vốn chôn chết:</strong> Tuyệt đối KHÔNG tính gộp chi phí biến đổi vào vốn góp ban đầu. Cổ đông chỉ góp đủ vốn thiết bị và đệm định phí.<br><br>
+            • <strong>Tỷ trọng chi phí siêu an toàn:</strong> Tại kịch bản mục tiêu 140 tr/ngày, tổng chi phí chỉ chiếm 29,5% doanh thu!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 6: MA TRẬN 3 KỊCH BẢN DOANH THU -->
+    <div class="slide" id="slide-6">
+      <div class="slide-header">
+        <div class="slide-title-wrap">
+          <h2>05. Bảng So Sánh 3 Kịch Bản Doanh Thu (Min – Kỳ Vọng – Max)</h2>
+          <p>Chỉ tiêu tháng hoạt động ổn định & Kết quả tài chính thực tế Năm 1</p>
+        </div>
+        <div class="slide-meta">SLIDE 05</div>
+      </div>
+      <table class="fin-table" style="font-size:0.95rem;">
+        <tr>
+          <th>Chỉ tiêu tài chính & vận hành</th>
+          <th style="color:var(--primary);">KỊCH BẢN MIN</th>
+          <th style="color:var(--gold); background:#fef3c7;">KỲ VỌNG (CHUẨN) ★</th>
+          <th style="color:var(--green);">KỊCH BẢN MAX</th>
+          <th>Ghi chú & Cơ sở</th>
+        </tr>
+        <tr><td><strong>Doanh thu mục tiêu 1 NGÀY</strong></td><td>80,0 Triệu / ngày</td><td style="color:var(--gold); font-weight:800; background:#fffbeb;">140,0 Triệu / ngày</td><td>200,0 Triệu / ngày</td><td>Mục tiêu theo ngày</td></tr>
+        <tr><td><strong>Doanh thu 1 THÁNG (26 ngày)</strong></td><td>2.080,0 Triệu VNĐ</td><td style="color:var(--gold); font-weight:800; background:#fffbeb;">3.640,0 Triệu VNĐ</td><td>5.200,0 Triệu VNĐ</td><td>26 ngày làm việc/tháng</td></tr>
+        <tr><td>Lượt khách khám dự kiến / ngày</td><td>~12,9 ca/ngày</td><td style="background:#fffbeb;">~22,6 ca/ngày</td><td>~32,3 ca/ngày</td><td>Bình quân 6,2 tr/ca</td></tr>
+        <tr><td>Chi phí biến đổi (20% COGS)</td><td>416,0 Triệu VNĐ</td><td style="background:#fffbeb;">728,0 Triệu VNĐ</td><td>1.040,0 Triệu VNĐ</td><td>Vật tư tiêu hao, xưởng Labo</td></tr>
+        <tr><td>Chi phí cố định bộ máy / tháng</td><td>345,3 Triệu VNĐ</td><td style="background:#fffbeb;">345,3 Triệu VNĐ</td><td>345,3 Triệu VNĐ</td><td>$13.342 USD (Nhà $500/th)</td></tr>
+        <tr><td>Tổng chi phí hoạt động / tháng</td><td>761,3 Triệu VNĐ</td><td style="background:#fffbeb;">1.073,3 Triệu VNĐ</td><td>1.385,3 Triệu VNĐ</td><td>Chỉ chiếm 26,6% - 36,6% DT</td></tr>
+        <tr><td><strong>Lợi nhuận EBITDA / tháng</strong></td><td style="color:var(--primary); font-weight:800;">+1.318,7 Triệu VNĐ</td><td style="color:var(--gold); font-weight:900; background:#fffbeb;">+2.566,7 Triệu VNĐ</td><td style="color:var(--green); font-weight:800;">+3.814,7 Triệu VNĐ</td><td>Dòng tiền tạo ra hàng tháng</td></tr>
+        <tr><td><strong>Biên lợi nhuận EBITDA (%)</strong></td><td>63,4%</td><td style="color:var(--gold); font-weight:800; background:#fffbeb;">70,5%</td><td>73,4%</td><td>Tỷ suất sinh lời vượt trội</td></tr>
+        <tr><td><strong>THỜI GIAN HOÀN VỐN (PAYBACK)</strong></td><td>6 THÁNG</td><td style="color:var(--gold); font-weight:900; font-size:1.1rem; background:#fffbeb;">4 THÁNG</td><td style="color:var(--green); font-weight:800;">3 THÁNG</td><td>HOÀN VỐN NGAY NĂM 1!</td></tr>
+      </table>
+    </div>
+
+    <!-- SLIDE 7: ĐIỂM HÒA VỐN -->
+    <div class="slide" id="slide-7">
+      <div class="slide-header">
+        <div class="slide-title-wrap">
+          <h2>06. Điểm Hòa Vốn Vận Hành & Thời Gian Hoàn Vốn Thần Tốc</h2>
+          <p>Kiểm định an toàn sống còn: Hòa vốn chỉ với 2,68 ca/ngày & Thu hồi vốn sạch trong 3 - 6 tháng</p>
+        </div>
+        <div class="slide-meta">SLIDE 06</div>
+      </div>
+      <div class="grid-2" style="flex:1;">
+        <div class="kpi-card" style="border-left: 6px solid var(--navy);">
+          <span class="kpi-label">DOANH THU HÒA VỐN 1 NGÀY (26 NGÀY)</span>
+          <span class="kpi-value">16,60 Triệu / ngày</span>
+          <span class="kpi-sub" style="font-size:0.95rem; color:var(--text-main); margin-top:6px;">Chỉ cần <strong>~2,68 lượt khám/ngày</strong> (doanh thu bình quân $239 USD/ca) là phòng khám đã đủ bù đắp 100% định phí của cả 8 nhân sự, tiền nhà và marketing!</span>
+        </div>
+        <div class="kpi-card" style="border-left: 6px solid var(--primary);">
+          <span class="kpi-label">DOANH THU HÒA VỐN 1 THÁNG (EBITDA = 0)</span>
+          <span class="kpi-value primary">431,67 Triệu / tháng</span>
+          <span class="kpi-sub" style="font-size:0.95rem; color:var(--text-main); margin-top:6px;">= 345,3 tr định phí / (1 - 20% biến phí). Đây là ngưỡng doanh thu sàn sống còn hàng tháng mà dự án vượt qua rất dễ dàng ngay từ tháng hoạt động đầu tiên.</span>
+        </div>
+        <div class="kpi-card" style="border-left: 6px solid var(--green);">
+          <span class="kpi-label">BIÊN AN TOÀN DOANH THU (KỲ VỌNG)</span>
+          <span class="kpi-value green">88,1% Margin of Safety</span>
+          <span class="kpi-sub" style="font-size:0.95rem; color:var(--text-main); margin-top:6px;">Doanh thu thực tế có thể sụt giảm tới <strong>88,1%</strong> so với mục tiêu 140 tr/ngày mà phòng khám vẫn không bị âm dòng tiền hoạt động!</span>
+        </div>
+        <div class="kpi-card" style="border-left: 6px solid var(--gold);">
+          <span class="kpi-label">THỜI GIAN THU HỒI 100% VỐN ĐẦU TƯ</span>
+          <span class="kpi-value gold">3 – 6 THÁNG</span>
+          <span class="kpi-sub" style="font-size:0.95rem; color:var(--text-main); margin-top:6px;">Kịch bản Min: Hoàn sau 6 tháng. Kỳ vọng: Hoàn sau 4 tháng. Max: Hoàn sau 3 tháng. Toàn bộ vốn đầu tư ban đầu được thu hồi sạch ngay trong Năm 1!</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 8: CƠ CẤU CỔ PHẦN & QUẢN TRỊ -->
+    <div class="slide" id="slide-8">
+      <div class="slide-header">
+        <div class="slide-title-wrap">
+          <h2>07. Cơ Cấu Cổ Phần & Mô Hình Hợp Tác Chuẩn Ngành Y Tế</h2>
+          <p>Phân bổ sở hữu minh bạch giữa Vốn tài chính - Quản trị vận hành - Chuyên môn lâm sàng</p>
+        </div>
+        <div class="slide-meta">SLIDE 07</div>
+      </div>
+      <div class="grid-2" style="flex:1;">
+        <table class="fin-table">
+          <tr><th>Nhóm Cổ đông</th><th>Tỷ lệ</th><th>Vốn USD</th><th>Vốn VNĐ</th><th>Vai trò cốt lõi</th></tr>
+          <tr><td>Nhóm Cổ đông Tài chính</td><td>65,0%</td><td>$81.769</td><td>~2.116 Tr</td><td>Góp 100% tiền mặt, kiểm soát tài chính</td></tr>
+          <tr><td>Nhóm Sáng lập & Vận hành</td><td>20,0%</td><td>$25.160</td><td>~651 Tr</td><td>Vốn tiền mặt + công sức khảo sát, pháp lý</td></tr>
+          <tr><td>Bác sĩ Trưởng Chuyên môn (ESOP)</td><td>15,0%</td><td>$18.870</td><td>~488 Tr</td><td>Cổ phần Vesting 3 năm, phụ trách lâm sàng</td></tr>
+          <tr><td>TỔNG VỐN ĐIỀU LỆ THỰC GÓP</td><td>100,0%</td><td>$125.798</td><td>~3.256 Tr</td><td>Quy mô 3 ghế nha & Máy CT ConeBeam 3D</td></tr>
+        </table>
+        <div class="kpi-card" style="border: 2px solid var(--primary); padding:18px;">
+          <h4 style="color:var(--primary); font-size:1.15rem; margin-bottom:10px;">🏛 NGUYÊN TẮC QUẢN TRỊ MINH BẠCH</h4>
+          <p style="font-size:0.92rem; line-height:1.6; color:var(--text-main);">
+            • <strong>Phê duyệt kép (Dual Authorization):</strong> Mọi khoản chi >1.000 USD áp dụng chữ ký kép giữa Giám đốc Vận hành và Đại diện Cổ đông Tài chính.<br><br>
+            • <strong>Quyền phủ quyết (>75% biểu quyết):</strong> Quyết định trọng yếu (tăng giảm vốn, vay nợ, sáp nhập cơ sở, đổi Bác sĩ Trưởng) bắt buộc đạt ≥75% đồng thuận.<br><br>
+            • <strong>Vesting cổ phần 3 năm:</strong> 15% cổ phần Bác sĩ Trưởng giải ngân lũy tiến 5%/năm trong 3 năm cam kết, triệt tiêu rủi ro 'bác sĩ nghỉ việc kéo theo bệnh nhân'.<br><br>
+            • <strong>Khóa chuyển nhượng (Lock-up):</strong> Cam kết không chuyển nhượng cổ phần ra ngoài trong 24 tháng đầu.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 9: KẾ HOẠCH GIẢI NGÂN 3 ĐỢT -->
+    <div class="slide" id="slide-9">
+      <div class="slide-header">
+        <div class="slide-title-wrap">
+          <h2>08. Kế Hoạch Giải Ngân Vốn 3 Đợt Theo Cột Mốc Thực Tế</h2>
+          <p>Tiền rót đúng tiến độ chuẩn bị gọn trong 30 ngày — Tuyệt đối không chôn vốn chết lãng phí</p>
+        </div>
+        <div class="slide-meta">SLIDE 08</div>
+      </div>
+      <div class="grid-3" style="flex:1;">
+        <div class="kpi-card" style="border-top: 5px solid var(--navy);">
+          <span style="font-size:0.85rem; color:var(--text-muted); font-weight:700;">ĐỢT 1: NGÀY 01 – 07</span>
+          <h3 style="color:var(--navy); font-size:1.1rem; margin:4px 0 8px 0;">KHỞI ĐỘNG, TIỀN NHÀ 1 NĂM & ĐẶT MÁY</h3>
+          <div style="font-size:1.25rem; font-weight:800; color:var(--navy); margin-bottom:12px;">25,0% | $31.450 USD (~814 Tr)</div>
+          <p style="font-size:0.88rem; line-height:1.5; color:var(--text-main);">
+            • Ký hợp đồng thuê mặt bằng & thanh toán thẳng 1 năm tiền nhà ($6.000 USD ~ 155,3 tr VNĐ).<br><br>
+            • Nộp đăng ký doanh nghiệp ban đầu tại MPI Champasak.<br><br>
+            • Đặt cọc 50% tiền thiết bị y tế (3 ghế nha Ajax, Máy CT ConeBeam 3D) để xuất xưởng chuyển về cửa khẩu.
+          </p>
+        </div>
+        <div class="kpi-card" style="border-top: 5px solid var(--primary);">
+          <span style="font-size:0.85rem; color:var(--text-muted); font-weight:700;">ĐỢT 2: NGÀY 08 – 20</span>
+          <h3 style="color:var(--primary); font-size:1.1rem; margin:4px 0 8px 0;">THI CÔNG CHỈNH TRANG & THÔNG QUAN</h3>
+          <div style="font-size:1.25rem; font-weight:800; color:var(--primary); margin-bottom:12px;">50,0% | $62.899 USD (~1.628 Tr)</div>
+          <p style="font-size:0.88rem; line-height:1.5; color:var(--text-main);">
+            • Thanh toán thầu thi công hạ tầng ngầm (ống nước, khí nén, dây điện) và ốp vách chì 2mm (12-15 ngày).<br><br>
+            • Dán sàn vinyl kháng khuẩn, hoàn thiện sơn bả sảnh đón khách.<br><br>
+            • Thanh toán đối ứng thiết bị y tế khi xe hàng thông quan chuyển về thẳng Pakse.
+          </p>
+        </div>
+        <div class="kpi-card" style="border-top: 5px solid var(--green);">
+          <span style="font-size:0.85rem; color:var(--text-muted); font-weight:700;">ĐỢT 3: NGÀY 21 – 30</span>
+          <h3 style="color:var(--green); font-size:1.1rem; margin:4px 0 8px 0;">LẮP ĐẶT, CHẠY THỬ & MỞ CỬA T11</h3>
+          <div style="font-size:1.25rem; font-weight:800; color:var(--green); margin-bottom:12px;">25,0% | $31.450 USD (~814 Tr)</div>
+          <p style="font-size:0.88rem; line-height:1.5; color:var(--text-main);">
+            • Kỹ sư lắp đặt căn chỉnh 3 ghế nha khoa & máy chụp CT 3D (3 – 5 ngày).<br><br>
+            • Lắp đặt biển quảng cáo OOH, quầy lễ tân, mạng LAN và Cloud PMS.<br><br>
+            • Rót quỹ tiền mặt vốn lưu động đệm an toàn, sẵn sàng mở cửa đón bệnh nhân ngay trong Tháng 11.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 10: LỘ TRÌNH THẦN TỐC THÁNG 11 -->
+    <div class="slide" id="slide-10">
+      <div class="slide-header">
+        <div class="slide-title-wrap">
+          <h2>09. Lộ Trình Thần Tốc 30 – 35 Ngày Khai Trương Tháng 11</h2>
+          <p>Mặt bằng thuê sẵn, chỉ chỉnh trang nội thất nhẹ — Thủ tục cơ bản làm nhanh, giấy phép hoàn tất song song</p>
+        </div>
+        <div class="slide-meta">SLIDE 09</div>
+      </div>
+      <div class="grid-4" style="flex:1;">
+        <div class="kpi-card" style="border-top:5px solid var(--navy); padding:14px;">
+          <span style="color:var(--navy); font-weight:800; font-size:0.9rem;">TUẦN 1: NGÀY 01 – 07</span>
+          <div style="font-weight:800; font-size:1.02rem; margin:6px 0; color:var(--text-main);">Khởi Động & Đặt Máy</div>
+          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">Ký thầu hạ tầng ngầm, cọc thiết bị y tế; nộp đăng ký MPI và ký bảo trợ chuyên môn Bác sĩ Lào.</p>
+        </div>
+        <div class="kpi-card" style="border-top:5px solid var(--primary); padding:14px;">
+          <span style="color:var(--primary); font-weight:800; font-size:0.9rem;">TUẦN 2 & 3: NGÀY 08 – 22</span>
+          <div style="font-weight:800; font-size:1.02rem; margin:6px 0; color:var(--text-main);">Chỉnh Trang 15 Ngày</div>
+          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">Thi công liên tục 12-15 ngày hoàn thiện hạ tầng ngầm, vách chì, sàn vinyl; Thiết bị thông quan về Pakse.</p>
+        </div>
+        <div class="kpi-card" style="border-top:5px solid var(--gold); padding:14px;">
+          <span style="color:var(--gold); font-weight:800; font-size:0.9rem;">TUẦN 4: NGÀY 23 – 28</span>
+          <div style="font-weight:800; font-size:1.02rem; margin:6px 0; color:var(--text-main);">Lắp Đặt 3 – 5 Ngày</div>
+          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">Kỹ sư lắp 3 ghế nha + máy CT 3D; treo biển OOH, kết nối Cloud PMS, vô trùng dụng cụ y tế.</p>
+        </div>
+        <div class="kpi-card" style="border-top:5px solid var(--green); padding:14px; background:#fefce8;">
+          <span style="color:var(--green); font-weight:800; font-size:0.9rem;">TUẦN 5: NGÀY 29 – 35</span>
+          <div style="font-weight:800; font-size:1.02rem; margin:6px 0; color:var(--text-main);">GRAND OPENING (T11)</div>
+          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">Chạy thử 2 ngày & Khai trương chính thức đón khách! Giấy phép chuyên môn tiếp tục hoàn thiện song song.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 11: THU HỒI VỐN ƯU TIÊN & CỔ TỨC -->
+    <div class="slide" id="slide-11">
+      <div class="slide-header">
+        <div class="slide-title-wrap">
+          <h2>10. Cơ Chế Thu Hồi Vốn Ưu Tiên & Phân Phối Cổ Tức</h2>
+          <p>Cam kết bảo vệ quyền lợi tối đa cho nhà đầu tư (Preferred Return Waterfall)</p>
+        </div>
+        <div class="slide-meta">SLIDE 10</div>
+      </div>
+      <div class="grid-2" style="flex:1;">
+        <div class="kpi-card" style="border: 2px solid var(--gold); padding:20px;">
+          <span style="font-size:0.88rem; color:var(--gold); font-weight:800; text-transform:uppercase;">Giai Đoạn 1: Tháng 1 – 6</span>
+          <h3 style="color:var(--navy); font-size:1.25rem; margin:6px 0 10px 0;">80% DÒNG TIỀN TỰ DO HOÀN VỐN GỐC</h3>
+          <p style="font-size:0.92rem; line-height:1.6; color:var(--text-main);">
+            • Trích xuất 80% Dòng tiền tự do (FCF) hàng tháng chuyển khoản trực tiếp hoàn vốn gốc cho Cổ đông.<br><br>
+            • <strong>Tiến độ thần tốc:</strong> Kịch bản Min hoàn sau 6 tháng; Kỳ vọng hoàn sau 4 tháng; Max hoàn sau 3 tháng.<br><br>
+            • 20% dòng tiền còn lại giữ làm quỹ đệm an toàn tại cơ sở.<br><br>
+            • Toàn bộ rủi ro chôn vốn của Nhà đầu tư được xóa sạch 100% ngay trong Năm 1!
+          </p>
+        </div>
+        <div class="kpi-card" style="border: 2px solid var(--green); padding:20px;">
+          <span style="font-size:0.88rem; color:var(--green); font-weight:800; text-transform:uppercase;">Giai Đoạn 2: Sau Khi Hoàn Vốn 100%</span>
+          <h3 style="color:var(--navy); font-size:1.25rem; margin:6px 0 10px 0;">PHÂN PHỐI LỢI NHUẬN RÒNG MINH BẠCH</h3>
+          <p style="font-size:0.92rem; line-height:1.6; color:var(--text-main);">
+            • <strong>60% Lợi nhuận sau thuế:</strong> Chi trả Cổ tức tiền mặt định kỳ hàng quý theo đúng tỷ lệ sở hữu.<br><br>
+            • <strong>30% Lợi nhuận sau thuế:</strong> Quỹ Phát triển & Tái đầu tư mở rộng (chuẩn bị mở cơ sở Vientiane hoặc thêm 2 ghế nha).<br><br>
+            • <strong>10% Lợi nhuận sau thuế:</strong> Quỹ Thưởng Hiệu quả & Phúc lợi nhân sự cho đội ngũ Y Bác sĩ.<br><br>
+            • Duy trì 'cỗ máy in tiền mặt' đều đặn hàng năm với ROI vượt bậc.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 12: ĐỀ XUẤT ĐẦU TƯ (CALL TO ACTION) -->
+    <div class="slide" id="slide-12">
+      <div class="slide-header">
+        <div class="slide-title-wrap">
+          <h2>11. Đề Xuất Hợp Tác Đầu Tư & Kế Hoạch Hành Động Ngay</h2>
+          <p>Cơ hội độc quyền công nghệ nha khoa tại Nam Lào — Sẵn sàng khai trương Tháng 11</p>
+        </div>
+        <div class="slide-meta">SLIDE 11</div>
+      </div>
+      <div style="display:flex; gap:20px; flex:1;">
+        <div style="flex:0.85;">
+          <img src="Hinh_Anh_Minh_Hoa/03_Hoi_Nghi_Nha_Dau_Tu.jpg" onerror="this.src='pakse_deal_meeting_1791805645810.jpg'" alt="Hội nghị thẩm định đầu tư" style="width:100%; height:100%; object-fit:cover; border-radius:12px; border:2px solid var(--border);">
+        </div>
+        <div class="kpi-card" style="flex:1.15; border: 2px solid var(--gold); padding:20px; justify-content:space-between;">
+          <div>
+            <h3 style="color:var(--navy); font-size:1.25rem; margin-bottom:12px;">🎯 TỔNG KẾT GIÁ TRỊ VÀNG CỦA DỰ ÁN</h3>
+            <p style="font-size:0.92rem; line-height:1.6; color:var(--text-main);">
+              ✔ <strong>Thị trường độc quyền công nghệ:</strong> Sở hữu máy CT 3D đầu tiên tại trung tâm Nam Lào.<br>
+              ✔ <strong>Định phí mặt bằng tối ưu:</strong> Tiền nhà chỉ $500/tháng, thanh toán thẳng 1 năm ($6.000 USD).<br>
+              ✔ <strong>Vốn đầu tư ban đầu an toàn:</strong> Tổng CAPEX $125.798 USD (~3,26 tỷ VNĐ), gồm đủ đệm lưu động.<br>
+              ✔ <strong>Hoàn vốn siêu tốc:</strong> Hòa vốn chỉ cần 16,6 tr/ngày (~2,68 ca); thu hồi vốn trong 3 đến 6 THÁNG.<br>
+              ✔ <strong>Khai trương Tháng 11:</strong> Thi công 15 ngày, lắp máy 3-5 ngày, mở cửa đón khách kịp sóng cuối năm.
+            </p>
+          </div>
+          <div style="background:#eff6ff; border-left:4px solid var(--primary); padding:12px; border-radius:8px; margin-top:10px;">
+            <p style="font-size:0.92rem; font-weight:700; color:var(--primary); line-height:1.5;">
+              🚀 HÀNH ĐỘNG TIẾP THEO: Ký kết Thỏa thuận Cổ đông & Kích hoạt Đợt 1 ($31.450 USD ~ 814 triệu VNĐ) để trả thẳng 1 năm tiền nhà, nộp hồ sơ pháp lý cơ bản và đặt cọc 50% thiết bị ngay trong tuần này!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="thumbnails" id="thumbContainer"></div>
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 12;
+
+    const titles = [
+      "Bìa Dự Án", "01. Bối Cảnh Thị Trường", "02. 4 Hào Kinh Tế", "03. Dự Toán CAPEX",
+      "04. Định Phí OPEX", "05. 3 Kịch Bản Doanh Thu", "06. Điểm Hòa Vốn", "07. Cơ Cấu Cổ Phần",
+      "08. Giải Ngân 3 Đợt", "09. Lộ Trình Tháng 11", "10. Hoàn Vốn & Cổ Tức", "11. Đề Xuất Đầu Tư"
+    ];
+
+    function initThumbs() {
+      const cont = document.getElementById("thumbContainer");
+      cont.innerHTML = "";
+      for (let i = 1; i <= totalSlides; i++) {
+        const btn = document.createElement("button");
+        btn.className = "thumb-btn" + (i === 1 ? " active" : "");
+        btn.id = "thumb-" + i;
+        btn.innerText = (i < 10 ? "0" + i : i) + ". " + titles[i - 1];
+        btn.onclick = () => goToSlide(i);
+        cont.appendChild(btn);
+      }
+    }
+
+    function showSlide(n) {
+      document.querySelectorAll(".slide").forEach(s => s.classList.remove("active"));
+      document.querySelectorAll(".thumb-btn").forEach(b => b.classList.remove("active"));
+
+      const s = document.getElementById("slide-" + n);
+      if (s) s.classList.add("active");
+
+      const t = document.getElementById("thumb-" + n);
+      if (t) t.classList.add("active");
+
+      document.getElementById("slideCounter").innerText = "Slide " + n + " / " + totalSlides;
+      currentSlide = n;
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides) showSlide(currentSlide + 1);
+      else showSlide(1);
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) showSlide(currentSlide - 1);
+      else showSlide(totalSlides);
+    }
+
+    function goToSlide(n) {
+      showSlide(n);
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight" || e.key === " ") nextSlide();
+      if (e.key === "ArrowLeft") prevSlide();
+    });
+
+    initThumbs();
+  </script>
+</body>
+</html>

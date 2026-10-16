@@ -1,0 +1,60 @@
+graph TD
+    ROOT["KINH TẾ HỌC ỨNG DỤNG"]
+
+    ROOT --> B1["Ra quyết định"]
+    B1 --> B1a["Chi phí cơ hội"]
+    B1 --> B1b["Chi phí chìm"]
+    B1 --> B1c["Tư duy biên"]
+    B1 --> B1d["Lợi ích biên giảm dần"]
+
+    ROOT --> B2["Thị trường & Giá"]
+    B2 --> B2a["Cung - Cầu"]
+    B2 --> B2b["Độ co giãn"]
+    B2 --> B2c["Thặng dư tiêu dùng/SX"]
+
+    ROOT --> B3["Thất bại thị trường"]
+    B3 --> B3a["Ngoại tác"]
+    B3 --> B3b["Thông tin bất cân xứng"]
+    B3 --> B3c["Hàng hóa công"]
+    B3 --> B3d["Sức mạnh độc quyền"]
+
+    ROOT --> B4["Thương mại & Vĩ mô quốc tế"]
+    B4 --> B4a["Lợi thế so sánh"]
+    B4 --> B4b["Cán cân thanh toán"]
+    B4 --> B4c["Tỷ giá hối đoái"]
+    B4 --> B4d["FDI & chuyển giao công nghệ"]
+
+    ROOT --> B5["Tương tác chiến lược"]
+    B5 --> B5a["Cân bằng Nash"]
+    B5 --> B5b["Thế lưỡng nan tù nhân"]
+    B5 --> B5c["Phát tín hiệu"]
+
+    ROOT --> B6["Kinh tế học hành vi"]
+    B6 --> B6a["Ác cảm mất mát"]
+    B6 --> B6b["Thiên kiến hiện tại"]
+    B6 --> B6c["Hiệu ứng mỏ neo"]
+    B6 --> B6d["Hiệu ứng sở hữu"]
+
+    ROOT --> B7["Vĩ mô tổng quát"]
+    B7 --> B7a["Lạm phát & kỳ vọng"]
+    B7 --> B7b["Lãi suất"]
+    B7 --> B7c["Chu kỳ kinh tế"]
+    B7 --> B7d["Chính sách tiền tệ/tài khóa"]
+
+    classDef root fill:#1e293b,stroke:#0f172a,color:#ffffff,font-weight:bold
+    classDef micro fill:#e0f2fe,stroke:#0369a1,color:#0c4a6e
+    classDef market fill:#fef3c7,stroke:#b45309,color:#78350f
+    classDef failure fill:#fee2e2,stroke:#b91c1c,color:#7f1d1d
+    classDef trade fill:#dcfce7,stroke:#15803d,color:#14532d
+    classDef strategy fill:#ede9fe,stroke:#6d28d9,color:#4c1d95
+    classDef behavioral fill:#fce7f3,stroke:#be185d,color:#831843
+    classDef macro fill:#e5e7eb,stroke:#374151,color:#111827
+
+    class ROOT root
+    class B1,B1a,B1b,B1c,B1d micro
+    class B2,B2a,B2b,B2c market
+    class B3,B3a,B3b,B3c,B3d failure
+    class B4,B4a,B4b,B4c,B4d trade
+    class B5,B5a,B5b,B5c strategy
+    class B6,B6a,B6b,B6c,B6d behavioral
+    class B7,B7a,B7b,B7c,B7d macro

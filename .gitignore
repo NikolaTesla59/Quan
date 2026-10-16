@@ -1,0 +1,40 @@
+# Security & Secrets
+*.env
+*.env.*
+!.env.example
+*.key
+*.pem
+*.cert
+credentials.json
+token.json
+secret*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Office Lock & Temp Files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+*.tmp
+*.bak
+
+# System & OS Files
+Thumbs.db
+Desktop.ini
+.DS_Store

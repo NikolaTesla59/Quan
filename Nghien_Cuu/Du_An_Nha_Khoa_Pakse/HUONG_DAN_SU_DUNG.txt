@@ -1,0 +1,59 @@
+========================================================================================
+       HỒ SƠ TRỌN BỘ DỰ ÁN: PHÒNG KHÁM NHA KHOA QUỐC TẾ PAKSE (LÀO)
+               (PHIÊN BẢN HOÀN CHỈNH MỚI NHẤT — THÁNG 10/2026)
+========================================================================================
+
+ĐƠN VỊ THẨM ĐỊNH & THIẾT KẾ: BỘ PHẬN TÀI CHÍNH CHIẾN LƯỢC DỰ ÁN
+ĐỊA ĐIỂM: MẶT TIỀN QUỐC LỘ 13 KHU VỰC CHỢ ĐÀO HƯƠNG, TP. PAKSE, TỈNH CHAMPASAK, LÀO
+QUY MÔ: 03 GHẾ NHA KHOA + 01 HỆ THỐNG CT CONEBEAM PANORAMA 3D TOÀN CẢNH
+LỘ TRÌNH KHAI TRƯƠNG: THẦN TỐC 30 NGÀY — MỞ CỬA CHÍNH THỨC TRONG THÁNG 11/2026
+
+----------------------------------------------------------------------------------------
+DANH MỤC CÁC TÀI LIỆU CỐT LÕI TRONG BỘ HỒ SƠ:
+----------------------------------------------------------------------------------------
+
+1. 01_Slide_Thuyet_Trinh_Nha_Khoa_Pakse_TO_RO_DE_NHIN.pptx
+   -> Bản trình chiếu PowerPoint 12 slide tỷ lệ chuẩn 16:9 hiện đại:
+      - Thiết kế tối ưu theo nguyên tắc chữ TO, RÕ, ĐẬM, tương phản cao, cực kỳ dễ đọc.
+      - Tích hợp đầy đủ các hình ảnh phối cảnh thực tế 8K (Phòng khám, Máy CT 3D, Hội nghị).
+      - Trình bày toàn diện: Bối cảnh khoảng trống thị trường, 4 hào kinh tế, CAPEX $125.8k USD,
+        bản chất chi phí biến đổi tự nuôi sau thu, so sánh 3 kịch bản ngày (80M / 140M / 200M),
+        điểm hòa vốn 16,6 tr/ngày, hoàn vốn 3-6 tháng, cơ cấu cổ phần 65-20-15 và lộ trình Tháng 11.
+
+2. 02_Mo_Hinh_Phong_Kham_Pakse_Hoan_Chinh.xlsx (Bản Hoàn Chỉnh — 11 Sheet Master)
+   -> Bảng tính mô hình tài chính 11 Sheet chuẩn mực:
+      - Cập nhật đúng tiền thuê mặt bằng $500 USD/tháng, thanh toán thẳng 1 năm ($6.000 USD).
+      - Chi phí cố định hàng tháng: $13.342,39 USD/tháng (~345,33 triệu VNĐ/tháng).
+      - Doanh thu theo ngày: Min 80 tr/ngày, Kỳ vọng 140 tr/ngày, Max 200 tr/ngày (26 ngày/tháng).
+      - Tổng vốn đầu tư ban đầu (CAPEX): $125.798,26 USD (~3.255,97 triệu VNĐ ~ 3,26 tỷ VNĐ).
+      - Bảng phân tích hoàn vốn: Hoàn vốn sau 6 tháng (Min), 4 tháng (Kỳ vọng), 3 tháng (Max).
+
+   02b_Mo_Hinh_Phong_Kham_Pakse_Ban_Lite.xlsx (Bản Lite Rút Gọn — 4 Sheet Cốt Lõi)
+   -> Bảng tính mô hình tài chính tinh gọn 4 Sheet:
+      - Gồm 4 sheet: Tong_hop_3_Kich_ban, Gia_dinh_Dau_vao, Dong_tien_Chi_tiet, CAPEX_Dau_tu.
+      - Phục vụ báo cáo nhanh, dễ nhìn, dễ trình bày cho các cuộc họp ngắn gọn với nhà đầu tư.
+
+3. 03_Ke_Hoach_Dau_Tu_Phong_Kham_Pakse_Hoan_Chinh.docx
+   -> Bản tài liệu kế hoạch kinh doanh & hồ sơ đầu tư định dạng Microsoft Word 7 phần chuyên sâu:
+      - Cơ chế góp vốn cổ phần chuẩn ngành y tế: 65% Cổ đông Tài chính ($81.769 USD), 20% Nhóm Vận hành
+        ($25.160 USD), 15% Bác sĩ Trưởng Chuyên môn áp dụng cơ chế Vesting 3 năm ($18.870 USD).
+      - Kế hoạch gọi vốn 3 đợt theo cột mốc thực tế chuẩn bị trong 30 ngày.
+      - Nguyên tắc chi phí phát sinh sau thu (tự nuôi bằng dòng tiền bệnh nhân cọc 50-70% tại quầy).
+      - Lộ trình thần tốc thi công 15 ngày, lắp máy 3-5 ngày, khai trương ngay trong Tháng 11.
+
+4. 04_Ban_Tom_Tat_Executive_Summary.md
+   -> Bản tóm tắt chỉ số cốt lõi 1 trang (One-Page Dashboard) định dạng Markdown để tra cứu nhanh.
+
+5. 05_Xem_Truoc_Slide_Tuong_Tac.html
+   -> File web tương tác lật xem từng slide mẫu trực tiếp trên Google Chrome / Microsoft Edge
+      mà không cần mở phần mềm PowerPoint, tích hợp phím mũi tên và bộ chọn slide tiện lợi.
+
+6. Hinh_Anh_Minh_Hoa/
+   -> Thư mục chứa 3 hình ảnh phối cảnh render chất lượng cao phục vụ truyền thông và báo cáo:
+      + 01_Phong_Kham_Nha_Khoa_Pakse.jpg (Không gian điều trị 3 ghế nha khoa hiện đại)
+      + 02_May_Chup_CT_Xquang_3D.jpg (Hệ thống máy chụp CT ConeBeam Panorama 3D Vatech)
+      + 03_Hoi_Nghi_Nha_Dau_Tu.jpg (Phòng họp thẩm định và ký kết thỏa thuận đầu tư)
+
+----------------------------------------------------------------------------------------
+TẤT CẢ CÁC TỆP ĐÃ ĐƯỢC ĐỒNG BỘ DỮ LIỆU CHUẨN XÁC 100% VÀ SẴN SÀNG ĐỂ SỬ DỤNG!
+========================================================================================
