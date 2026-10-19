@@ -17,36 +17,79 @@ print("KHỞI CHẠY HỆ THỐNG ĐỊNH CHẾ CAO CẤP (INSTITUTIONAL GRADE):
 print("Bổ sung: Giá mục tiêu, Upside %, Forward P/E, EV/EBITDA, Room Ngoại")
 print("==================================================================")
 
-# 1. Thu thập dữ liệu BCTC soát xét từ Vietstock
+# 1. Nạp danh mục 626 cổ phiếu niêm yết chuẩn và cập nhật BCTC mới nhất từ Vietstock
+base_excel_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Bo_Loc_Co_Phieu_Vietstock_Khung_Tieu_Chi.xlsx')
+df_base = pd.read_excel(base_excel_path, sheet_name='Danh_Gia_Toan_Bo_CP')
+df = pd.DataFrame({
+    'StockCode': df_base['Mã CK'].astype(str),
+    'FullName': df_base['Tên Doanh Nghiệp'].astype(str),
+    'INDEX': df_base['Sàn'].astype(str),
+    'SectorName': df_base['Nhóm Ngành (Vietstock)'].astype(str),
+    'CycleType': df_base['Đặc Tính Chu Kỳ'].astype(str),
+    'NetRevenue_B': pd.to_numeric(df_base['Doanh Thu (Tỷ)'], errors='coerce').fillna(0),
+    'NetProfit_B': pd.to_numeric(df_base['LNST (Tỷ)'], errors='coerce').fillna(0),
+    'ProfitGrowth_YoY': pd.to_numeric(df_base['Tăng Trưởng LN YoY (%)'], errors='coerce').fillna(0),
+    'EPS_4Q': pd.to_numeric(df_base['EPS 4Q (VNĐ)'], errors='coerce').fillna(0),
+    'BVPS_val': pd.to_numeric(df_base['BVPS (VNĐ)'], errors='coerce').fillna(0),
+    'Old_PE': pd.to_numeric(df_base['P/E Thực Tế (x)'], errors='coerce').fillna(0),
+    'AuditedStatus': df_base['Kiểm Toán'].astype(str),
+})
+print(f"-> Đã nạp thành công cơ sở dữ liệu {len(df)} cổ phiếu niêm yết.")
+
+# Thu thập dữ liệu BCTC soát xét mới nhất từ Vietstock (allkqkdorder)
 s = requests.Session()
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
 }
 
-r_kd = s.get('https://finance.vietstock.vn/ket-qua-kinh-doanh', headers=headers, timeout=15)
-soup_kd = BeautifulSoup(r_kd.text, 'html.parser')
-token_kd = soup_kd.find('input', {'name': '__RequestVerificationToken'})['value']
+try:
+    r_kd = s.get('https://finance.vietstock.vn/ket-qua-kinh-doanh', headers=headers, timeout=15)
+    soup_kd = BeautifulSoup(r_kd.text, 'html.parser')
+    token_kd = soup_kd.find('input', {'name': '__RequestVerificationToken'})['value']
 
-ajax_headers_kd = {
-    'User-Agent': headers['User-Agent'],
-    'X-Requested-With': 'XMLHttpRequest',
-    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-    'Origin': 'https://finance.vietstock.vn',
-    'Referer': 'https://finance.vietstock.vn/ket-qua-kinh-doanh',
-}
+    ajax_headers_kd = {
+        'User-Agent': headers['User-Agent'],
+        'X-Requested-With': 'XMLHttpRequest',
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'Origin': 'https://finance.vietstock.vn',
+        'Referer': 'https://finance.vietstock.vn/ket-qua-kinh-doanh',
+    }
 
-payload_kd = {
-    'catID': '0',
-    'industryID': '0',
-    'code': '',
-    'order': '1',
-    '__RequestVerificationToken': token_kd,
-}
-res_kd = s.post('https://finance.vietstock.vn/data/allkqkdorder', data=payload_kd, headers=ajax_headers_kd, timeout=20)
-fin_data = res_kd.json()
-print(f"-> Đã tải {len(fin_data)} bản ghi tài chính soát xét từ Vietstock.")
-
-df = pd.DataFrame(fin_data)
+    payload_kd = {
+        'catID': '0',
+        'industryID': '0',
+        'code': '',
+        'order': '1',
+        '__RequestVerificationToken': token_kd,
+    }
+    res_kd = s.post('https://finance.vietstock.vn/data/allkqkdorder', data=payload_kd, headers=ajax_headers_kd, timeout=20)
+    fin_data = res_kd.json()
+    print(f"-> Đã kiểm tra Vietstock: Có {len(fin_data)} bản ghi BCTC mới nhất vừa công bố.")
+    if fin_data and isinstance(fin_data, list):
+        fin_map = {item['StockCode']: item for item in fin_data if 'StockCode' in item}
+        updated_count = 0
+        for idx, row_stock in df.iterrows():
+            sym = row_stock['StockCode']
+            if sym in fin_map:
+                f_item = fin_map[sym]
+                if 'NetProfit' in f_item and f_item['NetProfit'] is not None:
+                    df.at[idx, 'NetProfit_B'] = float(f_item['NetProfit'])
+                if 'NetRevenue' in f_item and f_item['NetRevenue'] is not None:
+                    df.at[idx, 'NetRevenue_B'] = float(f_item['NetRevenue'])
+                if 'Profit_DiffSameTerm' in f_item and f_item['Profit_DiffSameTerm'] is not None:
+                    df.at[idx, 'ProfitGrowth_YoY'] = float(f_item['Profit_DiffSameTerm'])
+                if 'EPS_Accumulated' in f_item and f_item['EPS_Accumulated'] is not None and float(f_item['EPS_Accumulated']) > 0:
+                    df.at[idx, 'EPS_4Q'] = float(f_item['EPS_Accumulated'])
+                elif 'EPS' in f_item and f_item['EPS'] is not None and float(f_item['EPS']) > 0:
+                    df.at[idx, 'EPS_4Q'] = float(f_item['EPS'])
+                if 'BVPS' in f_item and f_item['BVPS'] is not None and float(f_item['BVPS']) > 0:
+                    df.at[idx, 'BVPS_val'] = float(f_item['BVPS'])
+                if 'AuditedStatus' in f_item and f_item['AuditedStatus']:
+                    df.at[idx, 'AuditedStatus'] = str(f_item['AuditedStatus'])
+                updated_count += 1
+        print(f"-> Đã đồng bộ BCTC mới từ Vietstock cho {updated_count} mã.")
+except Exception as e:
+    print(f"-> Lưu ý kết nối Vietstock: {e} (tiếp tục với BCTC soát xét gần nhất).")
 
 # 2. Thu thập thị giá và thanh khoản ADTV 20D từ Live Market Data Feed
 stock_codes = df['StockCode'].tolist()
@@ -108,21 +151,28 @@ sector_map = {
     1800: ('Khách sạn & Nghỉ dưỡng', 'Dịch vụ tiêu dùng')
 }
 
-df['SectorName'] = df['IndustryID'].map(lambda x: sector_map.get(x, ('Sản xuất & Thương mại khác', 'Tổng hợp'))[0])
-df['CycleType'] = df['IndustryID'].map(lambda x: sector_map.get(x, ('Sản xuất & Thương mại khác', 'Tổng hợp'))[1])
+if 'IndustryID' in df.columns:
+    df['SectorName'] = df['IndustryID'].map(lambda x: sector_map.get(x, ('Sản xuất & Thương mại khác', 'Tổng hợp'))[0])
+    df['CycleType'] = df['IndustryID'].map(lambda x: sector_map.get(x, ('Sản xuất & Thương mại khác', 'Tổng hợp'))[1])
 
-df['NetProfit_B'] = pd.to_numeric(df['NetProfit'], errors='coerce').fillna(0)
-df['NetRevenue_B'] = pd.to_numeric(df['NetRevenue'], errors='coerce').fillna(0)
-df['ProfitGrowth_YoY'] = pd.to_numeric(df['Profit_DiffSameTerm'], errors='coerce').fillna(0)
-df['EPS_4Q'] = pd.to_numeric(df['EPS_Accumulated'], errors='coerce').fillna(0)
-df['BVPS_val'] = pd.to_numeric(df['BVPS'], errors='coerce').fillna(0)
-df['Old_PE'] = pd.to_numeric(df['PE'], errors='coerce').fillna(0)
+if 'NetProfit' in df.columns:
+    df['NetProfit_B'] = pd.to_numeric(df['NetProfit'], errors='coerce').fillna(0)
+if 'NetRevenue' in df.columns:
+    df['NetRevenue_B'] = pd.to_numeric(df['NetRevenue'], errors='coerce').fillna(0)
+if 'Profit_DiffSameTerm' in df.columns:
+    df['ProfitGrowth_YoY'] = pd.to_numeric(df['Profit_DiffSameTerm'], errors='coerce').fillna(0)
+if 'EPS_Accumulated' in df.columns:
+    df['EPS_4Q'] = pd.to_numeric(df['EPS_Accumulated'], errors='coerce').fillna(0)
+if 'BVPS' in df.columns:
+    df['BVPS_val'] = pd.to_numeric(df['BVPS'], errors='coerce').fillna(0)
+if 'PE' in df.columns:
+    df['Old_PE'] = pd.to_numeric(df['PE'], errors='coerce').fillna(0)
 
 def assign_market_data(row):
     sym = row['StockCode']
     p = price_map.get(sym)
     adtv = adtv_map.get(sym, 0.0)
-    dt = date_map.get(sym, '2026-10-09')
+    dt = date_map.get(sym, '2026-10-15')
     if p and p > 0:
         return pd.Series([p, adtv, dt])
     old_pe = row['Old_PE']
@@ -134,7 +184,7 @@ def assign_market_data(row):
         p_est = bvps
     else:
         p_est = 10000.0
-    return pd.Series([p_est, 0.0, '2026-10-09'])
+    return pd.Series([p_est, 0.0, '2026-10-15'])
 
 df[['MarketPrice', 'ADTV_20D_B', 'TradeDate']] = df.apply(assign_market_data, axis=1)
 
