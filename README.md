@@ -20,7 +20,7 @@ Hệ thống lưu trữ, quản lý mã nguồn và tài liệu nghiên cứu c�
 - **`Video_AI_Tools/`**: Bộ công cụ tự động hóa sáng tạo video ngắn (Shorts/Reels) và phân tích kịch bản video AI.
 - **`LLM_Orchestrator/`**: Khung điều phối đa mô hình ngôn ngữ lớn (LLM Orchestration) linh hoạt.
 - **`Doc2Slide_App/`**: Ứng dụng tự động chuyển đổi tài liệu văn bản (.docx) thành slide thuyết trình PowerPoint (.pptx).
-- **`System_Maintenance/`**: Kịch bản PowerShell tự động dọn dẹp rác hệ thống, xóa cache DNS, chẩn đoán sức khỏe RAM/CPU và phát hiện tiến trình khả nghi (`system_maintenance.ps1`, `maintenance.ps1`).
+- **`System_Maintenance/`**: Kịch bản PowerShell tự động dọn dẹp rác hệ thống, xóa cache DNS, chẩn đoán sức khỏe RAM/CPU và xuất báo cáo JSON đo lường chi tiết (`system_maintenance.ps1`, `maintenance.ps1`, `sys_maintenance.ps1`).
 
 ---
 

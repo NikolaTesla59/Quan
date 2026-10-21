@@ -4,6 +4,44 @@ Nhật ký ghi lại toàn bộ hoạt động kiểm tra, rà soát bảo mật
 
 ---
 
+## 📅 Phiên Sao Lưu: 2026-10-21 18:15:00 (GMT+7)
+
+- **Kho lưu trữ đích**: [`NikolaTesla59/Quan`](https://github.com/NikolaTesla59/Quan)
+- **Tài khoản xác thực**: `NikolaTesla59` (Quân)
+- **Phương thức xác thực**: GitHub Personal Access Token (PAT) cấu hình qua biến môi trường (`$env:GITHUB_TOKEN`)
+- **Trạng thái**: ✅ Hoàn thành đồng bộ an toàn (Success)
+- **Hành động**: Tự động rà soát, phát hiện thay đổi và commit/push đồng bộ lên nhánh `main`
+
+### 📊 Thống Kê Dữ Liệu Đồng Bộ
+
+| Phân Loại | Tên Thư Mục / Chủ Đề | Số Tệp | Dung Lượng | Trạng Thái / Thay Đổi Chi Tiết |
+| :--- | :--- | :---: | :---: | :--- |
+| **Dự Án** | `Du_An/Vietstock_Screener` | 10 | 1.07 MB | **CẬP NHẬT**: Bản PRO Excel `Bo_Loc_Co_Phieu_Vietstock_Khung_Tieu_Chi_PRO.xlsx` 218.9 KB (cập nhật chiều 21/10/2026, tinh lọc danh mục `Top_Co_Phieu_Chon_Loc` chuẩn 220 mã cổ phiếu đạt chuẩn cổng chặn cơ bản & nhạy chu kỳ), giữ nguyên `stocks.db` (557KB), `analyze_top.py`, `diagnostic.py`, `import_to_sqlite.py`, `get_summary.py`, `auto_update_screener.py` |
+| **Dự Án** | `Du_An/System_Maintenance` | 3 | 0.01 MB | **CẬP NHẬT**: Bổ sung kịch bản `sys_maintenance.ps1` (chẩn đoán hệ thống toàn diện, dọn dẹp Temp, flush DNS, phân tích tài nguyên RAM/CPU và xuất báo cáo JSON cấu trúc sâu) bên cạnh `maintenance.ps1` và `system_maintenance.ps1` |
+| **Nghiên Cứu** | `Nghien_Cuu/So_Tay_Nghe_Thuat` | 2 | 1.59 MB | Chuyên khảo "Sổ Tay Nghệ Thuật Toàn Tập - Từ Nhập Môn Đến Chuyên Sâu" (ngữ pháp hội họa, đọc tranh, lược sử mỹ thuật phương Tây từ Phục Hưng đến Siêu Thực) gồm bản thảo Word (`.docx`) và bản xuất in ấn (`.pdf`) |
+| **Nghiên Cứu** | `Nghien_Cuu/Tai_Lieu_Hoc_Tap` | 7 | 0.07 MB | Công cụ phân tích và quản trị kỹ năng agent `analyze_skills.py`, cẩm nang CNTT Semi-Pro, quy chuẩn tư duy phản biện `rules_cognitive.md` và quy chuẩn kỹ thuật `rules_tech_stack.md` |
+| **Nghiên Cứu** | `Nghien_Cuu/Kinh_Te_Hoc_He_Thong` | 13 | 11.23 MB | Chuyên khảo Kinh tế học hệ thống (Word, PDF, LaTeX, HTML, sơ đồ Mermaid) |
+| **Nghiên Cứu** | `Nghien_Cuu/Laos_BoP_Research` | 6 | 0.47 MB | Báo cáo nghiên cứu Cán cân thanh toán Lào (v3, v4, phân tích hoàn chỉnh & pháp lý) |
+| **Nghiên Cứu** | `Nghien_Cuu/Tieu_Luan_Hoc_Thuat` | 4 | 0.13 MB | Các bản thảo tiểu luận học thuật hoàn thiện |
+| **Nghiên Cứu** | `Nghien_Cuu/Du_An_Nha_Khoa_Pakse` | 10 | 4.59 MB | Hồ sơ dự án đầu tư phòng khám nha khoa Pakse (Slide thuyết trình, mô hình tài chính) |
+| **Dự Án** | `Du_An/NhaKhoa_LaoViet_Pakse` | 6 | 0.13 MB | Toàn bộ mã nguồn giao diện website phòng khám nha khoa Lào - Việt |
+| **Dự Án** | `Du_An/Video_AI_Tools` | 4 | 0.49 MB | Bộ công cụ AI tự động tạo video ngắn và phân tích kịch bản video |
+| **Dự Án** | `Du_An/LLM_Orchestrator` | 3 | < 0.01 MB | Khung điều phối đa mô hình LLM (mã nguồn, requirements, .env.example) |
+| **Dự Án** | `Du_An/Doc2Slide_App` | 4 | 0.07 MB | Mã nguồn ứng dụng tự động chuyển tài liệu Word sang PowerPoint |
+| **Hệ Thống** | `README.md`, `.gitignore`, `NHAT_KY_SAO_LUU.md` | 3 | 0.01 MB | Tài liệu hướng dẫn, cấu hình bảo mật loại trừ và nhật ký sao lưu |
+| **TỔNG CỘNG** | **12 Module & Thư Mục** | **75 tệp** | **~19.88 MB** | **Tối ưu hóa tuyệt đối, đáp ứng 100% chuẩn bảo mật Git & GitHub** |
+
+### 🔒 Kiểm Soát An Toàn & Bảo Mật (Safety & Sanitization Audit)
+1. **Bảo mật Bí mật & Token**:
+   - Tệp `.env` trong `llm_orchestrator` và các tệp môi trường được bảo vệ nghiêm ngặt bằng `.gitignore`.
+   - Không chứa bất kỳ khóa API cứng hay token nhạy cảm nào trong mã nguồn commit.
+   - Token GitHub trong môi trường thực thi được cô lập an toàn, không hiển thị trong nhật ký công khai.
+2. **Loại trừ rác & Tối ưu hiệu năng**:
+   - Loại trừ hoàn toàn `venv/`, `__pycache__/`, `node_modules/`, file tạm MS Office `~$*`.
+   - Kích thước tệp lớn nhất ~3.56 MB (tệp PDF đồ họa chất lượng cao trong Kinh tế học hệ thống), hoàn toàn dưới giới hạn 100MB của GitHub.
+
+---
+
 ## 📅 Phiên Sao Lưu: 2026-10-20 18:25:00 (GMT+7)
 
 - **Kho lưu trữ đích**: [`NikolaTesla59/Quan`](https://github.com/NikolaTesla59/Quan)
