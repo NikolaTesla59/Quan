@@ -12,6 +12,7 @@ Hệ thống lưu trữ, quản lý mã nguồn và tài liệu nghiên cứu c�
 - **`Tieu_Luan_Hoc_Thuat/`**: Tập hợp các bản thảo bài tiểu luận học thuật hoàn thiện.
 - **`Du_An_Nha_Khoa_Pakse/`**: Hồ sơ dự án đầu tư phòng khám nha khoa tại Pakse, Lào (Slide thuyết trình, mô hình tài chính Excel Lite/Full, kế hoạch đầu tư chi tiết và tóm tắt điều hành).
 - **`So_Tay_Nghe_Thuat/`**: Chuyên khảo "Sổ Tay Nghệ Thuật Toàn Tập - Từ Nhập Môn Đến Chuyên Sâu" (hướng dẫn chi tiết phương pháp đọc tranh, ngôn ngữ thị giác và lịch sử mỹ thuật phương Tây từ Phục Hưng đến Siêu Thực - định dạng .docx và .pdf).
+- **`Tuyen_Tap_Thi_Ca_Viet_Trung/`**: Hệ thống nghiên cứu, số hóa văn bản học và tự động hóa biên soạn tuyển tập thi ca cổ điển Đường - Tống, thơ Nôm trung đại (Hồ Xuân Hương, Bà Huyện Thanh Quan, Nguyễn Trãi, Nguyễn Du) và phong trào Thơ Mới Việt Nam (`poetry_builder`, `poetry_anthology`, cùng các kịch bản biên dịch và phụ lục dữ liệu JSON).
 - **`Tai_Lieu_Hoc_Tap/`**: Cẩm nang CNTT Semi-Pro, quy trình Agent Process Diagram, báo cáo đánh giá công cụ AI, quy chuẩn tư duy phản biện Fabric Patterns & Shannon Alpha (`rules_cognitive.md`), quy chuẩn kỹ thuật lập trình senior (`rules_tech_stack.md`) và công cụ phân tích kỹ năng agent (`analyze_skills.py`).
 
 ### 💻 2. Dự Án & Công Cụ Kỹ Thuật (`Du_An/`)

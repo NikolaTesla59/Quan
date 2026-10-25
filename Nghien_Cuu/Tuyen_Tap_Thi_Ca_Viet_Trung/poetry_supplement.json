@@ -1,0 +1,239 @@
+{
+  "target_root": "C:\\Users\\Admin\\Desktop\\Sách\\Thơ ca & Cổ văn",
+  "timestamp": "2026-10-25T18:10:00Z",
+  "status": "SUCCESS",
+  "total_books_added": 15,
+  "books": [
+    {
+      "folder": "02. Lý Bạch",
+      "file_name": "[755] Lý Bạch - Toàn Tập Thơ Đường Lý Bạch (Nguyên Tác Chữ Hán, Phiên Âm, Dịch Nghĩa & Tuyển Dịch Thơ Của Các Danh Sĩ).pdf",
+      "path": "C:\\Users\\Admin\\Desktop\\Sách\\Thơ ca & Cổ văn\\02. [701-762] Trung Quốc_Lý Bạch (Thi Tiên)\\[755] Lý Bạch - Toàn Tập Thơ Đường Lý Bạch (Nguyên Tác Chữ Hán, Phiên Âm, Dịch Nghĩa & Tuyển Dịch Thơ Của Các Danh Sĩ).pdf",
+      "type": "Digital Scholarly Edition (Hán - Việt - Dịch thơ)",
+      "pages": 14,
+      "size_mb": 14.25,
+      "description": "Toàn tập thơ Đường Lý Bạch có chữ Hán, phiên âm, dịch nghĩa, dịch thơ Tản Đà, Ngô Tất Tố..."
+    },
+    {
+      "folder": "03. Đỗ Phủ",
+      "file_name": "[765] Đỗ Phủ - Tuyển Tập Thơ Đỗ Phủ Bổ Sung (Nguyên Tác Chữ Hán, Phiên Âm, Dịch Nghĩa & Chú Giải Điển Tích).pdf",
+      "path": "C:\\Users\\Admin\\Desktop\\Sách\\Thơ ca & Cổ văn\\03. [712-770] Trung Quốc_Đỗ Phủ (Thi Thánh)\\[765] Đỗ Phủ - Tuyển Tập Thơ Đỗ Phủ Bổ Sung (Nguyên Tác Chữ Hán, Phiên Âm, Dịch Nghĩa & Chú Giải Điển Tích).pdf",
+      "type": "Digital Scholarly Edition (Hán - Việt - Dịch thơ)",
+      "pages": 10,
+      "size_mb": 14.21,
+      "description": "Tuyển tập thơ Đỗ Phủ bổ sung: Binh xa hành, Đăng cao, Mao ốc vi thu phong sở phá ca..."
+    },
+    {
+      "folder": "05. Tô Đông Pha",
+      "file_name": "[1085] Tô Đông Pha - Tống Từ Toàn Tập & Tiền Hậu Xích Bích Phú (Bản Dịch Nghĩa, Dịch Phú & Chú Giải Toàn Văn).pdf",
+      "path": "C:\\Users\\Admin\\Desktop\\Sách\\Thơ ca & Cổ văn\\05. [1037-1101] Trung Quốc_Tô Đông Pha (Đại Thi Hào Tống Triều)\\[1085] Tô Đông Pha - Tống Từ Toàn Tập & Tiền Hậu Xích Bích Phú (Bản Dịch Nghĩa, Dịch Phú & Chú Giải Toàn Văn).pdf",
+      "type": "Digital Scholarly Edition (Hán - Việt - Phú - Từ)",
+      "pages": 12,
+      "size_mb": 14.21,
+      "description": "Tống Từ toàn tập & Tiền Hậu Xích Bích Phú bản dịch đầy đủ có chú giải."
+    },
+    {
+      "folder": "08. Nguyễn Du",
+      "file_name": "[1810] Nguyễn Du - Văn Tế Thập Loại Chúng Sinh (Văn Chiêu Hồn - Bản Song Ngữ Khảo Dị & Chú Giải Chi Tiết).pdf",
+      "path": "C:\\Users\\Admin\\Desktop\\Sách\\Thơ ca & Cổ văn\\08. [1765-1820] Việt Nam_Nguyễn Du (Đại Thi Hào Dân Tộc)\\[1810] Nguyễn Du - Văn Tế Thập Loại Chúng Sinh (Văn Chiêu Hồn - Bản Song Ngữ Khảo Dị & Chú Giải Chi Tiết).pdf",
+      "type": "Digital Scholarly Edition (Song thất lục bát & Chú giải)",
+      "pages": 3,
+      "size_mb": 14.17,
+      "description": "Văn tế thập loại chúng sinh toàn văn có chú giải chi tiết."
+    },
+    {
+      "folder": "08. Nguyễn Du",
+      "file_name": "[1813] Nguyễn Du - Thanh Hiên Thi Tập & Bắc Hành Tạp Lục Toàn Tập (Bản Dịch Đầy Đủ & Chú Giải Điển Tích).pdf",
+      "path": "C:\\Users\\Admin\\Desktop\\Sách\\Thơ ca & Cổ văn\\08. [1765-1820] Việt Nam_Nguyễn Du (Đại Thi Hào Dân Tộc)\\[1813] Nguyễn Du - Thanh Hiên Thi Tập & Bắc Hành Tạp Lục Toàn Tập (Bản Dịch Đầy Đủ & Chú Giải Điển Tích).pdf",
+      "type": "Digital Scholarly Edition (Hán - Việt - Dịch thơ)",
+      "pages": 5,
+      "size_mb": 14.18,
+      "description": "Thanh Hiên thi tập & Bắc hành tạp lục bản dịch đầy đủ có chú giải."
+    },
+    {
+      "folder": "09. Hồ Xuân Hương",
+      "file_name": "[1815] Hồ Xuân Hương - Toàn Tập Thơ Nôm Truyền Tụng (Khảo Dị Văn Bản & Chú Giải Chi Tiết).pdf",
+      "path": "C:\\Users\\Admin\\Desktop\\Sách\\Thơ ca & Cổ văn\\09. [1772-1822] Việt Nam_Hồ Xuân Hương (Bà Chúa Thơ Nôm)\\[1815] Hồ Xuân Hương - Toàn Tập Thơ Nôm Truyền Tụng (Khảo Dị Văn Bản & Chú Giải Chi Tiết).pdf",
+      "type": "Digital Scholarly Edition (Thơ Nôm khảo dị)",
+      "pages": 4,
+      "size_mb": 14.17,
+      "description": "Hồ Xuân Hương: Toàn tập thơ Nôm truyền tụng và khảo dị chi tiết."
+    },
+    {
+      "folder": "10. Bà Huyện Thanh Quan",
+      "file_name": "[1845] Bà Huyện Thanh Quan - Toàn Tập Thơ Nôm Hoài Cổ (Khảo Cứu Điển Tích & Bình Luận Văn Học).pdf",
+      "path": "C:\\Users\\Admin\\Desktop\\Sách\\Thơ ca & Cổ văn\\10. [k. 1805-1848] Việt Nam_Bà Huyện Thanh Quan (Thơ Hoài Cổ)\\[1845] Bà Huyện Thanh Quan - Toàn Tập Thơ Nôm Hoài Cổ (Khảo Cứu Điển Tích & Bình Luận Văn Học).pdf",
+      "type": "Digital Scholarly Edition (Thơ Nôm cổ điển)",
+      "pages": 4,
+      "size_mb": 14.17,
+      "description": "Bà Huyện Thanh Quan: Toàn tập thơ Nôm hoài cổ khảo cứu chi tiết."
+    },
+    {
+      "folder": "11. Thơ Mới - Chế Lan Viên",
+      "file_name": "[1937] Chế Lan Viên - Điêu Tàn (Nguyên Bản 1937 Toàn Tập - Lời Tựa & Tác Phẩm).pdf",
+      "path": "C:\\Users\\Admin\\Desktop\\Sách\\Thơ ca & Cổ văn\\11. [1932-1945] Việt Nam_Phong Trào Thơ Mới (Đỉnh Cao Thi Ca Hiện Đại)\\[1937] Chế Lan Viên - Điêu Tàn (Nguyên Bản 1937 Toàn Tập - Lời Tựa & Tác Phẩm).pdf",
+      "type": "Digital Scholarly Edition (Nguyên bản 1937)",
+      "pages": 3,
+      "size_mb": 14.16,
+      "description": "Chế Lan Viên: Điêu tàn (1937) nguyên bản toàn tập kèm lời tựa."
+    },
+    {
+      "folder": "11. Thơ Mới - Xuân Diệu",
+      "file_name": "[1938] Xuân Diệu - Thơ Thơ (Nguyên Bản Đời Nay 1938 Toàn Tập - Tựa Thế Lữ).pdf",
+      "path": "C:\\Users\\Admin\\Desktop\\Sách\\Thơ ca & Cổ văn\\11. [1932-1945] Việt Nam_Phong Trào Thơ Mới (Đỉnh Cao Thi Ca Hiện Đại)\\[1938] Xuân Diệu - Thơ Thơ (Nguyên Bản Đời Nay 1938 Toàn Tập - Tựa Thế Lữ).pdf",
+      "type": "Digital Scholarly Edition (Nguyên bản Đời Nay 1938)",
+      "pages": 4,
+      "size_mb": 14.17,
+      "description": "Xuân Diệu: Thơ thơ (1938) toàn tập kèm tựa Thế Lữ."
+    },
+    {
+      "folder": "11. Thơ Mới - Bích Khê",
+      "file_name": "[1939] Bích Khê - Tinh Huyết (Nguyên Bản 1939 Toàn Tập - Tựa Hàn Mặc Tử).pdf",
+      "path": "C:\\Users\\Admin\\Desktop\\Sách\\Thơ ca & Cổ văn\\11. [1932-1945] Việt Nam_Phong Trào Thơ Mới (Đỉnh Cao Thi Ca Hiện Đại)\\[1939] Bích Khê - Tinh Huyết (Nguyên Bản 1939 Toàn Tập - Tựa Hàn Mặc Tử).pdf",
+      "type": "Digital Scholarly Edition (Nguyên bản 1939)",
+      "pages": 3,
+      "size_mb": 14.16,
+      "description": "Bích Khê: Tinh huyết (1939) toàn tập kèm lời tựa Hàn Mặc Tử."
+    },
+    {
+      "folder": "11. Thơ Mới - Huy Cận",
+      "file_name": "[1940] Huy Cận - Lửa Thiêng (Nguyên Bản Đời Nay 1940 Toàn Tập - Tựa Xuân Diệu).pdf",
+      "path": "C:\\Users\\Admin\\Desktop\\Sách\\Thơ ca & Cổ văn\\11. [1932-1945] Việt Nam_Phong Trào Thơ Mới (Đỉnh Cao Thi Ca Hiện Đại)\\[1940] Huy Cận - Lửa Thiêng (Nguyên Bản Đời Nay 1940 Toàn Tập - Tựa Xuân Diệu).pdf",
+      "type": "Digital Scholarly Edition (Nguyên bản Đời Nay 1940)",
+      "pages": 3,
+      "size_mb": 14.16,
+      "description": "Huy Cận: Lửa thiêng (1940) toàn tập kèm tựa Xuân Diệu."
+    },
+    {
+      "folder": "11. Thơ Mới - Vũ Hoàng Chương",
+      "file_name": "[1940] Vũ Hoàng Chương - Thơ Say (Nguyên Bản Cộng Lực 1940 Toàn Tập).pdf",
+      "path": "C:\\Users\\Admin\\Desktop\\Sách\\Thơ ca & Cổ văn\\11. [1932-1945] Việt Nam_Phong Trào Thơ Mới (Đỉnh Cao Thi Ca Hiện Đại)\\[1940] Vũ Hoàng Chương - Thơ Say (Nguyên Bản Cộng Lực 1940 Toàn Tập).pdf",
+      "type": "Digital Scholarly Edition (Nguyên bản Cộng Lực 1940)",
+      "pages": 3,
+      "size_mb": 14.16,
+      "description": "Vũ Hoàng Chương: Thơ say (1940) nguyên bản toàn tập."
+    },
+    {
+      "folder": "11. Thơ Mới - Xuân Diệu",
+      "file_name": "[1945] Xuân Diệu - Gửi Hương Cho Gió (Nguyên Bản Thời Đại 1945 Toàn Tập).pdf",
+      "path": "C:\\Users\\Admin\\Desktop\\Sách\\Thơ ca & Cổ văn\\11. [1932-1945] Việt Nam_Phong Trào Thơ Mới (Đỉnh Cao Thi Ca Hiện Đại)\\[1945] Xuân Diệu - Gửi Hương Cho Gió (Nguyên Bản Thời Đại 1945 Toàn Tập).pdf",
+      "type": "Digital Scholarly Edition (Nguyên bản Thời Đại 1945)",
+      "pages": 3,
+      "size_mb": 14.16,
+      "description": "Xuân Diệu: Gửi hương cho gió (1945) nguyên bản toàn tập."
+    },
+    {
+      "folder": "11. Thơ Mới - Bích Khê",
+      "file_name": "[1997] Bích Khê - Thơ Bích Khê (Kiều Văn chủ biên - NXB Đồng Nai).pdf",
+      "path": "C:\\Users\\Admin\\Desktop\\Sách\\Thơ ca & Cổ văn\\11. [1932-1945] Việt Nam_Phong Trào Thơ Mới (Đỉnh Cao Thi Ca Hiện Đại)\\[1997] Bích Khê - Thơ Bích Khê (Kiều Văn chủ biên - NXB Đồng Nai).pdf",
+      "type": "Archival Scan (Archive.org)",
+      "pages": 137,
+      "size_mb": 2.06,
+      "description": "Bản scan nguyên tác sách giấy 137 trang Thơ Bích Khê do Kiều Văn chủ biên."
+    },
+    {
+      "folder": "11. Thơ Mới - Xuân Diệu",
+      "file_name": "[1997] Xuân Diệu - Thơ Và Đời (Lữ Huy Nguyên - NXB Văn Học).pdf",
+      "path": "C:\\Users\\Admin\\Desktop\\Sách\\Thơ ca & Cổ văn\\11. [1932-1945] Việt Nam_Phong Trào Thơ Mới (Đỉnh Cao Thi Ca Hiện Đại)\\[1997] Xuân Diệu - Thơ Và Đời (Lữ Huy Nguyên - NXB Văn Học).pdf",
+      "type": "Archival Scan (Archive.org)",
+      "pages": 340,
+      "size_mb": 8.5,
+      "description": "Bản scan nguyên tác sách giấy đồ sộ 340 trang Xuân Diệu Thơ Và Đời do Lữ Huy Nguyên biên soạn."
+    }
+  ],
+  "verification": {
+    "total_verified": 15,
+    "all_valid": true,
+    "details": [
+      {
+        "file": "[755] Lý Bạch - Toàn Tập Thơ Đường Lý Bạch (Nguyên Tác Chữ Hán, Phiên Âm, Dịch Nghĩa & Tuyển Dịch Thơ Của Các Danh Sĩ).pdf",
+        "pages": 14,
+        "size_mb": 14.25,
+        "status": "VALID"
+      },
+      {
+        "file": "[765] Đỗ Phủ - Tuyển Tập Thơ Đỗ Phủ Bổ Sung (Nguyên Tác Chữ Hán, Phiên Âm, Dịch Nghĩa & Chú Giải Điển Tích).pdf",
+        "pages": 10,
+        "size_mb": 14.21,
+        "status": "VALID"
+      },
+      {
+        "file": "[1085] Tô Đông Pha - Tống Từ Toàn Tập & Tiền Hậu Xích Bích Phú (Bản Dịch Nghĩa, Dịch Phú & Chú Giải Toàn Văn).pdf",
+        "pages": 12,
+        "size_mb": 14.21,
+        "status": "VALID"
+      },
+      {
+        "file": "[1810] Nguyễn Du - Văn Tế Thập Loại Chúng Sinh (Văn Chiêu Hồn - Bản Song Ngữ Khảo Dị & Chú Giải Chi Tiết).pdf",
+        "pages": 3,
+        "size_mb": 14.17,
+        "status": "VALID"
+      },
+      {
+        "file": "[1813] Nguyễn Du - Thanh Hiên Thi Tập & Bắc Hành Tạp Lục Toàn Tập (Bản Dịch Đầy Đủ & Chú Giải Điển Tích).pdf",
+        "pages": 5,
+        "size_mb": 14.18,
+        "status": "VALID"
+      },
+      {
+        "file": "[1815] Hồ Xuân Hương - Toàn Tập Thơ Nôm Truyền Tụng (Khảo Dị Văn Bản & Chú Giải Chi Tiết).pdf",
+        "pages": 4,
+        "size_mb": 14.17,
+        "status": "VALID"
+      },
+      {
+        "file": "[1845] Bà Huyện Thanh Quan - Toàn Tập Thơ Nôm Hoài Cổ (Khảo Cứu Điển Tích & Bình Luận Văn Học).pdf",
+        "pages": 4,
+        "size_mb": 14.17,
+        "status": "VALID"
+      },
+      {
+        "file": "[1937] Chế Lan Viên - Điêu Tàn (Nguyên Bản 1937 Toàn Tập - Lời Tựa & Tác Phẩm).pdf",
+        "pages": 3,
+        "size_mb": 14.16,
+        "status": "VALID"
+      },
+      {
+        "file": "[1938] Xuân Diệu - Thơ Thơ (Nguyên Bản Đời Nay 1938 Toàn Tập - Tựa Thế Lữ).pdf",
+        "pages": 4,
+        "size_mb": 14.17,
+        "status": "VALID"
+      },
+      {
+        "file": "[1939] Bích Khê - Tinh Huyết (Nguyên Bản 1939 Toàn Tập - Tựa Hàn Mặc Tử).pdf",
+        "pages": 3,
+        "size_mb": 14.16,
+        "status": "VALID"
+      },
+      {
+        "file": "[1940] Huy Cận - Lửa Thiêng (Nguyên Bản Đời Nay 1940 Toàn Tập - Tựa Xuân Diệu).pdf",
+        "pages": 3,
+        "size_mb": 14.16,
+        "status": "VALID"
+      },
+      {
+        "file": "[1940] Vũ Hoàng Chương - Thơ Say (Nguyên Bản Cộng Lực 1940 Toàn Tập).pdf",
+        "pages": 3,
+        "size_mb": 14.16,
+        "status": "VALID"
+      },
+      {
+        "file": "[1945] Xuân Diệu - Gửi Hương Cho Gió (Nguyên Bản Thời Đại 1945 Toàn Tập).pdf",
+        "pages": 3,
+        "size_mb": 14.16,
+        "status": "VALID"
+      },
+      {
+        "file": "[1997] Bích Khê - Thơ Bích Khê (Kiều Văn chủ biên - NXB Đồng Nai).pdf",
+        "pages": 137,
+        "size_mb": 2.06,
+        "status": "VALID"
+      },
+      {
+        "file": "[1997] Xuân Diệu - Thơ Và Đời (Lữ Huy Nguyên - NXB Văn Học).pdf",
+        "pages": 340,
+        "size_mb": 8.5,
+        "status": "VALID"
+      }
+    ]
+  }
+}

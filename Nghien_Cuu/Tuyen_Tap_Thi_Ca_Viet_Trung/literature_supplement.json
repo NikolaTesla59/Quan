@@ -1,0 +1,915 @@
+{
+  "summary": {
+    "status": "COMPLETED",
+    "total_folders": 21,
+    "total_books_in_vanhoc": 69,
+    "total_pages": 31230,
+    "total_size_mb": 577.76,
+    "supplemented_books_count": 19,
+    "supplement_coverage": "19/19 (100.0%)",
+    "corrupted_files_count": 0
+  },
+  "supplemented_masterpieces": [
+    {
+      "author_folder": "03. [1821-1881] Nga_Fyodor Dostoevsky",
+      "title": "Tội Ác Và Trừng Phạt",
+      "filename": "[1866] Tội Ác Và Trừng Phạt (Bản dịch Cao Xuân Hạo).pdf",
+      "pages": 664,
+      "size_mb": 3.28,
+      "verified": true
+    },
+    {
+      "author_folder": "03. [1821-1881] Nga_Fyodor Dostoevsky",
+      "title": "Chàng Ngốc",
+      "filename": "[1869] Chàng Ngốc (Kẻ Khờ - The Idiot).pdf",
+      "pages": 1041,
+      "size_mb": 3.53,
+      "verified": true
+    },
+    {
+      "author_folder": "03. [1821-1881] Nga_Fyodor Dostoevsky",
+      "title": "Những Đêm Trắng",
+      "filename": "[1848] Những Đêm Trắng.pdf",
+      "pages": 53,
+      "size_mb": 0.34,
+      "verified": true
+    },
+    {
+      "author_folder": "04. [1828-1910] Nga_Lev Tolstoy",
+      "title": "Phục Sinh",
+      "filename": "[1899] Phục Sinh (Resurrection).pdf",
+      "pages": 1197,
+      "size_mb": 3.67,
+      "verified": true
+    },
+    {
+      "author_folder": "04. [1828-1910] Nga_Lev Tolstoy",
+      "title": "Cái Chết Của Ivan Ilyich",
+      "filename": "[1886] Cái Chết Của Ivan Ilyich.pdf",
+      "pages": 59,
+      "size_mb": 0.4,
+      "verified": true
+    },
+    {
+      "author_folder": "02. [1802-1885] Pháp_Victor Hugo",
+      "title": "Ngày Cuối Cùng Của Một Tử Tù",
+      "filename": "[1829] Ngày Cuối Cùng Của Một Tử Tù.pdf",
+      "pages": 126,
+      "size_mb": 0.66,
+      "verified": true
+    },
+    {
+      "author_folder": "12. [1913-1960] Pháp_Albert Camus",
+      "title": "Thần Thoại Sisyphus",
+      "filename": "[1942] Thần Thoại Sisyphus (Huyền Thoại Sisyphus).pdf",
+      "pages": 86,
+      "size_mb": 1.65,
+      "verified": true
+    },
+    {
+      "author_folder": "16. [1894-1954] Việt Nam_Ngô Tất Tố",
+      "title": "Việc Làng",
+      "filename": "Việc Làng (Toàn Văn Tập Phóng Sự Hủ Tục Nông Thôn) (1940).pdf",
+      "pages": 83,
+      "size_mb": 0.35,
+      "verified": true
+    },
+    {
+      "author_folder": "16. [1894-1954] Việt Nam_Ngô Tất Tố",
+      "title": "Lều Chõng",
+      "filename": "Lều Chõng (Toàn Văn Tiểu Thuyết Khoa Cử Phong Kiến) (1952).pdf",
+      "pages": 322,
+      "size_mb": 1.0,
+      "verified": true
+    },
+    {
+      "author_folder": "19. [1912-1939] Việt Nam_Vũ Trọng Phụng",
+      "title": "Kỹ Nghệ Lấy Tây",
+      "filename": "Kỹ Nghệ Lấy Tây (Toàn Văn Phóng Sự Hiện Thực) (1934).pdf",
+      "pages": 79,
+      "size_mb": 0.31,
+      "verified": true
+    },
+    {
+      "author_folder": "19. [1912-1939] Việt Nam_Vũ Trọng Phụng",
+      "title": "Cơm Thầy Cơm Cô",
+      "filename": "Cơm Thầy Cơm Cô (Toàn Văn Phóng Sự Điều Tra) (1936).pdf",
+      "pages": 57,
+      "size_mb": 0.23,
+      "verified": true
+    },
+    {
+      "author_folder": "19. [1912-1939] Việt Nam_Vũ Trọng Phụng",
+      "title": "Làm Đĩ",
+      "filename": "Làm Đĩ (Toàn Văn Tiểu Thuyết Xã Hội) (1936).pdf",
+      "pages": 192,
+      "size_mb": 0.73,
+      "verified": true
+    },
+    {
+      "author_folder": "18. [1910-1987] Việt Nam_Nguyễn Tuân",
+      "title": "Chùa Đàn",
+      "filename": "[1946] Chùa Đàn (Kiệt Tác Duy Mỹ & Ma Mị).pdf",
+      "pages": 49,
+      "size_mb": 0.54,
+      "verified": true
+    },
+    {
+      "author_folder": "18. [1910-1987] Việt Nam_Nguyễn Tuân",
+      "title": "Tùy Bút Sông Đà",
+      "filename": "[1960] Tùy Bút Sông Đà (Toàn Tập Ký & Tùy Bút).pdf",
+      "pages": 9,
+      "size_mb": 0.14,
+      "verified": true
+    },
+    {
+      "author_folder": "17. [1910-1942] Việt Nam_Thạch Lam",
+      "title": "Nắng Trong Vườn",
+      "filename": "Nắng Trong Vườn (Toàn Tập Truyện Ngắn) (1938).pdf",
+      "pages": 99,
+      "size_mb": 0.4,
+      "verified": true
+    },
+    {
+      "author_folder": "17. [1910-1942] Việt Nam_Thạch Lam",
+      "title": "Theo Dòng",
+      "filename": "Theo Dòng (Toàn Tập Tiểu Luận & Tùy Bút Văn Học) (1941).pdf",
+      "pages": 62,
+      "size_mb": 0.3,
+      "verified": true
+    },
+    {
+      "author_folder": "17. [1910-1942] Việt Nam_Thạch Lam",
+      "title": "Sợi Tóc",
+      "filename": "Sợi Tóc (Toàn Tập Truyện Ngắn Tinh Tuyển) (1942).pdf",
+      "pages": 55,
+      "size_mb": 0.25,
+      "verified": true
+    },
+    {
+      "author_folder": "21. [Thế kỷ 14-18] Trung Quốc_Tứ Đại Danh Tác",
+      "title": "Đông Chu Liệt Quốc",
+      "filename": "[1644] Phùng Mộng Long - Đông Chu Liệt Quốc (Toàn Văn 108 Hồi Trọn Bộ).pdf",
+      "pages": 1570,
+      "size_mb": 64.94,
+      "verified": true
+    },
+    {
+      "author_folder": "21. [Thế kỷ 14-18] Trung Quốc_Tứ Đại Danh Tác",
+      "title": "Liêu Trai Chí Dị",
+      "filename": "[1740] Bồ Tùng Linh - Liêu Trai Chí Dị (Trọn Bộ Scan NXB Văn Học, Nguyễn Đức Lân dịch).pdf",
+      "pages": 1254,
+      "size_mb": 41.3,
+      "verified": true
+    }
+  ],
+  "complete_library_inventory": [
+    {
+      "folder": "01. [1547-1616] Tây Ban Nha_Miguel de Cervantes",
+      "book_count": 2,
+      "books": [
+        {
+          "filename": "[1605] Đôn Kihôtê (Tập 1).pdf",
+          "pages": 594,
+          "size_mb": 50.96,
+          "size_bytes": 53435386,
+          "title_meta": "",
+          "creator": "",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1615] Đôn Kihôtê (Tập 2).pdf",
+          "pages": 607,
+          "size_mb": 49.26,
+          "size_bytes": 51652964,
+          "title_meta": "",
+          "creator": "",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "02. [1802-1885] Pháp_Victor Hugo",
+      "book_count": 3,
+      "books": [
+        {
+          "filename": "[1829] Ngày Cuối Cùng Của Một Tử Tù.pdf",
+          "pages": 126,
+          "size_mb": 0.66,
+          "size_bytes": 690969,
+          "title_meta": "Ngày Cuối Cùng Của Một Tử Tù",
+          "creator": "calibre (3.41.3) [https://calibre-ebook.com]",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1831] Nhà Thờ Đức Bà Paris.pdf",
+          "pages": 119,
+          "size_mb": 0.83,
+          "size_bytes": 874591,
+          "title_meta": "Nhà Thờ Đức Bà Paris - Victor Hugo",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1862] Những Người Khốn Khổ.pdf",
+          "pages": 1621,
+          "size_mb": 7.95,
+          "size_bytes": 8337908,
+          "title_meta": "Những Người Khốn Khổ - Victor Hugo",
+          "creator": "Chromium",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "03. [1821-1881] Nga_Fyodor Dostoevsky",
+      "book_count": 4,
+      "books": [
+        {
+          "filename": "[1848] Những Đêm Trắng.pdf",
+          "pages": 53,
+          "size_mb": 0.34,
+          "size_bytes": 355205,
+          "title_meta": "Đêm Trắng",
+          "creator": "calibre (2.85.1) [https://calibre-ebook.com]",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1866] Tội Ác Và Trừng Phạt (Bản dịch Cao Xuân Hạo).pdf",
+          "pages": 664,
+          "size_mb": 3.28,
+          "size_bytes": 3443020,
+          "title_meta": "Tội Ác Và Sự Trừng Phạt",
+          "creator": "calibre (6.8.0) [https://calibre-ebook.com]",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1869] Chàng Ngốc (Kẻ Khờ - The Idiot).pdf",
+          "pages": 1041,
+          "size_mb": 3.53,
+          "size_bytes": 3698080,
+          "title_meta": "Chàng Ngốc",
+          "creator": "calibre (3.41.3) [https://calibre-ebook.com]",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1880] Anh Em Nhà Karamazov.pdf",
+          "pages": 937,
+          "size_mb": 8.17,
+          "size_bytes": 8568330,
+          "title_meta": "Anh Em Nhà Karamazov - Fyodor Dostoevsky",
+          "creator": "Chromium",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "04. [1828-1910] Nga_Lev Tolstoy",
+      "book_count": 4,
+      "books": [
+        {
+          "filename": "[1869] Chiến Tranh Và Hòa Bình.pdf",
+          "pages": 1822,
+          "size_mb": 13.98,
+          "size_bytes": 14657717,
+          "title_meta": "Chiến Tranh Và Hòa Bình - Lev Tolstoy",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1877] Anna Karenina.pdf",
+          "pages": 1090,
+          "size_mb": 7.9,
+          "size_bytes": 8283016,
+          "title_meta": "Anna Karenina - Lev Tolstoy",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1886] Cái Chết Của Ivan Ilyich.pdf",
+          "pages": 59,
+          "size_mb": 0.4,
+          "size_bytes": 417235,
+          "title_meta": "Cái Chết của Ivan Ilich",
+          "creator": "calibre (3.12.0) [https://calibre-ebook.com]",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1899] Phục Sinh (Resurrection).pdf",
+          "pages": 1197,
+          "size_mb": 3.67,
+          "size_bytes": 3852943,
+          "title_meta": "Phục Sinh",
+          "creator": "calibre (2.80.0) [https://calibre-ebook.com]",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "05. [1861-1941] Ấn Độ_Rabindranath Tagore",
+      "book_count": 1,
+      "books": [
+        {
+          "filename": "[1910] Lời Dâng (Gitanjali).pdf",
+          "pages": 50,
+          "size_mb": 0.42,
+          "size_bytes": 436131,
+          "title_meta": "Lời Dâng (Thơ Dâng) - Rabindranath Tagore",
+          "creator": "Chromium",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "06. [1877-1962] Đức_Hermann Hesse",
+      "book_count": 3,
+      "books": [
+        {
+          "filename": "[1919] Demian - Tuổi Trẻ Băn Khoăn.pdf",
+          "pages": 118,
+          "size_mb": 0.83,
+          "size_bytes": 872434,
+          "title_meta": "Demian: Tuổi Trẻ Băn Khoăn - Hermann Hesse",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1922] Câu Chuyện Dòng Sông (Siddhartha).pdf",
+          "pages": 92,
+          "size_mb": 0.92,
+          "size_bytes": 960211,
+          "title_meta": "Câu Chuyện Dòng Sông - Hermann Hesse",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1930] Đôi Bạn Chân Tình (Narziss và Goldmund).pdf",
+          "pages": 209,
+          "size_mb": 2.15,
+          "size_bytes": 2258703,
+          "title_meta": "Đôi Bạn Chân Tình - Hermann Hesse",
+          "creator": "Chromium",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "07. [1883-1924] Áo_Franz Kafka",
+      "book_count": 3,
+      "books": [
+        {
+          "filename": "[1912-1924] Franz Kafka - Tuyển Tập Tác Phẩm.pdf",
+          "pages": 1007,
+          "size_mb": 63.11,
+          "size_bytes": 66174281,
+          "title_meta": "",
+          "creator": "",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1915] Hóa Thân.pdf",
+          "pages": 42,
+          "size_mb": 0.58,
+          "size_bytes": 603543,
+          "title_meta": "Hóa Thân - Franz Kafka",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1925] Vụ Án.pdf",
+          "pages": 181,
+          "size_mb": 1.76,
+          "size_bytes": 1847654,
+          "title_meta": "Vụ Án - Franz Kafka",
+          "creator": "Chromium",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "08. [1890-1960] Nga_Boris Pasternak",
+      "book_count": 1,
+      "books": [
+        {
+          "filename": "[1957] Bác Sĩ Zhivago.pdf",
+          "pages": 560,
+          "size_mb": 4.89,
+          "size_bytes": 5129351,
+          "title_meta": "Bác Sĩ Zhivago - Boris Pasternak",
+          "creator": "Chromium",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "09. [1899-1972] Nhật Bản_Yasunari Kawabata",
+      "book_count": 5,
+      "books": [
+        {
+          "filename": "[1948-1952] Yasunari Kawabata - Snow Country & Thousand Cranes (Bản dịch trọn vẹn Edward Seidensticker).pdf",
+          "pages": 347,
+          "size_mb": 25.81,
+          "size_bytes": 27068787,
+          "title_meta": "",
+          "creator": "",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1952] Ngàn Cánh Hạc.pdf",
+          "pages": 130,
+          "size_mb": 0.89,
+          "size_bytes": 934918,
+          "title_meta": "Ngàn Cánh Hạc - Yasunari Kawabata",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1961] Người Đẹp Say Ngủ.pdf",
+          "pages": 78,
+          "size_mb": 0.8,
+          "size_bytes": 837088,
+          "title_meta": "Người Đẹp Say Ngủ - Yasunari Kawabata",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1962] Cố Đô.pdf",
+          "pages": 192,
+          "size_mb": 1.34,
+          "size_bytes": 1408787,
+          "title_meta": "Cố Đô - Yasunari Kawabata",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1964] Đẹp Và Buồn.pdf",
+          "pages": 189,
+          "size_mb": 1.2,
+          "size_bytes": 1255745,
+          "title_meta": "Đẹp Và Buồn - Yasunari Kawabata",
+          "creator": "Chromium",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "10. [1899-1961] Mỹ_Ernest Hemingway",
+      "book_count": 3,
+      "books": [
+        {
+          "filename": "[1929] Giã Từ Vũ Khí.pdf",
+          "pages": 348,
+          "size_mb": 1.99,
+          "size_bytes": 2089533,
+          "title_meta": "Giã Từ Vũ Khí - Ernest Hemingway",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1940] Chuông Nguyện Hồn Ai.pdf",
+          "pages": 500,
+          "size_mb": 3.9,
+          "size_bytes": 4085283,
+          "title_meta": "Chuông Gọi Hồn Ai - Ernest Hemingway",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1952] Ông Già Và Biển Cả.pdf",
+          "pages": 108,
+          "size_mb": 1.29,
+          "size_bytes": 1356557,
+          "title_meta": "Ông già và biển cả",
+          "creator": "calibre (2.56.0) [http://calibre-ebook.com]",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "11. [1905-1984] Nga_Mikhail Sholokhov",
+      "book_count": 1,
+      "books": [
+        {
+          "filename": "[1940] Sông Đông Êm Đềm.pdf",
+          "pages": 2217,
+          "size_mb": 15.88,
+          "size_bytes": 16649603,
+          "title_meta": "Sông Đông Êm Đềm - Mikhail Sholokhov",
+          "creator": "Chromium",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "12. [1913-1960] Pháp_Albert Camus",
+      "book_count": 4,
+      "books": [
+        {
+          "filename": "[1942] Người Xa Lạ.pdf",
+          "pages": 68,
+          "size_mb": 0.79,
+          "size_bytes": 825988,
+          "title_meta": "Người Xa Lạ - Albert Camus",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1942] Thần Thoại Sisyphus (Huyền Thoại Sisyphus).pdf",
+          "pages": 86,
+          "size_mb": 1.65,
+          "size_bytes": 1733839,
+          "title_meta": "Thần Thoại Sisyphus",
+          "creator": "calibre (2.80.0) [https://calibre-ebook.com]",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1947] Dịch Hạch.pdf",
+          "pages": 257,
+          "size_mb": 1.67,
+          "size_bytes": 1753117,
+          "title_meta": "Dịch Hạch",
+          "creator": "calibre (8.10.0) [https://calibre-ebook.com]",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1956] Sa Đọa.pdf",
+          "pages": 84,
+          "size_mb": 1.1,
+          "size_bytes": 1157512,
+          "title_meta": "Sa Đọa - Albert Camus",
+          "creator": "Chromium",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "13. [1927-2014] Colombia_Gabriel Garcia Marquez",
+      "book_count": 2,
+      "books": [
+        {
+          "filename": "[1967] Trăm Năm Cô Đơn.pdf",
+          "pages": 339,
+          "size_mb": 3.68,
+          "size_bytes": 3862491,
+          "title_meta": "Trăm Năm Cô Đơn - Gabriel García Márquez",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1985] Tình Yêu Thời Thổ Tả.pdf",
+          "pages": 334,
+          "size_mb": 3.85,
+          "size_bytes": 4041857,
+          "title_meta": "Tình Yêu Thời Thổ Tả - Gabriel García Márquez",
+          "creator": "Chromium",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "14. [1935-2023] Nhật Bản_Kenzaburo Oe",
+      "book_count": 2,
+      "books": [
+        {
+          "filename": "[1958] Nuôi Thú.pdf",
+          "pages": 45,
+          "size_mb": 0.52,
+          "size_bytes": 545097,
+          "title_meta": "Nuôi Thù - Kenzaburo Oe",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1964] Một Nỗi Đau Riêng.pdf",
+          "pages": 147,
+          "size_mb": 1.58,
+          "size_bytes": 1653366,
+          "title_meta": "Một Nỗi Đau Riêng - Kenzaburo Oe",
+          "creator": "Chromium",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "15. [1955-nay] Trung Quốc_Mạc Ngôn",
+      "book_count": 2,
+      "books": [
+        {
+          "filename": "[1992] Tửu Quốc.pdf",
+          "pages": 299,
+          "size_mb": 2.59,
+          "size_bytes": 2711340,
+          "title_meta": "Tửu Quốc - Mạc Ngôn (Mo Yan)",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1995] Báu Vật Của Đời.pdf",
+          "pages": 743,
+          "size_mb": 5.73,
+          "size_bytes": 6013548,
+          "title_meta": "Báu Vật Của Đời - Mạc Ngôn (Mo Yan)",
+          "creator": "Chromium",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "16. [1894-1954] Việt Nam_Ngô Tất Tố",
+      "book_count": 4,
+      "books": [
+        {
+          "filename": "Lều Chõng (Toàn Văn Tiểu Thuyết Khoa Cử Phong Kiến) (1952).pdf",
+          "pages": 322,
+          "size_mb": 1.0,
+          "size_bytes": 1043970,
+          "title_meta": "",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "Tắt Đèn (Toàn Văn 26 Chương Hoàn Chỉnh) (1939).pdf",
+          "pages": 147,
+          "size_mb": 0.43,
+          "size_bytes": 451259,
+          "title_meta": "",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "Việc Làng (Toàn Văn Tập Phóng Sự Hủ Tục Nông Thôn) (1940).pdf",
+          "pages": 83,
+          "size_mb": 0.35,
+          "size_bytes": 367237,
+          "title_meta": "",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1940] Việc Làng (Phóng Sự Toàn Tập Hoàn Chỉnh).pdf",
+          "pages": 29,
+          "size_mb": 3.36,
+          "size_bytes": 3519489,
+          "title_meta": "",
+          "creator": "",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "17. [1910-1942] Việt Nam_Thạch Lam",
+      "book_count": 5,
+      "books": [
+        {
+          "filename": "Gió Đầu Mùa (Toàn Tập Truyện Ngắn Hoàn Chỉnh) (1937).pdf",
+          "pages": 92,
+          "size_mb": 0.35,
+          "size_bytes": 368152,
+          "title_meta": "",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "Nắng Trong Vườn (Toàn Tập Truyện Ngắn) (1938).pdf",
+          "pages": 99,
+          "size_mb": 0.4,
+          "size_bytes": 420716,
+          "title_meta": "",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "Sợi Tóc (Toàn Tập Truyện Ngắn Tinh Tuyển) (1942).pdf",
+          "pages": 55,
+          "size_mb": 0.25,
+          "size_bytes": 260414,
+          "title_meta": "",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "Theo Dòng (Toàn Tập Tiểu Luận & Tùy Bút Văn Học) (1941).pdf",
+          "pages": 62,
+          "size_mb": 0.3,
+          "size_bytes": 315419,
+          "title_meta": "",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1943] Thạch Lam - Hà Nội 36 Phố Phường (Bản scan NXB Đời Nay).pdf",
+          "pages": 122,
+          "size_mb": 15.44,
+          "size_bytes": 16192506,
+          "title_meta": "",
+          "creator": "",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "18. [1910-1987] Việt Nam_Nguyễn Tuân",
+      "book_count": 3,
+      "books": [
+        {
+          "filename": "Vang Bóng Một Thời (Toàn Văn 12 Truyện Hoàn Chỉnh) (1940).pdf",
+          "pages": 152,
+          "size_mb": 0.64,
+          "size_bytes": 672685,
+          "title_meta": "Vang Bóng Một Thời - Nguyễn Tuân",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1946] Chùa Đàn (Kiệt Tác Duy Mỹ & Ma Mị).pdf",
+          "pages": 49,
+          "size_mb": 0.54,
+          "size_bytes": 568705,
+          "title_meta": "Chùa Đàn",
+          "creator": "calibre (7.20.0) [https://calibre-ebook.com]",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1960] Tùy Bút Sông Đà (Toàn Tập Ký & Tùy Bút).pdf",
+          "pages": 9,
+          "size_mb": 0.14,
+          "size_bytes": 149835,
+          "title_meta": "",
+          "creator": "Chromium",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "19. [1912-1939] Việt Nam_Vũ Trọng Phụng",
+      "book_count": 5,
+      "books": [
+        {
+          "filename": "Cơm Thầy Cơm Cô (Toàn Văn Phóng Sự Điều Tra) (1936).pdf",
+          "pages": 57,
+          "size_mb": 0.23,
+          "size_bytes": 243245,
+          "title_meta": "",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "Giông Tố (Toàn Văn 30 Chương Hoàn Chỉnh) (1936).pdf",
+          "pages": 320,
+          "size_mb": 0.95,
+          "size_bytes": 990957,
+          "title_meta": "",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "Kỹ Nghệ Lấy Tây (Toàn Văn Phóng Sự Hiện Thực) (1934).pdf",
+          "pages": 79,
+          "size_mb": 0.31,
+          "size_bytes": 328470,
+          "title_meta": "",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "Làm Đĩ (Toàn Văn Tiểu Thuyết Xã Hội) (1936).pdf",
+          "pages": 192,
+          "size_mb": 0.73,
+          "size_bytes": 765963,
+          "title_meta": "",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "Số Đỏ (Toàn Văn 20 Chương Hoàn Chỉnh) (1936).pdf",
+          "pages": 219,
+          "size_mb": 0.67,
+          "size_bytes": 704109,
+          "title_meta": "",
+          "creator": "Chromium",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "20. [1915-1951] Việt Nam_Nam Cao",
+      "book_count": 4,
+      "books": [
+        {
+          "filename": "Chí Phèo (Toàn Văn Kiệt Tác Hoàn Chỉnh) (1941).pdf",
+          "pages": 33,
+          "size_mb": 0.2,
+          "size_bytes": 206522,
+          "title_meta": "",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "Sống Mòn (Toàn Văn Tiểu Thuyết Hoàn Chỉnh) (1944).pdf",
+          "pages": 244,
+          "size_mb": 0.85,
+          "size_bytes": 893759,
+          "title_meta": "",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[2002] Nam Cao Toàn Tập (Tập 1 - NXB Văn Học, Hà Minh Đức).pdf",
+          "pages": 943,
+          "size_mb": 31.87,
+          "size_bytes": 33413985,
+          "title_meta": "",
+          "creator": "",
+          "status": "VALID"
+        },
+        {
+          "filename": "[2002] Nam Cao Toàn Tập (Tập 2 - NXB Văn Học, Hà Minh Đức).pdf",
+          "pages": 788,
+          "size_mb": 28.82,
+          "size_bytes": 30219978,
+          "title_meta": "",
+          "creator": "",
+          "status": "VALID"
+        }
+      ]
+    },
+    {
+      "folder": "21. [Thế kỷ 14-18] Trung Quốc_Tứ Đại Danh Tác",
+      "book_count": 8,
+      "books": [
+        {
+          "filename": "Hồng Lâu Mộng (Đỉnh Cao Tiểu Thuyết Cổ Điển Minh - Thanh) (1791).pdf",
+          "pages": 1428,
+          "size_mb": 4.84,
+          "size_bytes": 5074953,
+          "title_meta": "Hồng Lâu Mộng",
+          "creator": "http://motsach.info",
+          "status": "VALID"
+        },
+        {
+          "filename": "Tam Quốc Diễn Nghĩa (Bản Văn Học Toàn Văn 120 Hồi) (1522).pdf",
+          "pages": 1754,
+          "size_mb": 41.53,
+          "size_bytes": 43544058,
+          "title_meta": "Tam Quốc Diễn Nghĩa",
+          "creator": "Internet Archive PDF converter",
+          "status": "VALID"
+        },
+        {
+          "filename": "Thủy Hử (Bản Văn Học Toàn Văn 108 Anh Hùng Lương Sơn Bạc) (1570).pdf",
+          "pages": 417,
+          "size_mb": 2.0,
+          "size_bytes": 2092088,
+          "title_meta": "Thủy Hử - Thi Nại Am",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "Tây Du Ký (Bản Văn Học Toàn Văn 100 Hồi Thần Thoại) (1592).pdf",
+          "pages": 1187,
+          "size_mb": 3.82,
+          "size_bytes": 4009704,
+          "title_meta": "Tây Du Ký - Ngô Thừa Ân",
+          "creator": "Chromium",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1644] Phùng Mộng Long - Đông Chu Liệt Quốc (Toàn Văn 108 Hồi Trọn Bộ).pdf",
+          "pages": 1570,
+          "size_mb": 64.94,
+          "size_bytes": 68097065,
+          "title_meta": "",
+          "creator": "Nitro Pro 10",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1740] Bồ Tùng Linh - Liêu Trai Chí Dị (Trọn Bộ Scan NXB Văn Học, Nguyễn Đức Lân dịch).pdf",
+          "pages": 1254,
+          "size_mb": 41.3,
+          "size_bytes": 43308003,
+          "title_meta": "",
+          "creator": "PDF Shaper",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1750] Ngô Kính Tử - Nho Lâm Ngoại Sử (Chuyện Làng Nho - Tập 1).pdf",
+          "pages": 413,
+          "size_mb": 15.06,
+          "size_bytes": 15792036,
+          "title_meta": "",
+          "creator": "",
+          "status": "VALID"
+        },
+        {
+          "filename": "[1750] Ngô Kính Tử - Nho Lâm Ngoại Sử (Chuyện Làng Nho - Tập 2).pdf",
+          "pages": 411,
+          "size_mb": 14.57,
+          "size_bytes": 15280144,
+          "title_meta": "",
+          "creator": "",
+          "status": "VALID"
+        }
+      ]
+    }
+  ]
+}
