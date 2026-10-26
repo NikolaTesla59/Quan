@@ -1,0 +1,377 @@
+{
+  "total_courses": 46,
+  "completed": 46,
+  "missing": 0,
+  "total_pages": 352,
+  "total_size_mb": 169.95,
+  "textbooks": [
+    {
+      "folder": "01_Tài chính Doanh nghiệp & Đầu tư\\[NEU] Kinh tế đầu tư - PGS.TS Từ Quang Phương (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Kinh tế đầu tư - PGS.TS Từ Quang Phương (NXB ĐHKTQD).pdf",
+      "pages": 12,
+      "size_mb": 3.72,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN NGÂN HÀ"
+    },
+    {
+      "folder": "01_Tài chính Doanh nghiệp & Đầu tư\\[NEU] Thị trường chứng khoán - PGS.TS Nguyễn Đăng Dốt (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Thị trường chứng khoán - PGS.TS Nguyễn Đăng Dốt (NXB ĐHKTQD).pdf",
+      "pages": 12,
+      "size_mb": 3.72,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN NGÂN HÀ"
+    },
+    {
+      "folder": "01_Tài chính Doanh nghiệp & Đầu tư\\[NEU] Tài chính doanh nghiệp - PGS.TS Vũ Duy Hào (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Tài chính doanh nghiệp - PGS.TS Vũ Duy Hào (NXB ĐHKTQD).pdf",
+      "pages": 14,
+      "size_mb": 3.75,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN NGÂN HÀ"
+    },
+    {
+      "folder": "01_Tài chính Doanh nghiệp & Đầu tư\\[NEU] Tài chính tiền tệ - PGS.TS Nguyễn Đăng Dốt (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Tài chính tiền tệ - PGS.TS Nguyễn Đăng Dốt (NXB ĐHKTQD).pdf",
+      "pages": 14,
+      "size_mb": 3.75,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN NGÂN HÀ"
+    },
+    {
+      "folder": "01_Tài chính Doanh nghiệp & Đầu tư\\[NEU] Định giá tài sản & Bất động sản - PGS.TS Hoàng Văn Cường (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Định giá tài sản & Bất động sản - PGS.TS Hoàng Văn Cường (NXB ĐHKTQD).pdf",
+      "pages": 12,
+      "size_mb": 3.73,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA BẤT ĐỘN"
+    },
+    {
+      "folder": "02_Kế toán & Kiểm toán\\[NEU] Kiểm toán căn bản - GS.TS Nguyễn Quang Quynh (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Kiểm toán căn bản - GS.TS Nguyễn Quang Quynh (NXB ĐHKTQD).pdf",
+      "pages": 14,
+      "size_mb": 3.76,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN KẾ TOÁN"
+    },
+    {
+      "folder": "02_Kế toán & Kiểm toán\\[NEU] Kế toán quản trị - PGS.TS Trương Bá Thanh (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Kế toán quản trị - PGS.TS Trương Bá Thanh (NXB ĐHKTQD).pdf",
+      "pages": 14,
+      "size_mb": 3.76,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN KẾ TOÁN"
+    },
+    {
+      "folder": "02_Kế toán & Kiểm toán\\[NEU] Kế toán tài chính 1 - GS.TS Đặng Thị Loan (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Kế toán tài chính 1 - GS.TS Đặng Thị Loan (NXB ĐHKTQD).pdf",
+      "pages": 14,
+      "size_mb": 3.75,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN KẾ TOÁN"
+    },
+    {
+      "folder": "02_Kế toán & Kiểm toán\\[NEU] Kế toán tài chính 2 - PGS.TS Nguyễn Phú Giang (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Kế toán tài chính 2 - PGS.TS Nguyễn Phú Giang (NXB ĐHKTQD).pdf",
+      "pages": 14,
+      "size_mb": 3.76,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN KẾ TOÁN"
+    },
+    {
+      "folder": "02_Kế toán & Kiểm toán\\[NEU] Nguyên lý kế toán - GS.TS Đặng Thị Loan (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Nguyên lý kế toán - GS.TS Đặng Thị Loan (NXB ĐHKTQD).pdf",
+      "pages": 14,
+      "size_mb": 3.75,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN KẾ TOÁN"
+    },
+    {
+      "folder": "02_Kế toán & Kiểm toán\\[NEU] Phân tích báo cáo tài chính - PGS.TS Nguyễn Năng Phúc (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Phân tích báo cáo tài chính - PGS.TS Nguyễn Năng Phúc (NXB ĐHKTQD).pdf",
+      "pages": 14,
+      "size_mb": 3.76,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN KẾ TOÁN"
+    },
+    {
+      "folder": "03_Ngân hàng & Bảo hiểm\\[NEU] Kinh doanh bảo hiểm - PGS.TS Nguyễn Văn Định (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Kinh doanh bảo hiểm - PGS.TS Nguyễn Văn Định (NXB ĐHKTQD).pdf",
+      "pages": 12,
+      "size_mb": 3.73,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA BẢO HIỂ"
+    },
+    {
+      "folder": "03_Ngân hàng & Bảo hiểm\\[NEU] Quản trị ngân hàng thương mại - PGS.TS Phan Thị Thu Hà (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Quản trị ngân hàng thương mại - PGS.TS Phan Thị Thu Hà (NXB ĐHKTQD).pdf",
+      "pages": 12,
+      "size_mb": 3.74,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN NGÂN HÀ"
+    },
+    {
+      "folder": "04_Tài chính Công, Thuế & Hải quan\\[NEU] Kinh tế công cộng - PGS.TS Vũ Cường (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Kinh tế công cộng - PGS.TS Vũ Cường (NXB ĐHKTQD).pdf",
+      "pages": 14,
+      "size_mb": 3.76,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA KINH TẾ"
+    },
+    {
+      "folder": "04_Tài chính Công, Thuế & Hải quan\\[NEU] Quản trị thuế trong kinh doanh - PGS.TS Nguyễn Thị Thùy Dương (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Quản trị thuế trong kinh doanh - PGS.TS Nguyễn Thị Thùy Dương (NXB ĐHKTQD).pdf",
+      "pages": 14,
+      "size_mb": 3.77,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA TÀI CHÍ"
+    },
+    {
+      "folder": "05_Tài chính Quốc tế\\[NEU] Giao dịch & Đàm phán quốc tế - PGS.TS Lê Thị Thu Hà (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Giao dịch & Đàm phán quốc tế - PGS.TS Lê Thị Thu Hà (NXB ĐHKTQD).pdf",
+      "pages": 12,
+      "size_mb": 3.74,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA KINH DO"
+    },
+    {
+      "folder": "05_Tài chính Quốc tế\\[NEU] Kinh tế quốc tế - PGS.TS Nguyễn Thường Lạng (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Kinh tế quốc tế - PGS.TS Nguyễn Thường Lạng (NXB ĐHKTQD).pdf",
+      "pages": 4,
+      "size_mb": 3.66,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN THƯƠNG "
+    },
+    {
+      "folder": "05_Tài chính Quốc tế\\[NEU] Thanh toán quốc tế - PGS.TS Nguyễn Thị Tường Anh (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Thanh toán quốc tế - PGS.TS Nguyễn Thị Tường Anh (NXB ĐHKTQD).pdf",
+      "pages": 12,
+      "size_mb": 3.74,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN NGÂN HÀ"
+    },
+    {
+      "folder": "05_Tài chính Quốc tế\\[NEU] Tài chính quốc tế - PGS.TS Nguyễn Thị Quy (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Tài chính quốc tế - PGS.TS Nguyễn Thị Quy (NXB ĐHKTQD).pdf",
+      "pages": 12,
+      "size_mb": 3.74,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN NGÂN HÀ"
+    },
+    {
+      "folder": "06_Kinh tế học, Quản trị kinh doanh & Marketing\\[NEU] Hành vi người tiêu dùng - PGS.TS Vũ Trí Dũng (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Hành vi người tiêu dùng - PGS.TS Vũ Trí Dũng (NXB ĐHKTQD).pdf",
+      "pages": 4,
+      "size_mb": 3.66,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA MARKETI"
+    },
+    {
+      "folder": "06_Kinh tế học, Quản trị kinh doanh & Marketing\\[NEU] Khởi sự kinh doanh & Đổi mới sáng tạo - PGS.TS Trương Thị Nam Thắng (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Khởi sự kinh doanh & Đổi mới sáng tạo - PGS.TS Trương Thị Nam Thắng (NXB ĐHKTQD).pdf",
+      "pages": 3,
+      "size_mb": 3.65,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: TRUNG TÂM KH"
+    },
+    {
+      "folder": "06_Kinh tế học, Quản trị kinh doanh & Marketing\\[NEU] Kinh tế học vi mô - PGS.TS Vũ Kim Dũng (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Kinh tế học vi mô - PGS.TS Vũ Kim Dũng (NXB ĐHKTQD).pdf",
+      "pages": 10,
+      "size_mb": 3.71,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA KINH TẾ"
+    },
+    {
+      "folder": "06_Kinh tế học, Quản trị kinh doanh & Marketing\\[NEU] Kinh tế học vĩ mô - PGS.TS Vũ Kim Dũng (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Kinh tế học vĩ mô - PGS.TS Vũ Kim Dũng (NXB ĐHKTQD).pdf",
+      "pages": 6,
+      "size_mb": 3.67,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA KINH TẾ"
+    },
+    {
+      "folder": "06_Kinh tế học, Quản trị kinh doanh & Marketing\\[NEU] Kinh tế phát triển - PGS.TS Nguyễn Ngọc Sơn (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Kinh tế phát triển - PGS.TS Nguyễn Ngọc Sơn (NXB ĐHKTQD).pdf",
+      "pages": 14,
+      "size_mb": 3.77,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA KINH TẾ"
+    },
+    {
+      "folder": "06_Kinh tế học, Quản trị kinh doanh & Marketing\\[NEU] Kinh tế quốc tế - PGS.TS Nguyễn Thường Lạng (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Kinh tế quốc tế - PGS.TS Nguyễn Thường Lạng (NXB ĐHKTQD).pdf",
+      "pages": 4,
+      "size_mb": 3.66,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN THƯƠNG "
+    },
+    {
+      "folder": "06_Kinh tế học, Quản trị kinh doanh & Marketing\\[NEU] Lịch sử các học thuyết kinh tế - GS.TS Nguyễn Văn Dần (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Lịch sử các học thuyết kinh tế - GS.TS Nguyễn Văn Dần (NXB ĐHKTQD).pdf",
+      "pages": 4,
+      "size_mb": 3.66,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA KINH TẾ"
+    },
+    {
+      "folder": "06_Kinh tế học, Quản trị kinh doanh & Marketing\\[NEU] Marketing căn bản - PGS.TS Trần Minh Đạo (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Marketing căn bản - PGS.TS Trần Minh Đạo (NXB ĐHKTQD).pdf",
+      "pages": 4,
+      "size_mb": 3.66,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA MARKETI"
+    },
+    {
+      "folder": "06_Kinh tế học, Quản trị kinh doanh & Marketing\\[NEU] Nghiên cứu Marketing - PGS.TS Nguyễn Viết Lâm (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Nghiên cứu Marketing - PGS.TS Nguyễn Viết Lâm (NXB ĐHKTQD).pdf",
+      "pages": 4,
+      "size_mb": 3.66,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA MARKETI"
+    },
+    {
+      "folder": "06_Kinh tế học, Quản trị kinh doanh & Marketing\\[NEU] Quản trị Logistics & Chuỗi cung ứng - PGS.TS Đặng Đình Đào (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Quản trị Logistics & Chuỗi cung ứng - PGS.TS Đặng Đình Đào (NXB ĐHKTQD).pdf",
+      "pages": 4,
+      "size_mb": 3.66,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN THƯƠNG "
+    },
+    {
+      "folder": "06_Kinh tế học, Quản trị kinh doanh & Marketing\\[NEU] Quản trị Marketing - PGS.TS Trần Minh Đạo (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Quản trị Marketing - PGS.TS Trần Minh Đạo (NXB ĐHKTQD).pdf",
+      "pages": 3,
+      "size_mb": 3.65,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA MARKETI"
+    },
+    {
+      "folder": "06_Kinh tế học, Quản trị kinh doanh & Marketing\\[NEU] Quản trị chiến lược - PGS.TS Lê Công Hoa (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Quản trị chiến lược - PGS.TS Lê Công Hoa (NXB ĐHKTQD).pdf",
+      "pages": 4,
+      "size_mb": 3.66,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN QUẢN TR"
+    },
+    {
+      "folder": "06_Kinh tế học, Quản trị kinh doanh & Marketing\\[NEU] Quản trị dự án - PGS.TS Từ Quang Phương (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Quản trị dự án - PGS.TS Từ Quang Phương (NXB ĐHKTQD).pdf",
+      "pages": 4,
+      "size_mb": 3.66,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA ĐẦU TƯ "
+    },
+    {
+      "folder": "06_Kinh tế học, Quản trị kinh doanh & Marketing\\[NEU] Quản trị học đại cương - PGS.TS Đoàn Thị Thu Hà (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Quản trị học đại cương - PGS.TS Đoàn Thị Thu Hà (NXB ĐHKTQD).pdf",
+      "pages": 4,
+      "size_mb": 3.66,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA KHOA HỌ"
+    },
+    {
+      "folder": "06_Kinh tế học, Quản trị kinh doanh & Marketing\\[NEU] Quản trị nhân lực - PGS.TS Nguyễn Ngọc Quân (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Quản trị nhân lực - PGS.TS Nguyễn Ngọc Quân (NXB ĐHKTQD).pdf",
+      "pages": 3,
+      "size_mb": 3.65,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA BẢO HIỂ"
+    },
+    {
+      "folder": "07_Toán, Thống kê, Kinh tế lượng & Tin học\\[NEU] Hệ thống thông tin quản lý (MIS) - PGS.TS Trần Thị Song Minh (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Hệ thống thông tin quản lý (MIS) - PGS.TS Trần Thị Song Minh (NXB ĐHKTQD).pdf",
+      "pages": 3,
+      "size_mb": 3.65,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA TIN HỌC"
+    },
+    {
+      "folder": "07_Toán, Thống kê, Kinh tế lượng & Tin học\\[NEU] Kinh tế lượng cơ bản & nâng cao - GS.TS Nguyễn Quang Dong (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Kinh tế lượng cơ bản & nâng cao - GS.TS Nguyễn Quang Dong (NXB ĐHKTQD).pdf",
+      "pages": 3,
+      "size_mb": 3.65,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA TOÁN KI"
+    },
+    {
+      "folder": "07_Toán, Thống kê, Kinh tế lượng & Tin học\\[NEU] Kinh tế lượng tài chính & Chuỗi thời gian nâng cao (Financial Econometrics - Bậc Thạc sĩ & Tiến sĩ)",
+      "file": "[NEU] [Giáo trình Toàn văn] Kinh tế lượng tài chính & Chuỗi thời gian nâng cao (Financial Econometrics - Bậc Thạc sĩ & Tiến sĩ).pdf",
+      "pages": 3,
+      "size_mb": 3.65,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA TOÁN KI"
+    },
+    {
+      "folder": "07_Toán, Thống kê, Kinh tế lượng & Tin học\\[NEU] Mô hình toán kinh tế & Tối ưu hóa - GS.TS Trần Túc & Khoa Toán Kinh tế NEU",
+      "file": "[NEU] [Giáo trình Toàn văn] Mô hình toán kinh tế & Tối ưu hóa - GS.TS Trần Túc & Khoa Toán Kinh tế NEU.pdf",
+      "pages": 3,
+      "size_mb": 3.65,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA TOÁN KI"
+    },
+    {
+      "folder": "07_Toán, Thống kê, Kinh tế lượng & Tin học\\[NEU] Nguyên lý Thống kê kinh tế - PGS.TS Trần Ngọc Phác (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Nguyên lý Thống kê kinh tế - PGS.TS Trần Ngọc Phác (NXB ĐHKTQD).pdf",
+      "pages": 3,
+      "size_mb": 3.65,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA THỐNG K"
+    },
+    {
+      "folder": "07_Toán, Thống kê, Kinh tế lượng & Tin học\\[NEU] Phân tích dữ liệu kinh tế với Python & R - Khoa Toán Kinh tế NEU",
+      "file": "[NEU] [Giáo trình Toàn văn] Phân tích dữ liệu kinh tế với Python & R - Khoa Toán Kinh tế NEU.pdf",
+      "pages": 3,
+      "size_mb": 3.65,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA TOÁN KI"
+    },
+    {
+      "folder": "07_Toán, Thống kê, Kinh tế lượng & Tin học\\[NEU] Phương pháp nghiên cứu khoa học trong kinh tế & kinh doanh (Bậc Thạc sĩ & Tiến sĩ)",
+      "file": "[NEU] [Giáo trình Toàn văn] Phương pháp nghiên cứu khoa học trong kinh tế & kinh doanh (Bậc Thạc sĩ & Tiến sĩ).pdf",
+      "pages": 3,
+      "size_mb": 3.65,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: VIỆN QUẢN LÝ"
+    },
+    {
+      "folder": "07_Toán, Thống kê, Kinh tế lượng & Tin học\\[NEU] Thống kê doanh nghiệp - PGS.TS Phan Công Nghĩa (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Thống kê doanh nghiệp - PGS.TS Phan Công Nghĩa (NXB ĐHKTQD).pdf",
+      "pages": 3,
+      "size_mb": 3.65,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA THỐNG K"
+    },
+    {
+      "folder": "07_Toán, Thống kê, Kinh tế lượng & Tin học\\[NEU] Toán cho các nhà kinh tế - PGS.TS Nguyễn Cao Văn (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Toán cho các nhà kinh tế - PGS.TS Nguyễn Cao Văn (NXB ĐHKTQD).pdf",
+      "pages": 4,
+      "size_mb": 3.66,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA TOÁN KI"
+    },
+    {
+      "folder": "07_Toán, Thống kê, Kinh tế lượng & Tin học\\[NEU] Xác suất và Thống kê toán - PGS.TS Nguyễn Cao Văn (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Xác suất và Thống kê toán - PGS.TS Nguyễn Cao Văn (NXB ĐHKTQD).pdf",
+      "pages": 3,
+      "size_mb": 3.65,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA TOÁN KI"
+    },
+    {
+      "folder": "08_Pháp luật & Ngoại ngữ chuyên ngành\\[NEU] Luật kinh tế & Kinh doanh - TS Trần Văn Nam (NXB ĐHKTQD)",
+      "file": "[NEU] [Giáo trình Toàn văn] Luật kinh tế & Kinh doanh - TS Trần Văn Nam (NXB ĐHKTQD).pdf",
+      "pages": 3,
+      "size_mb": 3.65,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA LUẬT GI"
+    },
+    {
+      "folder": "08_Pháp luật & Ngoại ngữ chuyên ngành\\[NEU] Tiếng Anh chuyên ngành Kinh tế & Kinh doanh - Khoa Ngoại ngữ NEU",
+      "file": "[NEU] [Giáo trình Toàn văn] Tiếng Anh chuyên ngành Kinh tế & Kinh doanh - Khoa Ngoại ngữ NEU.pdf",
+      "pages": 3,
+      "size_mb": 3.65,
+      "font_ok": true,
+      "sample": "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN KHOA / VIỆN: KHOA NGOẠI N"
+    }
+  ]
+}

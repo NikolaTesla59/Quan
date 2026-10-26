@@ -1,103 +1,88 @@
-$ErrorActionPreference = 'SilentlyContinue'
+# Windows System Maintenance Script
+Set-StrictMode -Version Latest
+$ErrorActionPreference = "Continue"
 
-function Get-DirMetrics($path) {
-    if (Test-Path $path) {
-        $files = Get-ChildItem -Path $path -Recurse -File -Force -ErrorAction SilentlyContinue
-        $measure = $files | Measure-Object -Property Length -Sum
-        $sizeMB = if ($measure.Sum) { [math]::Round(($measure.Sum / 1MB), 2) } else { 0 }
-        $count = if ($files) { $files.Count } else { 0 }
-        return @{ SizeMB = $sizeMB; Count = $count }
+function Get-DirSizeMB ($dirPath) {
+    if (Test-Path $dirPath) {
+        $files = Get-ChildItem -Path $dirPath -Recurse -Force -File -ErrorAction SilentlyContinue
+        if ($files) {
+            $totalBytes = ($files | Measure-Object -Property Length -Sum).Sum
+            if ($totalBytes) {
+                return [math]::Round($totalBytes / 1MB, 2)
+            }
+        }
     }
-    return @{ SizeMB = 0; Count = 0 }
+    return 0.0
 }
 
-# 1. Đo lường ban đầu
-$userBefore = Get-DirMetrics $env:TEMP
-$winBefore = Get-DirMetrics 'C:\Windows\Temp'
+Write-Output "[1/5] Thu thap thong so he thong truoc don dep..."
+$diskC = Get-CimInstance Win32_LogicalDisk -Filter "DeviceID='C:'"
+$cTotalGB = [math]::Round($diskC.Size / 1GB, 2)
+$cFreeBeforeGB = [math]::Round($diskC.FreeSpace / 1GB, 2)
+$cUsedBeforeGB = [math]::Round(($diskC.Size - $diskC.FreeSpace) / 1GB, 2)
 
-# 2. Xóa Temp User
-$userRemoved = 0
-$userLocked = 0
-Get-ChildItem -Path $env:TEMP -Force -ErrorAction SilentlyContinue | ForEach-Object {
+$userTempPath = $env:TEMP
+$winTempPath = "C:\Windows\Temp"
+
+$userTempBeforeMB = Get-DirSizeMB $userTempPath
+$winTempBeforeMB = Get-DirSizeMB $winTempPath
+
+Write-Output "Dung luong o C truoc don: Total = $cTotalGB GB, Used = $cUsedBeforeGB GB, Free = $cFreeBeforeGB GB"
+Write-Output "User Temp truoc don: $userTempBeforeMB MB"
+Write-Output "Windows Temp truoc don: $winTempBeforeMB MB"
+
+Write-Output "`n[2/5] Don dep file rac trong $userTempPath va $winTempPath..."
+
+# Count files before
+$userTempFilesBefore = @(Get-ChildItem -Path $userTempPath -Recurse -Force -ErrorAction SilentlyContinue).Count
+$winTempFilesBefore = @(Get-ChildItem -Path $winTempPath -Recurse -Force -ErrorAction SilentlyContinue).Count
+
+# Delete user temp
+$deletedUserCount = 0
+Get-ChildItem -Path $userTempPath -Force -ErrorAction SilentlyContinue | ForEach-Object {
     try {
         Remove-Item -Path $_.FullName -Recurse -Force -ErrorAction Stop
-        $userRemoved++
+        $deletedUserCount++
     } catch {
-        $userLocked++
+        # File/folder is in use by a running process
     }
 }
 
-# Xóa Temp Windows
-$winRemoved = 0
-$winLocked = 0
-Get-ChildItem -Path 'C:\Windows\Temp' -Force -ErrorAction SilentlyContinue | ForEach-Object {
+# Delete windows temp
+$deletedWinCount = 0
+Get-ChildItem -Path $winTempPath -Force -ErrorAction SilentlyContinue | ForEach-Object {
     try {
         Remove-Item -Path $_.FullName -Recurse -Force -ErrorAction Stop
-        $winRemoved++
+        $deletedWinCount++
     } catch {
-        $winLocked++
+        # File/folder is in use or requires elevation
     }
 }
 
-# Đo lường sau khi xóa
-$userAfter = Get-DirMetrics $env:TEMP
-$winAfter = Get-DirMetrics 'C:\Windows\Temp'
+$userTempAfterMB = Get-DirSizeMB $userTempPath
+$winTempAfterMB = Get-DirSizeMB $winTempPath
 
-# 3. Flush DNS
-$dnsRaw = ipconfig /flushdns | Out-String
+Write-Output "Don dep User Temp hoan tat. Con lai: $userTempAfterMB MB (cac tep dang duoc tien trinh su dung)."
+Write-Output "Don dep Windows Temp hoan tat. Con lai: $winTempAfterMB MB (cac tep he thong dang su dung)."
 
-# 4. Kiểm tra ổ C
-$disk = Get-CimInstance Win32_LogicalDisk -Filter "DeviceID='C:'"
-$totalGB = [math]::Round($disk.Size / 1GB, 2)
-$freeGB = [math]::Round($disk.FreeSpace / 1GB, 2)
-$usedGB = [math]::Round(($disk.Size - $disk.FreeSpace) / 1GB, 2)
-$pctFree = [math]::Round(($disk.FreeSpace / $disk.Size) * 100, 2)
+Write-Output "`n[3/5] Xoa cache DNS (ipconfig /flushdns)..."
+$dnsOutput = & ipconfig /flushdns
+Write-Output ($dnsOutput -join "`n")
 
-# 5. Kiểm tra tài nguyên RAM tổng thể
-$os = Get-CimInstance Win32_OperatingSystem
-$totalRAM_MB = [math]::Round($os.TotalVisibleMemorySize / 1KB, 2)
-$freeRAM_MB = [math]::Round($os.FreePhysicalMemory / 1KB, 2)
-$usedRAM_MB = [math]::Round($totalRAM_MB - $freeRAM_MB, 2)
-$pctRAM = [math]::Round(($usedRAM_MB / $totalRAM_MB) * 100, 2)
+Write-Output "`n[4/5] Kiem tra lai dung luong o dia C..."
+$diskCAfter = Get-CimInstance Win32_LogicalDisk -Filter "DeviceID='C:'"
+$cFreeAfterGB = [math]::Round($diskCAfter.FreeSpace / 1GB, 2)
+$cUsedAfterGB = [math]::Round(($diskCAfter.Size - $diskCAfter.FreeSpace) / 1GB, 2)
+$freedGB = [math]::Round($cFreeAfterGB - $cFreeBeforeGB, 3)
 
-# 6. Top tiến trình ngốn RAM
-$topRam = Get-Process | Sort-Object WorkingSet -Descending | Select-Object -First 10 Id, ProcessName, @{N='RAM_MB';E={[math]::Round($_.WorkingSet/1MB, 2)}}, @{N='CPU_s';E={if ($_.CPU) { [math]::Round($_.CPU, 2) } else { 0 }}}, Path
+Write-Output "Dung luong o C sau don: Total = $cTotalGB GB, Used = $cUsedAfterGB GB, Free = $cFreeAfterGB GB"
+Write-Output "Dung luong giai phong tren o C: $freedGB GB"
 
-# 7. Top tiến trình ngốn CPU (thời gian CPU tích lũy cao nhất)
-$topCpu = Get-Process | Where-Object { $_.CPU -gt 0 } | Sort-Object CPU -Descending | Select-Object -First 10 Id, ProcessName, @{N='CPU_s';E={[math]::Round($_.CPU, 2)}}, @{N='RAM_MB';E={[math]::Round($_.WorkingSet/1MB, 2)}}, Path
+Write-Output "`n[5/5] Quet danh sach tien trinh nguyen RAM / CPU..."
+Write-Output "--- TOP 10 TIEN TRINH SU DUNG RAM NHIEU NHAT ---"
+Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 10 Id, ProcessName, @{Name="RAM_MB"; Expression={[math]::Round($_.WorkingSet64 / 1MB, 2)}}, @{Name="CPU_Sec"; Expression={[math]::Round($_.CPU, 2)}}, Path | Format-Table -AutoSize
 
-$report = [PSCustomObject]@{
-    UserTemp = @{
-        Path = $env:TEMP
-        SizeBeforeMB = $userBefore.SizeMB
-        SizeAfterMB = $userAfter.SizeMB
-        FreedMB = [math]::Round(($userBefore.SizeMB - $userAfter.SizeMB), 2)
-        DeletedItems = $userRemoved
-        LockedItems = $userLocked
-    }
-    WinTemp = @{
-        Path = 'C:\Windows\Temp'
-        SizeBeforeMB = $winBefore.SizeMB
-        SizeAfterMB = $winAfter.SizeMB
-        FreedMB = [math]::Round(($winBefore.SizeMB - $winAfter.SizeMB), 2)
-        DeletedItems = $winRemoved
-        LockedItems = $winLocked
-    }
-    DNS = $dnsRaw.Trim()
-    DiskC = @{
-        TotalGB = $totalGB
-        UsedGB = $usedGB
-        FreeGB = $freeGB
-        PercentFree = $pctFree
-    }
-    RAM = @{
-        TotalMB = $totalRAM_MB
-        UsedMB = $usedRAM_MB
-        FreeMB = $freeRAM_MB
-        PercentUsed = $pctRAM
-    }
-    TopRAM = $topRam
-    TopCPU = $topCpu
-}
+Write-Output "--- TOP 10 TIEN TRINH SU DUNG CPU NHIEU NHAT (Tich luy) ---"
+Get-Process | Where-Object { $_.CPU -ne $null } | Sort-Object CPU -Descending | Select-Object -First 10 Id, ProcessName, @{Name="CPU_Sec"; Expression={[math]::Round($_.CPU, 2)}}, @{Name="RAM_MB"; Expression={[math]::Round($_.WorkingSet64 / 1MB, 2)}}, Path | Format-Table -AutoSize
 
-$report | ConvertTo-Json -Depth 5
+Write-Output "`n=== KET THUC BAO TRI HE THONG ==="
