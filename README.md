@@ -7,6 +7,7 @@ Hệ thống lưu trữ, quản lý mã nguồn và tài liệu nghiên cứu c�
 ## 📂 Cấu Trúc Thư Mục
 
 ### 📚 1. Nghiên Cứu (`Nghien_Cuu/`)
+- **`Quan_Tri_Rui_Ro_Agribank_MB/`**: Công trình nghiên cứu Thạc sĩ NEU Quản trị rủi ro tín dụng tại Agribank và MBBank giai đoạn 2020–2025: luận văn hoàn chỉnh học thuật chuẩn mực (`.docx`), mô hình tài chính định lượng kiểm định 2 ngân hàng 6 năm với dữ liệu sạch 100% (`.xlsx`), danh mục tài liệu cần thu thập (`.xlsx`) và hệ thống kịch bản Python tự động hóa xây dựng tài liệu, chuẩn hóa dữ liệu (`build_full_thesis.py`, `build_advanced_excel.py`, `sync_v2.py`, `update_danh_muc.py`, `final_sanity_check.py`).
 - **`Kinh_Te_Hoc_He_Thong/`**: Chuyên khảo hoàn chỉnh Kinh tế học hệ thống (bản thảo Word, PDF, LaTeX, HTML, Markdown và sơ đồ hệ thống Mermaid).
 - **`Laos_BoP_Research/`**: Công trình nghiên cứu, phân tích chuyên sâu về Cán cân thanh toán Lào (BoP) qua các phiên bản v3, v4 và tài liệu pháp lý đầu tư nước ngoài.
 - **`Tieu_Luan_Hoc_Thuat/`**: Tập hợp các bản thảo bài tiểu luận học thuật hoàn thiện.
@@ -22,7 +23,7 @@ Hệ thống lưu trữ, quản lý mã nguồn và tài liệu nghiên cứu c�
 - **`Video_AI_Tools/`**: Bộ công cụ tự động hóa sáng tạo video ngắn (Shorts/Reels) và phân tích kịch bản video AI.
 - **`LLM_Orchestrator/`**: Khung điều phối đa mô hình ngôn ngữ lớn (LLM Orchestration) linh hoạt.
 - **`Doc2Slide_App/`**: Ứng dụng tự động chuyển đổi tài liệu văn bản (.docx) thành slide thuyết trình PowerPoint (.pptx).
-- **`System_Maintenance/`**: Kịch bản PowerShell tự động dọn dẹp rác hệ thống, xóa cache DNS, chẩn đoán sức khỏe RAM/CPU và xuất báo cáo JSON đo lường chi tiết (`system_maintenance.ps1`, `maintenance.ps1`, `sys_maintenance.ps1`).
+- **`System_Maintenance/`**: Kịch bản PowerShell tự động dọn dẹp rác hệ thống, xóa cache DNS, chẩn đoán sức khỏe RAM/CPU và xuất báo cáo JSON đo lường chi tiết (`system_maintenance.ps1`, `maintenance.ps1`, `sys_maintenance.ps1`, `run_maintenance.ps1`).
 
 ---
 
