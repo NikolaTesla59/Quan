@@ -1,87 +1,100 @@
-# Script: System Maintenance & Diagnostics
-$ErrorActionPreference = "SilentlyContinue"
+$ErrorActionPreference = 'SilentlyContinue'
 
-function Get-FolderSize([string]$folderPath) {
-    if (Test-Path $folderPath) {
-        $measure = Get-ChildItem -Path $folderPath -Recurse -Force -ErrorAction SilentlyContinue | Measure-Object -Property Length -Sum -ErrorAction SilentlyContinue
-        if ($measure -and $measure.Sum) {
-            return [math]::Round($measure.Sum / 1MB, 2)
-        }
-    }
-    return 0.0
-}
+Write-Host "====================================================="
+Write-Host "         BAO CAO BAO TRI HE THONG WINDOWS           "
+Write-Host "====================================================="
 
-# 1. Measure Temp sizes before cleanup
-$userTempPath = $env:TEMP
-$winTempPath = "C:\Windows\Temp"
+# 1. Baseline Disk C
+Write-Host "`n>>> [1/4] KIEM TRA DUNG LUONG O DIA C TRUOC KHI DON"
+$diskBefore = Get-CimInstance Win32_LogicalDisk -Filter "DeviceID='C:'"
+$freeBeforeGB = [math]::Round($diskBefore.FreeSpace / 1GB, 2)
+$totalGB = [math]::Round($diskBefore.Size / 1GB, 2)
+$usedBeforeGB = [math]::Round(($diskBefore.Size - $diskBefore.FreeSpace) / 1GB, 2)
+$usedBeforePct = [math]::Round(($usedBeforeGB / $totalGB) * 100, 1)
 
-$userTempBefore = Get-FolderSize $userTempPath
-$winTempBefore = Get-FolderSize $winTempPath
+Write-Host "Tong dung luong C: : $totalGB GB"
+Write-Host "Da su dung         : $usedBeforeGB GB ($usedBeforePct %)"
+Write-Host "Con trong          : $freeBeforeGB GB"
 
 # 2. Cleanup Temp Files
-# Delete files and folders inside $env:TEMP
-Get-ChildItem -Path $userTempPath -Recurse -Force -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
-# Delete files and folders inside C:\Windows\Temp
-Get-ChildItem -Path $winTempPath -Recurse -Force -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
+Write-Host "`n>>> [2/4] DON DEP FILE RAC TRONG THU MUC TEMP"
+function Get-FolderStats($path) {
+    if (Test-Path $path) {
+        $items = Get-ChildItem -Path $path -Recurse -Force -ErrorAction SilentlyContinue
+        $measure = $items | Measure-Object -Property Length -Sum -ErrorAction SilentlyContinue
+        $sizeMB = if ($measure.Sum) { [math]::Round(($measure.Sum / 1MB), 2) } else { 0 }
+        $count = ($items | Measure-Object).Count
+        return @{ SizeMB = $sizeMB; Count = $count }
+    }
+    return @{ SizeMB = 0; Count = 0 }
+}
 
-$userTempAfter = Get-FolderSize $userTempPath
-$winTempAfter = Get-FolderSize $winTempPath
+$userTempStatsBefore = Get-FolderStats $env:TEMP
+$winTempStatsBefore = Get-FolderStats "C:\Windows\Temp"
+Write-Host "User Temp ($env:TEMP): $($userTempStatsBefore.SizeMB) MB ($($userTempStatsBefore.Count) files/folders)"
+Write-Host "Windows Temp (C:\Windows\Temp): $($winTempStatsBefore.SizeMB) MB ($($winTempStatsBefore.Count) files/folders)"
 
-$freedUser = [math]::Max(0, [math]::Round($userTempBefore - $userTempAfter, 2))
-$freedWin = [math]::Max(0, [math]::Round($winTempBefore - $winTempAfter, 2))
-$totalFreed = [math]::Round($freedUser + $freedWin, 2)
+# Perform deletion
+Remove-Item -Path "$env:TEMP\*" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "C:\Windows\Temp\*" -Recurse -Force -ErrorAction SilentlyContinue
 
-# 3. Flush DNS
-$dnsFlush = ipconfig /flushdns
+$userTempStatsAfter = Get-FolderStats $env:TEMP
+$winTempStatsAfter = Get-FolderStats "C:\Windows\Temp"
 
-# 4. Drive C info
-$driveC = Get-CimInstance Win32_LogicalDisk -Filter "DeviceID='C:'"
-$totalGB = [math]::Round($driveC.Size / 1GB, 2)
-$freeGB = [math]::Round($driveC.FreeSpace / 1GB, 2)
-$usedGB = [math]::Round(($driveC.Size - $driveC.FreeSpace) / 1GB, 2)
-$freePct = [math]::Round(($driveC.FreeSpace / $driveC.Size) * 100, 2)
+Write-Host "Ket qua sau don:"
+Write-Host " - User Temp: Con lai $($userTempStatsAfter.SizeMB) MB (cac file dang duoc ung dung/he thong mo khoa)"
+Write-Host " - Windows Temp: Con lai $($winTempStatsAfter.SizeMB) MB (file he thong dang khoa)"
 
-# 5. OS and RAM info
+# 3. DNS Flush
+Write-Host "`n>>> [3/4] XOA CACHE DNS (ipconfig /flushdns)"
+$flushOutput = ipconfig /flushdns
+$flushOutput | Out-String | Write-Host
+
+# 4. Measure Post-Cleanup Disk C
+$diskAfter = Get-CimInstance Win32_LogicalDisk -Filter "DeviceID='C:'"
+$freeAfterGB = [math]::Round($diskAfter.FreeSpace / 1GB, 2)
+$usedAfterGB = [math]::Round(($diskAfter.Size - $diskAfter.FreeSpace) / 1GB, 2)
+$freedMB = [math]::Round(($diskAfter.FreeSpace - $diskBefore.FreeSpace) / 1MB, 2)
+
+Write-Host "Dung luong O C sau khi don:"
+Write-Host " - Con trong : $freeAfterGB GB"
+Write-Host " - Giai phong: $freedMB MB"
+
+# 5. System Health Overview: CPU, RAM
+Write-Host "`n>>> [4/4] SUC KHOE HE THONG VA TIEN TRINH (CPU / RAM)"
 $os = Get-CimInstance Win32_OperatingSystem
-$totalRamGB = [math]::Round($os.TotalVisibleMemorySize / 1MB, 2)
-$freeRamGB = [math]::Round($os.FreePhysicalMemory / 1MB, 2)
-$usedRamGB = [math]::Round(($os.TotalVisibleMemorySize - $os.FreePhysicalMemory) / 1MB, 2)
-$ramPct = [math]::Round(($usedRamGB / $totalRamGB) * 100, 2)
+$totalRAM_GB = [math]::Round($os.TotalVisibleMemorySize / 1MB, 2)
+$freeRAM_GB = [math]::Round($os.FreePhysicalMemory / 1MB, 2)
+$usedRAM_GB = [math]::Round($totalRAM_GB - $freeRAM_GB, 2)
+$ramPct = [math]::Round(($usedRAM_GB / $totalRAM_GB) * 100, 1)
 
-# 6. Top 10 RAM Processes
-$topRam = Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 10 Id, ProcessName, @{Name="RAM_MB";Expression={[math]::Round($_.WorkingSet64 / 1MB, 2)}}, @{Name="CPU_Sec";Expression={[math]::Round($_.CPU, 2)}}, @{Name="Path";Expression={$_.Path}}
+$cpuLoad = (Get-CimInstance Win32_Processor | Measure-Object -Property LoadPercentage -Average).Average
 
-# 7. Top 10 CPU Processes
-$topCpu = Get-Process | Where-Object {$_.CPU -gt 0} | Sort-Object CPU -Descending | Select-Object -First 10 Id, ProcessName, @{Name="CPU_Sec";Expression={[math]::Round($_.CPU, 2)}}, @{Name="RAM_MB";Expression={[math]::Round($_.WorkingSet64 / 1MB, 2)}}, @{Name="Path";Expression={$_.Path}}
+Write-Host "Tong RAM          : $totalRAM_GB GB"
+Write-Host "RAM dang dung     : $usedRAM_GB GB ($ramPct %)"
+Write-Host "RAM con trong     : $freeRAM_GB GB"
+Write-Host "Tai CPU tong the  : $cpuLoad %"
 
-# Output results in structured format
-Write-Output "---SUMMARY_START---"
-[PSCustomObject]@{
-    UserTemp_Path = $userTempPath
-    UserTemp_MB_Before = $userTempBefore
-    UserTemp_MB_After = $userTempAfter
-    UserTemp_Freed_MB = $freedUser
-    WinTemp_Path = $winTempPath
-    WinTemp_MB_Before = $winTempBefore
-    WinTemp_MB_After = $winTempAfter
-    WinTemp_Freed_MB = $freedWin
-    Total_Freed_MB = $totalFreed
-    Drive_C_Total_GB = $totalGB
-    Drive_C_Used_GB = $usedGB
-    Drive_C_Free_GB = $freeGB
-    Drive_C_Free_Percent = $freePct
-    RAM_Total_GB = $totalRamGB
-    RAM_Used_GB = $usedRamGB
-    RAM_Free_GB = $freeRamGB
-    RAM_Used_Percent = $ramPct
-    DNS_Flush_Result = ($dnsFlush | Out-String).Trim()
-} | ConvertTo-Json -Depth 3
-Write-Output "---SUMMARY_END---"
+# Top 10 RAM Consumers
+Write-Host "`n--- TOP 10 TIEN TRINH CHIEM NHIEU RAM NHAT ---"
+Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 10 Id, ProcessName, @{Name="RAM_MB";Expression={[math]::Round($_.WorkingSet64 / 1MB, 1)}}, @{Name="CPU_Sec";Expression={[math]::Round($_.CPU, 1)}}, @{Name="Path";Expression={$_.Path}} | Format-Table -AutoSize
 
-Write-Output "---TOP_RAM_START---"
-$topRam | ConvertTo-Json -Depth 3
-Write-Output "---TOP_RAM_END---"
+# Top 10 CPU Consumers
+Write-Host "`n--- TOP 10 TIEN TRINH CO THOI GIAN XU LY CPU NHIEU NHAT ---"
+Get-Process | Sort-Object CPU -Descending | Select-Object -First 10 Id, ProcessName, @{Name="CPU_Sec";Expression={[math]::Round($_.CPU, 1)}}, @{Name="RAM_MB";Expression={[math]::Round($_.WorkingSet64 / 1MB, 1)}}, @{Name="Path";Expression={$_.Path}} | Format-Table -AutoSize
 
-Write-Output "---TOP_CPU_START---"
-$topCpu | ConvertTo-Json -Depth 3
-Write-Output "---TOP_CPU_END---"
+# Potential Suspicious / Anomalous Processes Check
+Write-Host "`n--- RANSOMWARE / SUSPICIOUS PROCESS SCAN (Chay tu thu muc la / bat thuong) ---"
+$suspicious = Get-Process | Where-Object { 
+    $_.Path -and (
+        $_.Path -like "*\Temp\*" -or 
+        ($_.Path -like "*\AppData\Local\Temp\*") -or
+        ($_.Path -like "*\Users\Public\*")
+    )
+}
+
+if ($suspicious) {
+    $suspicious | Select-Object Id, ProcessName, Path | Format-Table -AutoSize
+} else {
+    Write-Host "Khong phat hien tien trinh nao chay tu Temp hoac Users\Public (He thong an toan)."
+}

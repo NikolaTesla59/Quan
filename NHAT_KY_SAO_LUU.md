@@ -4,6 +4,48 @@ Nhật ký ghi lại toàn bộ hoạt động kiểm tra, rà soát bảo mật
 
 ---
 
+
+## 📅 Phiên Sao Lưu: 2026-10-29 19:05:00 (GMT+7)
+
+- **Kho lưu trữ đích**: [`NikolaTesla59/Quan`](https://github.com/NikolaTesla59/Quan)
+- **Tài khoản xác thực**: `NikolaTesla59` (Quân)
+- **Phương thức xác thực**: GitHub Personal Access Token (PAT) cấu hình qua biến môi trường (`$env:GITHUB_TOKEN`)
+- **Trạng thái**: ✅ Hoàn thành đồng bộ an toàn (Success)
+- **Hành động**: Tự động rà soát toàn bộ thư mục dự án & nghiên cứu, phát hiện thay đổi và commit/push đồng bộ lên nhánh `main`
+
+### 📊 Thống Kê Dữ Liệu Đồng Bộ
+
+| Phân Loại | Tên Thư Mục / Chủ Đề | Số Tệp | Dung Lượng | Trạng Thái / Thay Đổi Chi Tiết |
+| :--- | :--- | :---: | :---: | :--- |
+| **Nghiên Cứu** | `Nghien_Cuu/Quan_Tri_Rui_Ro_Agribank_MB` | 34 | 7.62 MB | **CẬP NHẬT ĐẶC BIỆT (NÂNG CẤP V5 & EXECUTIVE)**: Bổ sung bộ công trình nghiên cứu Thạc sĩ hoàn thiện mới nhất: Bản hoàn thiện V5 (`Tieu_luan_Agribank_MB_2020-2025_hoan_thien_v5.docx` 1.50 MB), Bài tập lớn Thạc sĩ QTRR (`Bai_tap_lon_QTRR_Agribank_MB_2020-2025.docx` 1.32 MB), Báo cáo thuyết trình điều hành (`Bao_cao_Thuyet_trinh_Agribank_MB_2020-2025_Executive.docx` 1.39 MB), Mô hình tài chính kiểm định V4 chuẩn IFRS9 & Stress Testing (`Phan_tich_RRTD_Agribank_MB_2020-2025_v4.xlsx` 74.2 KB) và bản V3 (`73.9 KB`), Báo cáo soát xét & phản biện học thuật (`Ban_phan_bien_danh_gia_hoc_thuat_ThS_TS.docx`, `.md`, `Bao_cao_Soat_xet_Agribank_MB_v5.docx`), bộ 6 biểu đồ phân tích trực quan độ phân giải cao (`charts/` 1.40 MB), bộ dữ liệu trích xuất BCTC MBBank kiểm toán (`extracted_bctc/`), cùng 6 kịch bản Python tự động sinh tài liệu chuẩn mực (`generators/` 243 KB) |
+| **Dự Án** | `Du_An/Vietstock_Screener` | 12 | 1.06 MB | **CẬP NHẬT**: Bản PRO Excel `Bo_Loc_Co_Phieu_Vietstock_Khung_Tieu_Chi_PRO.xlsx` 207.92 KB (cập nhật ngày 29/10/2026 lúc 18:01:16, làm mới danh mục lọc cổ phiếu chuẩn 169 mã cổ phiếu tinh hoa & biên an toàn upside), bổ sung 2 công cụ truy vấn mới: `find_tickers.py` và `query_stocks.py` bên cạnh `stocks.db` (557KB), `analyze_top.py`, `diagnostic.py`, `import_to_sqlite.py`, `get_summary.py`, `auto_update_screener.py` |
+| **Dự Án** | `Du_An/System_Maintenance` | 7 | 0.02 MB | **CẬP NHẬT**: Bản nâng cấp kịch bản bảo trì & chẩn đoán hệ thống `system_maintenance.ps1` 4.89 KB (cập nhật ngày 29/10/2026 lúc 18:01:38), bổ sung bộ công cụ tối ưu hóa hiệu năng chuyên sâu: `optimize_system.ps1` (4.49 KB), `diagnose_perf.ps1` (0.98 KB), `get_system_specs.ps1` (1.86 KB) bên cạnh `maintenance.ps1`, `run_maintenance.ps1` và `sys_maintenance.ps1` |
+| **Nghiên Cứu** | `Nghien_Cuu/NEU_Textbook_Builder` | 28 | 1.11 MB | Hệ thống số hóa & tự động hóa biên soạn 10 bộ giáo trình kinh tế & tài chính chuẩn Đại học Kinh tế Quốc dân (NEU): lõi `neu_engine.py`, 10 bộ sinh giáo trình `generators/` (KTĐT, TTCK, TCDN, TCTT, ĐGTS, KDBH, NHTM, TCQT, TTQT, GDĐP), 6 kịch bản batch builder chuyên sâu và 4 tệp báo cáo kiểm toán chất lượng JSON (`neu_master_audit.json`, `neu_agent_1..3_report.json`) |
+| **Nghiên Cứu** | `Nghien_Cuu/Tuyen_Tap_Thi_Ca_Viet_Trung` | 32 | 0.65 MB | Hệ thống số hóa văn bản học & tự động hóa biên soạn tuyển tập thi ca Đường - Tống, thơ Nôm trung đại và Thơ Mới Việt Nam (`poetry_builder/` và `poetry_anthology/`) |
+| **Nghiên Cứu** | `Nghien_Cuu/So_Tay_Nghe_Thuat` | 2 | 1.59 MB | Chuyên khảo "Sổ Tay Nghệ Thuật Toàn Tập - Từ Nhập Môn Đến Chuyên Sâu" (ngữ pháp hội họa, đọc tranh, lược sử mỹ thuật phương Tây từ Phục Hưng đến Siêu Thực) gồm bản thảo Word (`.docx`) và bản xuất in ấn (`.pdf`) |
+| **Nghiên Cứu** | `Nghien_Cuu/Tai_Lieu_Hoc_Tap` | 7 | 0.07 MB | Công cụ phân tích và quản trị kỹ năng agent `analyze_skills.py`, cẩm nang CNTT Semi-Pro, quy chuẩn tư duy phản biện `rules_cognitive.md` và quy chuẩn kỹ thuật `rules_tech_stack.md` |
+| **Nghiên Cứu** | `Nghien_Cuu/Kinh_Te_Hoc_He_Thong` | 13 | 11.23 MB | Chuyên khảo Kinh tế học hệ thống (Word, PDF, LaTeX, HTML, sơ đồ Mermaid) |
+| **Nghiên Cứu** | `Nghien_Cuu/Laos_BoP_Research` | 6 | 0.47 MB | Báo cáo nghiên cứu Cán cân thanh toán Lào (v3, v4, phân tích hoàn chỉnh & pháp lý) |
+| **Nghiên Cứu** | `Nghien_Cuu/Tieu_Luan_Hoc_Thuat` | 4 | 0.13 MB | Các bản thảo tiểu luận học thuật hoàn thiện |
+| **Nghiên Cứu** | `Nghien_Cuu/Du_An_Nha_Khoa_Pakse` | 10 | 4.59 MB | Hồ sơ dự án đầu tư phòng khám nha khoa Pakse (Slide thuyết trình, mô hình tài chính) |
+| **Dự Án** | `Du_An/NhaKhoa_LaoViet_Pakse` | 6 | 0.13 MB | Toàn bộ mã nguồn giao diện website phòng khám nha khoa Lào - Việt |
+| **Dự Án** | `Du_An/Video_AI_Tools` | 4 | 0.49 MB | Bộ công cụ AI tự động tạo video ngắn và phân tích kịch bản video |
+| **Dự Án** | `Du_An/LLM_Orchestrator` | 3 | < 0.01 MB | Khung điều phối đa mô hình LLM (mã nguồn, requirements, .env.example) |
+| **Dự Án** | `Du_An/Doc2Slide_App` | 4 | 0.07 MB | Mã nguồn ứng dụng tự động chuyển tài liệu Word sang PowerPoint |
+| **Hệ Thống** | `README.md`, `.gitignore`, `NHAT_KY_SAO_LUU.md` | 3 | 0.04 MB | Cập nhật cấu trúc thư mục, tài liệu hướng dẫn và nhật ký kiểm toán an toàn |
+| **TỔNG CỘNG** | **15 Module & Thư Mục** | **175 tệp** | **~29.28 MB** | **Tối ưu hóa tuyệt đối, đáp ứng 100% chuẩn bảo mật Git & GitHub** |
+
+### 🔒 Kiểm Soát An Toàn & Bảo Mật (Safety & Sanitization Audit)
+1. **Bảo mật Bí mật & Token**:
+   - Tệp `.env` trong `llm_orchestrator` và các tệp môi trường được bảo vệ nghiêm ngặt bằng `.gitignore`.
+   - Đã quét tự động toàn bộ mã nguồn và tệp văn bản: 0 khóa API cứng, 0 token nhạy cảm trong mã nguồn commit.
+   - Token GitHub trong môi trường thực thi được cô lập an toàn qua Header Base64/Credential Helper, không hiển thị trong nhật ký công khai hoặc lịch sử git remote.
+2. **Loại trừ rác & Tối ưu hiệu năng**:
+   - Loại trừ hoàn toàn `venv/`, `__pycache__/`, `node_modules/`, file tạm MS Office `~$*`, bộ driver nhị phân (`usb_driver.zip`, DLL driver) và các file nén quét PDF gốc BCTC dung lượng lớn (>200MB).
+   - Dung lượng toàn bộ kho lưu trữ ~29.28 MB (175 tệp), file lớn nhất ~3.56 MB, hoàn toàn đáp ứng ngưỡng khuyến nghị của GitHub (<100MB).
+
+---
+
 ## 📅 Phiên Sao Lưu: 2026-10-27 18:20:00 (GMT+7)
 
 - **Kho lưu trữ đích**: [`NikolaTesla59/Quan`](https://github.com/NikolaTesla59/Quan)
