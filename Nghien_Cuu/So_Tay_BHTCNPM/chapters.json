@@ -1,0 +1,741 @@
+[
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/nmlt/lythuyet/chuong1",
+    "slug": "nmlt/lythuyet/chuong1",
+    "title": "Chương 1: Tổng quan về lập trình",
+    "h2s": [
+      "1. Tổng quan về máy tính và lập trình​",
+      "2. Thuật toán​"
+    ],
+    "h3s": [
+      "1.1. Tổng quan về máy tính​",
+      "1.2. Khái niệm cơ bản về lập trình​",
+      "1.3. Sơ lược về ngôn ngữ lập trình​",
+      "Các tính chất cốt lõi​",
+      "Ưu điểm​",
+      "Nhược điểm​",
+      "2.1. Khái niệm về vấn đề/bài toán​",
+      "2.2. Các bước giải quyết vấn đề/bài toán bằng máy tính​",
+      "2.3. Khái niệm về thuật toán​",
+      "2.4. Các tiêu chuẩn của thuật toán​",
+      "2.5. Các phương pháp biểu diễn thuật toán​",
+      "2.6. Độ phức tạp của Thuật toán​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 18258,
+    "summary": "Nhập môn lập trình\nPhần I: Lý thuyết Nhập môn lập trình\nChương 1: Tổng quan về lập trình\nTrên trang này\nChương 1: Tổng quan về lập trình\nGiới thiệu những kiến thức cơ bản về máy tính, lập trình và thuật toán, những nền tảng quan trọng trước khi bắt đầu tìm hiểu các kỹ thuật lập trình.\n1. Tổng quan về máy tính và lập trình\n​\nMáy tính là công cụ cơ bản giúp con người\nxử lý thông tin\nnhanh chóng và c"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/nmlt/lythuyet/chuong2",
+    "slug": "nmlt/lythuyet/chuong2",
+    "title": "Chương 2: Cú pháp lập trình",
+    "h2s": [
+      "1. C++ và cú pháp cơ bản của C++​",
+      "2. Dữ liệu trong lập trình​"
+    ],
+    "h3s": [
+      "1.1. Tổng quan về C++​",
+      "1.2. Câu chú thích (Comments)​",
+      "1.3. Cấu trúc chương trình C++ cơ bản​",
+      "1.4. Khái niệm cốt lõi và thư viện iostream trong C++​",
+      "1.5. Giới thiệu không gian tên (namespace)​",
+      "1.6. Nhập xuất vào file​",
+      "1.6. Bộ keywords trong C++​",
+      "2.1. Kiểu dữ liệu​",
+      "2.2. Biến​",
+      "2.3. Hằng​",
+      "2.4. Các phép toán​",
+      "2.5. Biểu thức và độ ưu tiên toán tử​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 59959,
+    "summary": "Nhập môn lập trình\nPhần I: Lý thuyết Nhập môn lập trình\nChương 2: Cú pháp lập trình\nTrên trang này\nChương 2: Cú pháp lập trình\nMở đầu về lập trình với cú pháp, thao tác cơ bản với dữ liệu trong C++\n1. C++ và cú pháp cơ bản của C++\n​\n1.1. Tổng quan về C++\n​\n1.1.1. Nguồn gốc và bản chất\n​\nKế thừa và Mở rộng:\nC++ được Bjarne Stroustrup phát triển từ năm 1979 như một bản nâng cấp toàn diện của ngôn ng"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/nmlt/lythuyet/chuong3",
+    "slug": "nmlt/lythuyet/chuong3",
+    "title": "Chương 3: Cấu trúc điều khiển",
+    "h2s": [
+      "1. Giới thiệu cấu trúc điều khiển​",
+      "2. Cấu trúc rẽ nhánh if, if-else, if-else if-else và switch-case.​",
+      "3. Cấu trúc lặp​"
+    ],
+    "h3s": [
+      "2.1. Cấu trúc if​",
+      "2.2. Cấu trúc if-else:​",
+      "2.3. Cấu trúc khối lệnh if-else if-else:​",
+      "2.4. Cấu trúc rẽ nhánh Switch-case​",
+      "3.1. Cấu trúc lặpfor​",
+      "3.2. Cấu trúc lặpwhile​",
+      "3.3. Cấu trúc lặpdo-while​",
+      "3.4. Câu lệnhbreakvàcontinue​",
+      "3.5. So sánh nhanhfor,while,do-while​",
+      "3.6. Lỗi thường gặp khi học vòng lặp​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 14016,
+    "summary": "Nhập môn lập trình\nPhần I: Lý thuyết Nhập môn lập trình\nChương 3: Cấu trúc điều khiển\nTrên trang này\nChương 3: Cấu trúc điều khiển\nCấu trúc rẽ nhánh, vòng lặp và điều hướng luồng thực thi - những công cụ cốt lõi giúp chương trình có khả năng đưa ra quyết định thông minh và tự động hóa các tác vụ một cách hiệu quả.\n1. Giới thiệu cấu trúc điều khiển\n​\nTrong\nC++\n\\texttt{C++}\nC++\n, 1 chương trình sẽ b"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/nmlt/lythuyet/chuong4",
+    "slug": "nmlt/lythuyet/chuong4",
+    "title": "Chương 4. Hàm",
+    "h2s": [
+      "1. Lập trình hàm​",
+      "2. Hàm đệ quy​"
+    ],
+    "h3s": [
+      "1.1. Giới thiệu về hàm​",
+      "1.2. Cấu trúc và sử dụng hàm​",
+      "1.3. Phạm vi và mở rộng hàm​",
+      "2.1. Giới thiệu đệ quy​",
+      "2.2. Cấu trúc và phân loại hàm đệ quy​",
+      "2.3. Cách xây dựng hàm đệ quy​",
+      "2.4. Các vấn đề đệ quy thông dụng​",
+      "2.5. Ưu điểm và nhược điểm của đệ quy​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 17324,
+    "summary": "Nhập môn lập trình\nPhần I: Lý thuyết Nhập môn lập trình\nChương 4. Hàm\nTrên trang này\nChương 4. Hàm\nĐơn vị cơ bản giúp tái sử dụng mã nguồn, giảm thiểu trùng lặp và tổ chức chương trình theo cấu trúc khoa học, linh hoạt.\n1. Lập trình hàm\n​\n1.1. Giới thiệu về hàm\n​\n1.1.1. Khái niệm\n​\nHàm trong\nC++\n\\texttt{C++}\nC++\nlà một\nkhối lệnh\ncó thể tái sử dụng, được thiết kế để thực hiện một chức năng cụ thể t"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/nmlt/lythuyet/chuong5",
+    "slug": "nmlt/lythuyet/chuong5",
+    "title": "Chương 5: Mảng và chuỗi",
+    "h2s": [
+      "1. Khái niệm​",
+      "2. Mảng 1 chiều​",
+      "3. Mảng hai chiều​",
+      "4. Mảng nhiều chiều​",
+      "5. Chuỗi​"
+    ],
+    "h3s": [
+      "1.1. Khái niệm mảng​",
+      "1.2. Lợi ích của mảng​",
+      "1.3. Các yếu tố xác định mảng​",
+      "2.1. Khai báo và khởi tạo mảng 1 chiều​",
+      "2.2. Chỉ số mảng và truy xuất phần tử mảng​",
+      "2.3. Lấy kích thước mảng (toán tửsizeof)​",
+      "2.4. Lấy địa chỉ các phần tử mảng​",
+      "2.5. Gán dữ liệu kiểu mảng​",
+      "2.6. Truyền mảng cho hàm và lời gọi hàm​",
+      "2.7. Một số tác vụ trên mảng 1 chiều​",
+      "3.1. Khai báo và khởi tạo mảng 2 chiều​",
+      "3.2. Chỉ số mảng & truy xuất phần tử​",
+      "3.3. Lấy kích thước mảng dùng toán tửsizeof​",
+      "3.4. Lấy địa chỉ các phần tử mảng​",
+      "3.5. Phép gán dữ liệu kiểu mảng​",
+      "3.6. Một số khái niệm ma trận liên quan​",
+      "3.7. Truyền mảng cho hàm và lời gọi hàm​",
+      "3.8. Các tác vụ trên mảng 2 chiều​",
+      "4.1. Khai báo mảng nhiều chiều​",
+      "4.2. Khởi tạo giá trị mảng nhiều chiều​",
+      "4.3. Kích thước mảng nhiều chiều​",
+      "4.4. Chỉ số mảng và truy xuất mảng nhiều chiều​",
+      "4.5. Lấy địa chỉ các phần tử mảng nhiều chiều​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 27226,
+    "summary": "Nhập môn lập trình\nPhần I: Lý thuyết Nhập môn lập trình\nChương 5: Mảng và chuỗi\nTrên trang này\nChương 5: Mảng và chuỗi\nCấu trúc dữ liệu cơ bản cho phép lưu trữ một tập hợp các phần tử cùng kiểu dữ liệu. Chương này cung cấp các kiến thức cơ bản về mảng, mảng 1 chiều, mảng nhiều chiều và chuỗi (mảng kí tự).\n1. Khái niệm\n​\n1.1. Khái niệm mảng\n​\nMảng trong lập trình là một cấu trúc dữ liệu cơ bản, giú"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/nmlt/lythuyet/chuong6",
+    "slug": "nmlt/lythuyet/chuong6",
+    "title": "Chương 6: Con trỏ",
+    "h2s": [
+      "1. Bộ nhớ máy tính khi lập trình​",
+      "2. Con trỏ​",
+      "3. Con trỏ động​"
+    ],
+    "h3s": [
+      "1.1. Bộ nhớ máy tính​",
+      "1.2. Vùng nhớ máy tính và biến​",
+      "2.1. Khái niệm​",
+      "2.2. Vai trò của con trỏ​",
+      "2.3. Khai báo và khởi tạo biến con trỏ​",
+      "2.4. Các phép toán với biến con trỏ​",
+      "2.5. Con trỏ Void​",
+      "2.6. Con trỏ NULL, nullptr​",
+      "2.7. Con trỏ và khóa constant​",
+      "2.8. Con trỏ và mảng 1 chiều​",
+      "2.9. Con trỏ và mảng 2 chiều​",
+      "3.1. Cấp phát tĩnh, Cấp phát động​",
+      "3.2. Mảng một chiều cấp phát động​",
+      "3.2.3. Xóa mảng động​",
+      "3.3. Con trỏ cấp phát động và chuỗi​",
+      "3.4. Mảng hai chiều cấp phát động​",
+      "3.5. Truyền con trỏ cho hàm​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 13502,
+    "summary": "Nhập môn lập trình\nPhần I: Lý thuyết Nhập môn lập trình\nChương 6: Con trỏ\nTrên trang này\nChương 6: Con trỏ\nKỹ thuật lập trình quan trọng liên quan đến quản lý bộ nhớ của biến, cấp phát và thu hồi vùng nhớ trong quá trình thực thi chương trình C/C++.\n1. Bộ nhớ máy tính khi lập trình\n​\n1.1. Bộ nhớ máy tính\n​\nBộ nhớ máy tính:\nBộ nhớ\nRAM\nchứa rất nhiều ô nhớ, mỗi ô nhớ có kích thước\n1 byte\n.\nMỗi ô nhớ"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/nmlt/lythuyet/chuong7",
+    "slug": "nmlt/lythuyet/chuong7",
+    "title": "Chương 7: Cấu trúc",
+    "h2s": [
+      "1. Cấu trúc Cơ sở và Thao tác Dữ liệu​",
+      "2. Cấu trúc Nâng cao và Ứng dụng​"
+    ],
+    "h3s": [
+      "1.1. Khai báo và Khởi tạo Biến Cấu trúc​",
+      "1.2. Kích thước của Cấu trúc​",
+      "1.3. Truy xuất Thuộc tính của Kiểu Cấu trúc​",
+      "1.4. Phép Gán Dữ liệu Kiểu Cấu trúc​",
+      "2.1. Mảng Cấu trúc, Cấu trúc Phức hợp, Cấu trúc Tự trỏ​",
+      "2.2. Kiểu Hợp nhất Union​",
+      "2.3. Truyền Cấu trúc cho Hàm​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 12097,
+    "summary": "Nhập môn lập trình\nPhần I: Lý thuyết Nhập môn lập trình\nChương 7: Cấu trúc\nTrên trang này\nChương 7: Cấu trúc\nĐịnh nghĩa kiểu dữ liệu mới với độ phức tạp cao hơn. Chương này cung cấp các kiến thức cơ bản về kiểu dữ liệu cấu trúc, là nền tảng quan trọng cho các môn\nCấu trúc dữ liệu và giải thuật\nvà\nLập trình hướng đối tượng\nsau này.\n1. Cấu trúc Cơ sở và Thao tác Dữ liệu\n​\n1.1. Khai báo và Khởi tạo B"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/oop/lythuyet/chuong1",
+    "slug": "oop/lythuyet/chuong1",
+    "title": "Chương 1: Giới thiệu về lập trình hướng đối tượng",
+    "h2s": [],
+    "h3s": [
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 1181,
+    "summary": "Lập trình hướng đối tượng\nPhần I: Lý thuyết lập trình Hướng đối tượng\nChương 1: Giới thiệu về lập trình hướng đối tượng\nChương 1: Giới thiệu về lập trình hướng đối tượng\nLập trình hướng đối tượng (Object Oriented Programming - OOP)\nlà một mô hình\nlập trình dựa trên khái niệm\nLớp (Class)\nvà\nĐối tượng (Object)\n. Phương pháp này được sử dụng để cấu trúc một chương trình thành các bản thiết kế đơn giả"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/oop/lythuyet/chuong2",
+    "slug": "oop/lythuyet/chuong2",
+    "title": "Chương 2: Lớp, Đối tượng và Tính đóng gói",
+    "h2s": [
+      "1. Khái niệm về Lớp (Class) và Đối tượng (Object)​",
+      "2. Khai báo và định nghĩa một Lớp đối tượng mới​",
+      "3. Hàm thành phần - Phương thức (Member function - Method)​",
+      "4. Trừu tượng hóa dữ liệu (Data abstraction) và Đóng gói (Encapsulation)​",
+      "5. Phạm vi truy xuất​",
+      "6. Phương thức truy vấn và cập nhật​",
+      "7. Phương thức thiết lập (Constructor)​",
+      "8. Phương thức phá hủy (Destructor)​",
+      "9.    Thành phần tĩnh (Static member)​",
+      "10. Hàm bạn, lớp bạn (Friends)​"
+    ],
+    "h3s": [
+      "3.1.Khái niệm​",
+      "3.2Cách gọi phương thức​",
+      "3.3.Định nghĩa phương thức​",
+      "3.4.Giới thiệu về con trỏ “this”​",
+      "7.1.Phương thức thiết lập mặc định (default constructor)​",
+      "7.2.Phương thức thiết lập nhận tham số đầu vào (parameterized constructors)​",
+      "7.3.Phương thức thiết lập sao chép (copy constructor)​",
+      "8.1.Phương thức phá hủy và cấp phát động​",
+      "8.2.Phương thức phá hủy và phương thức thiết lập sao chép​",
+      "9.1Khởi tạo thành viên tĩnh​",
+      "9.2.Cách gọi các thành viên tĩnh​",
+      "9.3.Định nghĩa thành viên tĩnh​",
+      "10.1.Hàm bạn​",
+      "10.2.Lớp bạn​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 32130,
+    "summary": "Lập trình hướng đối tượng\nPhần I: Lý thuyết lập trình Hướng đối tượng\nChương 2: Lớp, Đối tượng và Tính đóng gói\nTrên trang này\nChương 2: Lớp, Đối tượng và Tính đóng gói\n1. Khái niệm về Lớp (Class) và Đối tượng (Object)\n​\nLớp đối tượng là đơn vị đóng gói cơ bản của C++, cung cấp cơ chế tạo ra một đối tượng. Có thể xem rằng lớp là một khuôn mẫu và đối tượng là một thực thể được thể hiện dựa trên khu"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/oop/lythuyet/chuong3",
+    "slug": "oop/lythuyet/chuong3",
+    "title": "Chương 3: Đa năng hóa toán tử",
+    "h2s": [
+      "1. Giới thiệu tính năng và cú pháp khai báo​",
+      "2. Toán tử nhập, xuất (Input, output operator)​",
+      "3.Toán tử so sánh​",
+      "4. Toán tử gán (Assignment operator)​",
+      "5. Toán tử số học, gán kết hợp (Compound-assignment operator)​",
+      "6  Toán tử tăng một, giảm một (Increment, decrement operator)​",
+      "Footnotes​"
+    ],
+    "h3s": [
+      "1.1. Nạp chồng toán tử là gì?​",
+      "1.2. Cơ chế hoạt động​",
+      "1.3. Cú pháp overload​",
+      "1.4. Chuyển kiểu​",
+      "1.5. Sự nhập nằng​",
+      "2.1. Toán tử nhập​",
+      "2.2. Toán tử xuất​",
+      "6.1 Phiên bản tiền tố (++a)​",
+      "6.2 Phiên bản hậu tố (a++)​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 13757,
+    "summary": "Lập trình hướng đối tượng\nPhần I: Lý thuyết lập trình Hướng đối tượng\nChương 3: Đa năng hóa toán tử\nTrên trang này\nChương 3: Đa năng hóa toán tử\n1. Giới thiệu tính năng và cú pháp khai báo\n​\nNếu bạn đã học qua lập trình C++ cơ bản, chắc chắc rằng trong hầu hết các bài tập về\nC++, bạn đều sử dụng các toán tử số học như cộng, trừ, nhân, chia. Hầu hết các toán tử đó\nđều được thực hiện trên toán hạng "
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/oop/lythuyet/chuong4",
+    "slug": "oop/lythuyet/chuong4",
+    "title": "Chương 4: Kế thừa và Đa hình",
+    "h2s": [
+      "1. Mối quan hệ đặc biệt hóa, tổng quát hóa​",
+      "2. Kế thừa​",
+      "3. Định nghĩa lớp cơ sở và lớp dẫn xuất trongC++​",
+      "4. Các kiểu kế thừa​",
+      "5. Phương thức thiết lập trong kế thừa​",
+      "6. Phép gán và con trỏ trong kế thừa​",
+      "7. Phương thức ảo (Virtual function) và Đa hình (Polymorphism)​",
+      "8. Lớp cơ sở trừu tượng (Abstract base class)​",
+      "9. Phương thức phá hủy trong kế thừa​"
+    ],
+    "h3s": [
+      "Định nghĩa lớp cơ sở​",
+      "Phạm vi truy xuấtprotectedtrong kế thừa​",
+      "Định nghĩa lớp dẫn xuất​",
+      "Kế thừapublic​",
+      "Kế thừaprotected​",
+      "Kế thừaprivate​",
+      "Đa hình​",
+      "Danh sách con trỏ đa hình​",
+      "Khái niệm​",
+      "Cách định nghĩa một lớp cơ sở trừu tượng​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 19762,
+    "summary": "Lập trình hướng đối tượng\nPhần I: Lý thuyết lập trình Hướng đối tượng\nChương 4: Kế thừa và Đa hình\nTrên trang này\nChương 4: Kế thừa và Đa hình\n1. Mối quan hệ đặc biệt hóa, tổng quát hóa\n​\nHai lớp đối tượng được gọi là quan hệ đặc biệt hóa – tổng quát hóa với nhau khi, lớp đối tượng này là trường hợp đặc biệt của lớp đối tượng kia và lớp đối tượng kia là trường hợp tổng quát của lớp đối tượng này.\n"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/dsa/phan1/chuong1",
+    "slug": "dsa/phan1/chuong1",
+    "title": "Chương 1: Giới thiệu về giải thuật",
+    "h2s": [
+      "1. Khái quát về giải thuật​",
+      "2. Phân tích thuật toán​",
+      "3. Độ phức tạp thuật toán​"
+    ],
+    "h3s": [
+      "1.1. Định nghĩa​",
+      "1.2. Sự cần thiết của việc học giải thuật​",
+      "3.1. Một số khái niệm căn bản​",
+      "3.2. Một số độ phức tạp của giải thuật phổ biến​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 4693,
+    "summary": "Cấu trúc dữ liệu và Giải thuật\nPhần I: Giải thuật\nChương 1: Giới thiệu về giải thuật\nTrên trang này\nChương 1: Giới thiệu về giải thuật\n1. Khái quát về giải thuật\n​\n1.1. Định nghĩa\n​\nGiải thuật\nlà một quy trình rõ ràng, được xác định và hiểu được để giải quyết một vấn đề tính toán. Để được coi là một giải thuật, một quy trình phải có ba tính chất sau:\nTính chính xác:\nCác bước phải dẫn đến một kết q"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/dsa/phan1/chuong2",
+    "slug": "dsa/phan1/chuong2",
+    "title": "Chương 2. Thuật toán tìm kiếm",
+    "h2s": [
+      "1. Định nghĩa về tìm kiếm​",
+      "2. Tại sao chúng ta cần tìm kiếm?​",
+      "3. Các thuật toán tìm kiếm cơ bản​",
+      "4. Ví dụ​"
+    ],
+    "h3s": [
+      "3.1. Thuật toán tìm kiếm tuyến tính​",
+      "3.2. Thuật toán tìm kiếm nhị phân​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 9066,
+    "summary": "Cấu trúc dữ liệu và Giải thuật\nPhần I: Giải thuật\nChương 2. Thuật toán tìm kiếm\nTrên trang này\nChương 2. Thuật toán tìm kiếm\n1. Định nghĩa về tìm kiếm\n​\nTrong môn khoa học máy tính, tìm kiếm là một quá trình tìm kiếm một đối tượng với những thuộc tính đặc trưng trong tập hợp các đối tượng. Đối tượng tìm kiếm ấy có thể là bản ghi trong một cơ sở dữ liệu, những dữ liệu cơ bản trong một mảng, đoạn vă"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/dsa/phan1/chuong3",
+    "slug": "dsa/phan1/chuong3",
+    "title": "Chương 3. Các thuật toán sắp xếp",
+    "h2s": [
+      "1. Sắp xếp chọn (Selection Sort)​",
+      "2. Sắp xếp chèn (Insertion Sort)​",
+      "3. Sắp xếp nổi bọt (Bubble Sort)​",
+      "4. Sắp xếp nhanh (Quick Sort)​",
+      "5. Sắp xếp trộn (Merge Sort)​",
+      "6. Sắp xếp vun đống (Heap Sort)​"
+    ],
+    "h3s": [
+      "1.1. Sơ lược về nguồn gốc​",
+      "1.2. Ý tưởng​",
+      "1.3. Pseudocode:​",
+      "1.4. Cài đặt hàm​",
+      "1.5. Biểu diễn chi tiết thuật toán​",
+      "1.6. Ví dụ​",
+      "1.7. Bài tập luyện tập​",
+      "2.1. Giới thiệu​",
+      "2.2. Mô tả cách hoạt động của thuật toán Insertion Sort bằng việc xếp các lá bài​",
+      "2.3. Ví dụ minh họa​",
+      "2.4. Đoạn code c++ cho thuật toán Insertion Sort​",
+      "2.5. Insertion Sort: animation​",
+      "3.1. Mô tả cách hoạt động của thuật toán Bubble Sort​",
+      "3.2. Đoạn code c++ cho thuật toán Bubble Sort​",
+      "4.1. Sơ lược về nguồn gốc​",
+      "4.2. Ý tưởng​",
+      "4.3. Cài đặt hàm​",
+      "4.4. Biểu diễn chi tiết thuật toán​",
+      "4.5. Đánh giá thuật toán​",
+      "4.6. Bài tập luyện tập​",
+      "5.1. Sơ lược về nguồn gốc​",
+      "5.2. Ý tưởng​",
+      "5.3. Cài đặt hàm​",
+      "5.4. Biểu diễn chi tiết thuật toán​",
+      "5.5. Đánh giá thuật toán​",
+      "5.6. Bài tập luyện tập​",
+      "6.1. Sơ lược về lịch sử hình thành​",
+      "6.2. Cấu trúc dữ liệu Binary Heap​",
+      "6.3. Thao tác Heapify​",
+      "6.4. Cài đặt thuật toán Heap Sort​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 18646,
+    "summary": "Cấu trúc dữ liệu và Giải thuật\nPhần I: Giải thuật\nChương 3. Các thuật toán sắp xếp\nTrên trang này\nChương 3. Các thuật toán sắp xếp\n1. Sắp xếp chọn (Selection Sort)\n​\n1.1. Sơ lược về nguồn gốc\n​\nSelection Sort\nlà một thuật toán sắp xếp đơn giản và dễ triển khai, hoạt động dựa trên nguyên tắc chọn phần tử nhỏ nhất trong đoạn chưa được sắp xếp và hoán đổi nó với phần tử đầu tiên của đoạn đó. Quá trìn"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/dsa/phan2/chuong4",
+    "slug": "dsa/phan2/chuong4",
+    "title": "Chương 4: Danh sách liên kết đơn (Linked list)",
+    "h2s": [
+      "4.1. Sơ lược về lịch sử ra đời Linked list​",
+      "4.2. Nguyên Lý Hoạt Động của Linked​",
+      "4.3. Định nghĩa Node và LIST​",
+      "4.4. Các thao tác với danh sách liên kết đơn​"
+    ],
+    "h3s": [
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 2393,
+    "summary": "Cấu trúc dữ liệu và Giải thuật\nPhần II: Cấu trúc dữ liệu\nChương 4: Danh sách liên kết đơn (Linked list)\nTrên trang này\nChương 4: Danh sách liên kết đơn (Linked list)\n4.1. Sơ lược về lịch sử ra đời Linked list\n​\nDanh sách liên kết (Linked List)\nlà một cấu trúc dữ liệu cổ điển trong khoa học máy tính. Nó xuất hiện từ thời kỳ đầu của máy tính và lập trình. Dù không thể xác định chính xác thời điểm đầ"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/dsa/phan2/chuong5",
+    "slug": "dsa/phan2/chuong5",
+    "title": "Chương 5: Ngăn xếp (Stack)",
+    "h2s": [
+      "5.1. Định nghĩa​",
+      "5.2. Các thao tác cơ bản trên stack​",
+      "5.3. Một số ứng dụng của stack​",
+      "5.4. Các thao tác trên ngăn xếp (stack)​"
+    ],
+    "h3s": [
+      "5.4.1. Cài đặt ngăn xếp (stack) bằng cách sử dụng mảng:​",
+      "5.4.2. Cài đặt ngăn xếp (stack) sử dụng danh sách liên kết (Linked List)​",
+      "5.4.3. Cách sử dụng các thao tác trên ngăn xếp sử dụng thư viện STL trong C++​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 8780,
+    "summary": "Cấu trúc dữ liệu và Giải thuật\nPhần II: Cấu trúc dữ liệu\nChương 5: Ngăn xếp (Stack)\nTrên trang này\nChương 5: Ngăn xếp (Stack)\n5.1. Định nghĩa\n​\nStack (ngăn xếp)\nlà một cấu trúc dữ liệu trừu tượng, hoạt động theo nguyên lý \"vào sau ra trước\" (\nLIFO\n- Last In First Out, nghĩa là dữ liệu được nạp vào ngăn xếp trước sẽ được xử lý sau cùng và dữ liệu được nạp vào sau cùng được xử lý đầu tiên).\nCó thể h"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/dsa/phan2/chuong6",
+    "slug": "dsa/phan2/chuong6",
+    "title": "Chương 6: Hàng đợi (Queue)",
+    "h2s": [
+      "6.1. Sơ lược về hàng đợi​",
+      "6.2. Khởi tạo​",
+      "6.3. Ứng dụng của Queue​",
+      "6.4. Thao tác trên Queue​",
+      "6.5. Bài toán thường gặp​",
+      "6.6. Bài tập​"
+    ],
+    "h3s": [
+      "6.1.1. Sơ lược về lịch sử hình thành:​",
+      "6.1.2. Khái niệm hàng đợi​",
+      "6.2.1. Khởi tạo queue trên mảng (array):​",
+      "6.2.2. Khởi tạo queue trên danh sách liên kết đơn (singly linked-list):​",
+      "6.3.1. Trong các thuật toán:​",
+      "6.3.2. Trong thực tế:​",
+      "6.4.1. Thao tác trên mảng​",
+      "6.4.2. Thao tác trên danh sách liên kết đơn​",
+      "6.5.1. Chuỗi palindromes​",
+      "6.5.2. Giải thuật dermerging:​",
+      "6.5.3. Chuyển từ biểu thức trung tố sang ký pháp Ba Lan​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 12391,
+    "summary": "Cấu trúc dữ liệu và Giải thuật\nPhần II: Cấu trúc dữ liệu\nChương 6: Hàng đợi (Queue)\nTrên trang này\nChương 6: Hàng đợi (Queue)\n6.1. Sơ lược về hàng đợi\n​\n6.1.1. Sơ lược về lịch sử hình thành:\n​\nKhái niệm về hàng đợi đã tồn tại từ rất lâu trong cuộc sống hàng ngày trước khi nó được áp dụng vào lĩnh vực khoa học máy tính. Tuy nhiên, việc formalize và áp dụng hàng đợi vào lĩnh vực khoa học máy tính bắ"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/dsa/phan2/chuong7",
+    "slug": "dsa/phan2/chuong7",
+    "title": "Chương 7: Cây (Tree)",
+    "h2s": [
+      "7.1. Cấu trúc cây​",
+      "7.2. Một số khái niệm liên quan​",
+      "7.3. Ứng dụng​",
+      "7.4. Cây nhị phân​",
+      "7.5 Cây nhị phân tìm kiếm (BST)​",
+      "7.6. B-Tree​"
+    ],
+    "h3s": [
+      "7.1.1. Định nghĩa​",
+      "7.1.2. Tính chất​",
+      "7.2.1 Các loại node​",
+      "7.2.2. Quan hệ giữa các node​",
+      "7.2.3. Đường đi, mức, chiều cao của cây.​",
+      "7.4.1. Định nghĩa​",
+      "7.4.2. Tính chất​",
+      "7.5.1. Định nghĩa​",
+      "7.5.2. Xây dựng cấu trúc cây nhị phân​",
+      "7.5.3.1. Các thao tác trên cây nhị phân​",
+      "7.6.1. Định nghĩa, tính chất​",
+      "7.6.2. Một số khái niệm thao tác với cây B-Tree​",
+      "7.6.3. Thao tác thêm nút​",
+      "7.6.4. Thao tác xóa nút​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 25988,
+    "summary": "Cấu trúc dữ liệu và Giải thuật\nPhần II: Cấu trúc dữ liệu\nChương 7: Cây (Tree)\nTrên trang này\nChương 7: Cây (Tree)\n7.1. Cấu trúc cây\n​\n7.1.1. Định nghĩa\n​\nCây là một cấu trúc dữ liệu phi tuyến tính (non-linear data structure). Trong đó, tập hợp các phần tử được gọi là các nút (node) được kết nối với nhau thông\nqua các cạnh, sao cho chỉ tồn tại đúng một đường đi giữa 2 nút bất kì.\nNote\n: Dữ liệu tro"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/dsa/phan2/chuong8",
+    "slug": "dsa/phan2/chuong8",
+    "title": "Chương 8: Đồ thị (Graph)",
+    "h2s": [
+      "8.1. Lý thuyết Đồ thị​",
+      "8.2. Giới thiệu các thuật toán trên đồ thị​",
+      "8.3. Ứng dụng đồ thị​"
+    ],
+    "h3s": [
+      "8.1.1. Khái niệm​",
+      "8.1.2. Một số đồ thị đặc biệt​",
+      "8.1.3. Chu trình, đường đi​",
+      "8.1.4. Bậc của đỉnh (degree)​",
+      "8.1.5. Liên thông (connection)​",
+      "8.1.6. Đẳng cấu đồ thị​",
+      "8.1.7. Ứng dụng​",
+      "8.2.1. Tổ chức dữ liệu​",
+      "8.2.2. Duyệt DFS​",
+      "8.2.3. Duyệt BFS​",
+      "8.2.4. Thuật toán tìm đường đi ngắn nhất Djikstra​",
+      "8.3.1. Bài toán Tô màu bản đồ​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 30528,
+    "summary": "Cấu trúc dữ liệu và Giải thuật\nPhần II: Cấu trúc dữ liệu\nChương 8: Đồ thị (Graph)\nTrên trang này\nChương 8: Đồ thị (Graph)\n8.1. Lý thuyết Đồ thị\n​\nNgười đặt nền móng cho sự phát triển của đồ thị là nhà toán học thụy sĩ Leonhard Euler (1707 - 1783). Trong bài toán Cầu Königsberg, Euler đã giới thiệu khái niệm về đồ thị và sử dụng nó để giải quyết bài toán này. Euler cũng đưa ra định lý Euler, nền tả"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/dsa/phan2/chuong9",
+    "slug": "dsa/phan2/chuong9",
+    "title": "Chương 9: Bảng băm (Hash table)",
+    "h2s": [
+      "9.1. Giới thiệu cơ bản về bảng băm​",
+      "9.2. Hàm băm​",
+      "9.3. Sự đụng độ​",
+      "",
+      "9.4. Ứng dụng​"
+    ],
+    "h3s": [
+      "9.1.1. Giới thiệu sơ lược​",
+      "9.1.2. Các khái niệm​",
+      "9.2.1. Định nghĩa​",
+      "9.2.2. Một số hàm băm thường sử dụng​",
+      "9.3.1. Khái niệm đụng độ​",
+      "9.3.2. Phương pháp nối kết​",
+      "9.3.3. Phương pháp băm lại​",
+      "9.3.4. Bài tập tham khảo​",
+      "9.4.1. Nhận xét, đánh giá​",
+      "9.4.2. Ứng dụng​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 25154,
+    "summary": "Cấu trúc dữ liệu và Giải thuật\nPhần II: Cấu trúc dữ liệu\nChương 9: Bảng băm (Hash table)\nTrên trang này\nChương 9: Bảng băm (Hash table)\n9.1. Giới thiệu cơ bản về bảng băm\n​\n9.1.1. Giới thiệu sơ lược\n​\nVào những năm 50 của thế kỷ 20, thuật ngữ bảng băm bất đầu xuất hiện và phát triển một cách nhanh chóng. Và đến những năm 70, cuốn sách “The Art of Computer Programming” do nhà khoa học nổi tiếng Don"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/csdl/lythuyet/chuong1",
+    "slug": "csdl/lythuyet/chuong1",
+    "title": "Chương 1:  Tổng quan về cơ sở dữ liệu",
+    "h2s": [
+      "1. Các khái niệm cơ bản​",
+      "2. Mô hình dữ liệu thực thể mối kết hợp​"
+    ],
+    "h3s": [
+      "1.1. Cơ sở dữ liệu (CSDL)​",
+      "1.2. Các đối tượng sử dụng CSDL​",
+      "1.3. Hệ quản trị CSDL​",
+      "1.4. Các mức biểu diễn một CSDL​",
+      "1.5. Các mô hình dữ liệu​",
+      "2.1. Loại thực thể​",
+      "2.2. Thuộc tính​",
+      "2.3. Thực thể​",
+      "2.4. Khóa​",
+      "2.5. Loại mối kết hợp​",
+      "2.6. Bản số​",
+      "2.7. Lược đồ ER​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 10450,
+    "summary": "Cơ sở dữ liệu\nPhần I: Lý thuyết Cơ sở dữ liệu\nChương 1:  Tổng quan về cơ sở dữ liệu\nTrên trang này\nChương 1:  Tổng quan về cơ sở dữ liệu\nCác khái niệm cơ bản về cơ sở dữ liệu, các mô hình cơ sở dữ liệu và mô hình thực thể mối kết hợp.\n1. Các khái niệm cơ bản\n​\n1.1. Cơ sở dữ liệu (CSDL)\n​\nCơ sở dữ liệu (Database)\nlà một hệ thống các thông tin có cấu trúc, được lưu trữ trên các thiết bị lưu trữ nhằm"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/csdl/lythuyet/chuong2",
+    "slug": "csdl/lythuyet/chuong2",
+    "title": "Chương 2: Mô hình dữ liệu quan hệ",
+    "h2s": [
+      "1. Các khái niệm của mô hình quan hệ​",
+      "2. Khóa​",
+      "3. Các đặc trưng của quan hệ​",
+      "4. Chuyển lược đồ ER sang mô hình quan hệ​"
+    ],
+    "h3s": [
+      "1.1. Thuộc tính​",
+      "1.2. Quan hệ​",
+      "1.3. Bộ​",
+      "1.4. Thể hiện của quan hệ​",
+      "1.5. Tân từ​",
+      "1.6. Lược đồ quan hệ​",
+      "1.7. Lược đồ CSDL​",
+      "2.1. Siêu khóa​",
+      "2.2. Khóa​",
+      "2.3. Khóa chính​",
+      "2.4. Khóa ngoại​",
+      "4.1. Tập thực thể​",
+      "4.2. Mối quan hệ Nhiều-Nhiều​",
+      "4.3. Mối quan hệ Một-Nhiều​",
+      "4.4. Mối quan hệ Một-Một​",
+      "4.5. Mối kết hợp 1 ngôi (Đệ quy)​",
+      "4.6. Mối kết hợp 3 ngôi​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 19538,
+    "summary": "Cơ sở dữ liệu\nPhần I: Lý thuyết Cơ sở dữ liệu\nChương 2: Mô hình dữ liệu quan hệ\nTrên trang này\nChương 2: Mô hình dữ liệu quan hệ\nMô hình dữ liệu dựa trên khái niệm quan hệ, mô hình tổ chức, lưu trữ và quản lý dữ liệu một cách logic, nhất quán trong các hệ thống cơ sở dữ liệu hiện đại.\n1. Các khái niệm của mô hình quan hệ\n​\n1.1. Thuộc tính\n​\nLà mô tả\nđặc trưng của đối tượng\ncần quản lý. Thuộc tính "
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/csdl/lythuyet/chuong3",
+    "slug": "csdl/lythuyet/chuong3",
+    "title": "Chương 3: Đại số quan hệ",
+    "h2s": [
+      "1. Tổng quan về đại số quan hệ​",
+      "2. Các phép toán cơ sở​",
+      "3. Các phép toán tập hợp​",
+      "4. Phép kết​",
+      "5. Gom nhóm và hàm tổng hợp​",
+      "6. Phép chia​"
+    ],
+    "h3s": [
+      "1.1. Dữ liệu dạng quan hệ và truy vấn​",
+      "1.2. Đại số quan hệ là gì​",
+      "1.3. Phân loại các phép toán​",
+      "2.1. Lược đồ ví dụ​",
+      "2.2. Phép chọn​",
+      "2.3. Phép chiếu​",
+      "2.4. Kết hợp phép chọn và phép chiếu​",
+      "2.5. Phép gán​",
+      "3.1. Khái quát​",
+      "3.2. Điều kiện cần để áp dụng các phép hợp, giao và hiệu​",
+      "3.3. Phép hợp​",
+      "3.4. Phép giao​",
+      "3.5. Phép hiệu​",
+      "3.6. Phép tích​",
+      "4.1. Giới thiệu​",
+      "4.2. Cấu trúc và ý nghĩa​",
+      "4.3. Các dạng phép kết thường dùng​",
+      "5.1. Mở đầu​",
+      "5.2. Khái niệm gom nhóm​",
+      "5.3. Các hàm tổng hợp thường dùng​",
+      "5.4. Ví dụ minh họa​",
+      "6.1. Mở đầu​",
+      "6.2. Ký hiệu​",
+      "6.3. Ví dụ minh họa​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 29210,
+    "summary": "Cơ sở dữ liệu\nPhần I: Lý thuyết Cơ sở dữ liệu\nChương 3: Đại số quan hệ\nTrên trang này\nChương 3: Đại số quan hệ\nCác phép toán thao tác và truy vấn dữ liệu trong mô hình dữ liệu quan hệ. Là nền tảng logic cho ngôn ngữ truy vấn trong các hệ quản trị cơ sở dữ liệu hiện đại.\n1. Tổng quan về đại số quan hệ\n​\n1.1. Dữ liệu dạng quan hệ và truy vấn\n​\nTrong mô hình dữ liệu quan hệ, thông tin được tổ chức dư"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/csdl/lythuyet/chuong4",
+    "slug": "csdl/lythuyet/chuong4",
+    "title": "Chương 4: Ngôn ngữ SQL",
+    "h2s": [
+      "1. Tổng quan về SQL​",
+      "2. Ngôn ngữ định nghĩa dữ liệu​",
+      "3. Ngôn ngữ thao tác dữ liệu​",
+      "4. Ngôn ngữ truy vấn dữ liệu​"
+    ],
+    "h3s": [
+      "1.1. Giới thiệu​",
+      "1.2. Thuật ngữ và phân loại​",
+      "2.1. Kiểu dữ liệu và ràng buộc toàn vẹn​",
+      "2.2. Tạo bảng​",
+      "2.3. Sửa đổi cấu trúc bảng​",
+      "2.4. Xóa bảng​",
+      "3.1. Thêm dữ liệu vào bảng​",
+      "3.2. Cập nhật dữ liệu trên bảng​",
+      "3.3. Xóa dữ liệu khỏi bảng​",
+      "4.1. Cấu trúc câu lệnh truy vấn.​",
+      "4.2. Các toán tử, các hàm​",
+      "4.3. Truy vấn cơ bản​",
+      "4.4. Truy vấn sử dụng phép toán tập hợp​",
+      "4.5. Truy vấn lồng​",
+      "4.6. Truy vấn sử dụng hàm tính toán trên nhóm​",
+      "4.7. Truy vấn sử dụng phép kết ngoài​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 30782,
+    "summary": "Cơ sở dữ liệu\nPhần I: Lý thuyết Cơ sở dữ liệu\nChương 4: Ngôn ngữ SQL\nTrên trang này\nChương 4: Ngôn ngữ SQL\nNgôn ngữ tiêu chuẩn giúp giao tiếp, quản lý và khai thác thông tin hiệu quả trên các hệ quản trị cơ sở dữ liệu quan hệ\n1. Tổng quan về SQL\n​\n1.1. Giới thiệu\n​\n1.1.1. SQL là gì?\n​\nSQL là viết tắt của Structured Query Language (Ngôn ngữ truy vấn có cấu trúc). Đây là một ngôn ngữ cấp cao, được t"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/csdl/lythuyet/chuong5",
+    "slug": "csdl/lythuyet/chuong5",
+    "title": "Chương 5: Ràng buộc toàn vẹn",
+    "h2s": [
+      "1. Giới thiệu​",
+      "2. Các đặc trưng của một ràng buộc toàn vẹn​",
+      "3. Phân loại ràng buộc toàn vẹn​"
+    ],
+    "h3s": [
+      "2.1. Nội dung​",
+      "2.2. Bối cảnh​",
+      "2.3. Bảng tầm ảnh hưởng​",
+      "3.1. Ràng buộc toàn vẹn có bối cảnh trên 1 quan hệ​",
+      "3.2. Ràng buộc toàn vẹn có bối cảnh nhiều quan hệ​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 10977,
+    "summary": "Cơ sở dữ liệu\nPhần I: Lý thuyết Cơ sở dữ liệu\nChương 5: Ràng buộc toàn vẹn\nTrên trang này\nChương 5: Ràng buộc toàn vẹn\nCác điều kiện, quy định mà tất cả thể hiện của quan hệ phải\nthỏa\n1. Giới thiệu\n​\nĐịnh nghĩa:\nRàng buộc toàn vẹn (RBTV) là các quy định, điều kiện từ ứng dụng thực tế. Các điều kiện này là bất biến.\nVai trò:\nNgăn ngừa mất dữ liệu.\nĐảm bảo dữ liệu tuân thủ theo các loại và phạm vi g"
+  },
+  {
+    "url": "https://handbook.bhtcnpm.com/docs/csdl/lythuyet/chuong6",
+    "slug": "csdl/lythuyet/chuong6",
+    "title": "Chương 6: Phụ thuộc hàm và dạng chuẩn",
+    "h2s": [
+      "1. Các khái niệm liên quan đến phụ thuộc hàm​",
+      "2. Khóa​",
+      "3. Các dạng chuẩn​"
+    ],
+    "h3s": [
+      "1.1. Ví dụ mở đầu​",
+      "1.2. Phụ thuộc hàm​",
+      "1.3. Luật dẫn Armstrong​",
+      "1.4. Bao đóng​",
+      "2.1. Khái niệm​",
+      "2.2. Thuật toán tìm khóa​",
+      "2.3. Siêu khóa. Thuộc tính khóa​",
+      "3.1. Khái niệm về xác định dạng chuẩn​",
+      "3.2. Dạng chuẩn 1​",
+      "3.3. Dạng chuẩn 2​",
+      "3.4. Dạng chuẩn 3​",
+      "3.5. Dạng chuẩn BC (Boyce – Codd)​",
+      "Truy cập nhanh",
+      "Liên kết"
+    ],
+    "length": 27600,
+    "summary": "Cơ sở dữ liệu\nPhần I: Lý thuyết Cơ sở dữ liệu\nChương 6: Phụ thuộc hàm và dạng chuẩn\nTrên trang này\nChương 6: Phụ thuộc hàm và dạng chuẩn\nCơ sở khoa học để tối ưu cấu trúc bảng khi thiết kế cơ sở dữ liệu, tổ chức dữ liệu hợp lý, loại bỏ sự trùng lặp và đảm bảo tính toàn vẹn thông tin xuyên suốt trong các mô hình cơ sở dữ liệu.\n1. Các khái niệm liên quan đến phụ thuộc hàm\n​\n1.1. Ví dụ mở đầu\n​\nPhụ t"
+  }
+]

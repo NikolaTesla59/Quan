@@ -1,0 +1,1415 @@
+{
+  "Tổng quan": [
+    {
+      "row": 2,
+      "cells": {
+        "2": {
+          "val": "TỔNG QUAN TIẾN ĐỘ HỌC",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 5,
+      "cells": {
+        "2": {
+          "val": "Nhóm tài liệu",
+          "link": null
+        },
+        "3": {
+          "val": "Số lượng",
+          "link": null
+        },
+        "4": {
+          "val": "Đang học",
+          "link": null
+        },
+        "5": {
+          "val": "Đã xong",
+          "link": null
+        },
+        "6": {
+          "val": "Hoàn thành",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 6,
+      "cells": {
+        "2": {
+          "val": "🎬  Video",
+          "link": null
+        },
+        "3": {
+          "val": "=COUNTIF('Lộ trình'!$C$7:$C$45,B6)",
+          "link": null
+        },
+        "4": {
+          "val": "=COUNTIFS('Lộ trình'!$C$7:$C$45,B6,'Lộ trình'!$G$7:$G$45,\"Đang học\")",
+          "link": null
+        },
+        "5": {
+          "val": "=COUNTIFS('Lộ trình'!$C$7:$C$45,B6,'Lộ trình'!$G$7:$G$45,\"Đã xong\")",
+          "link": null
+        },
+        "6": {
+          "val": "=IF(C6=0,0,E6/C6)",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 7,
+      "cells": {
+        "2": {
+          "val": "💻  GitHub",
+          "link": null
+        },
+        "3": {
+          "val": "=COUNTIF('Lộ trình'!$C$7:$C$45,B7)",
+          "link": null
+        },
+        "4": {
+          "val": "=COUNTIFS('Lộ trình'!$C$7:$C$45,B7,'Lộ trình'!$G$7:$G$45,\"Đang học\")",
+          "link": null
+        },
+        "5": {
+          "val": "=COUNTIFS('Lộ trình'!$C$7:$C$45,B7,'Lộ trình'!$G$7:$G$45,\"Đã xong\")",
+          "link": null
+        },
+        "6": {
+          "val": "=IF(C7=0,0,E7/C7)",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 8,
+      "cells": {
+        "2": {
+          "val": "📘  Tài liệu hướng dẫn",
+          "link": null
+        },
+        "3": {
+          "val": "=COUNTIF('Lộ trình'!$C$7:$C$45,B8)",
+          "link": null
+        },
+        "4": {
+          "val": "=COUNTIFS('Lộ trình'!$C$7:$C$45,B8,'Lộ trình'!$G$7:$G$45,\"Đang học\")",
+          "link": null
+        },
+        "5": {
+          "val": "=COUNTIFS('Lộ trình'!$C$7:$C$45,B8,'Lộ trình'!$G$7:$G$45,\"Đã xong\")",
+          "link": null
+        },
+        "6": {
+          "val": "=IF(C8=0,0,E8/C8)",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 9,
+      "cells": {
+        "2": {
+          "val": "📚  Sách",
+          "link": null
+        },
+        "3": {
+          "val": "=COUNTIF('Lộ trình'!$C$7:$C$45,B9)",
+          "link": null
+        },
+        "4": {
+          "val": "=COUNTIFS('Lộ trình'!$C$7:$C$45,B9,'Lộ trình'!$G$7:$G$45,\"Đang học\")",
+          "link": null
+        },
+        "5": {
+          "val": "=COUNTIFS('Lộ trình'!$C$7:$C$45,B9,'Lộ trình'!$G$7:$G$45,\"Đã xong\")",
+          "link": null
+        },
+        "6": {
+          "val": "=IF(C9=0,0,E9/C9)",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 10,
+      "cells": {
+        "2": {
+          "val": "🔬  Bài nghiên cứu",
+          "link": null
+        },
+        "3": {
+          "val": "=COUNTIF('Lộ trình'!$C$7:$C$45,B10)",
+          "link": null
+        },
+        "4": {
+          "val": "=COUNTIFS('Lộ trình'!$C$7:$C$45,B10,'Lộ trình'!$G$7:$G$45,\"Đang học\")",
+          "link": null
+        },
+        "5": {
+          "val": "=COUNTIFS('Lộ trình'!$C$7:$C$45,B10,'Lộ trình'!$G$7:$G$45,\"Đã xong\")",
+          "link": null
+        },
+        "6": {
+          "val": "=IF(C10=0,0,E10/C10)",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 11,
+      "cells": {
+        "2": {
+          "val": "🎓  Khóa học",
+          "link": null
+        },
+        "3": {
+          "val": "=COUNTIF('Lộ trình'!$C$7:$C$45,B11)",
+          "link": null
+        },
+        "4": {
+          "val": "=COUNTIFS('Lộ trình'!$C$7:$C$45,B11,'Lộ trình'!$G$7:$G$45,\"Đang học\")",
+          "link": null
+        },
+        "5": {
+          "val": "=COUNTIFS('Lộ trình'!$C$7:$C$45,B11,'Lộ trình'!$G$7:$G$45,\"Đã xong\")",
+          "link": null
+        },
+        "6": {
+          "val": "=IF(C11=0,0,E11/C11)",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 12,
+      "cells": {
+        "2": {
+          "val": "TỔNG CỘNG",
+          "link": null
+        },
+        "3": {
+          "val": "=SUM(C6:C11)",
+          "link": null
+        },
+        "4": {
+          "val": "=SUM(D6:D11)",
+          "link": null
+        },
+        "5": {
+          "val": "=SUM(E6:E11)",
+          "link": null
+        },
+        "6": {
+          "val": "=IF(C12=0,0,E12/C12)",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 14,
+      "cells": {
+        "2": {
+          "val": "Số liệu tự cập nhật khi bạn đổi trạng thái ở sheet “Lộ trình”.",
+          "link": null
+        }
+      }
+    }
+  ],
+  "Lộ trình": [
+    {
+      "row": 2,
+      "cells": {
+        "2": {
+          "val": "FULL ROADMAP AI AGENT  ·  Từ A đến Z",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 4,
+      "cells": {
+        "2": {
+          "val": "Lộ trình học AI Agent cho người mới: Video, GitHub, tài liệu, sách, paper và khóa học. Chọn trạng thái ở cột “Trạng thái” để theo dõi tiến độ.",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 6,
+      "cells": {
+        "2": {
+          "val": "STT",
+          "link": null
+        },
+        "3": {
+          "val": "Nhóm",
+          "link": null
+        },
+        "4": {
+          "val": "Tên tài liệu",
+          "link": null
+        },
+        "5": {
+          "val": "Mô tả",
+          "link": null
+        },
+        "6": {
+          "val": "Link",
+          "link": null
+        },
+        "7": {
+          "val": "Trạng thái",
+          "link": null
+        },
+        "8": {
+          "val": "Ghi chú",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 7,
+      "cells": {
+        "2": {
+          "val": "1.0",
+          "link": null
+        },
+        "3": {
+          "val": "🎬  Video",
+          "link": null
+        },
+        "4": {
+          "val": "LLM Introduction",
+          "link": null
+        },
+        "5": {
+          "val": "Giới thiệu về mô hình ngôn ngữ lớn (LLM)",
+          "link": null
+        },
+        "6": {
+          "val": "youtube.com  ↗",
+          "link": "https://youtube.com/watch?v=zjkBMFhNj_g"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 8,
+      "cells": {
+        "2": {
+          "val": "2.0",
+          "link": null
+        },
+        "3": {
+          "val": "🎬  Video",
+          "link": null
+        },
+        "4": {
+          "val": "LLMs from Scratch",
+          "link": null
+        },
+        "5": {
+          "val": "Tìm hiểu cách xây dựng LLM từ đầu",
+          "link": null
+        },
+        "6": {
+          "val": "youtube.com  ↗",
+          "link": "https://youtube.com/watch?v=9vM4p9NN0Ts"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 9,
+      "cells": {
+        "2": {
+          "val": "3.0",
+          "link": null
+        },
+        "3": {
+          "val": "🎬  Video",
+          "link": null
+        },
+        "4": {
+          "val": "Agentic AI Overview (Stanford)",
+          "link": null
+        },
+        "5": {
+          "val": "Tổng quan về AI Agent từ Stanford",
+          "link": null
+        },
+        "6": {
+          "val": "youtube.com  ↗",
+          "link": "https://youtube.com/watch?v=kJLiOGle3Lw"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 10,
+      "cells": {
+        "2": {
+          "val": "4.0",
+          "link": null
+        },
+        "3": {
+          "val": "🎬  Video",
+          "link": null
+        },
+        "4": {
+          "val": "Building & Evaluating Agents",
+          "link": null
+        },
+        "5": {
+          "val": "Xây dựng và đánh giá AI Agent",
+          "link": null
+        },
+        "6": {
+          "val": "youtube.com  ↗",
+          "link": "https://youtube.com/watch?v=d5EltXhbcfA"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 11,
+      "cells": {
+        "2": {
+          "val": "5.0",
+          "link": null
+        },
+        "3": {
+          "val": "🎬  Video",
+          "link": null
+        },
+        "4": {
+          "val": "Building Effective Agents",
+          "link": null
+        },
+        "5": {
+          "val": "Cách xây dựng AI Agent hiệu quả",
+          "link": null
+        },
+        "6": {
+          "val": "youtube.com  ↗",
+          "link": "https://youtube.com/watch?v=D7_ipDqhtwk"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 12,
+      "cells": {
+        "2": {
+          "val": "6.0",
+          "link": null
+        },
+        "3": {
+          "val": "🎬  Video",
+          "link": null
+        },
+        "4": {
+          "val": "Building Agents with MCP",
+          "link": null
+        },
+        "5": {
+          "val": "Xây dựng AI Agent với MCP",
+          "link": null
+        },
+        "6": {
+          "val": "youtube.com  ↗",
+          "link": "https://youtube.com/watch?v=kQmXtrmQ5Zg"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 13,
+      "cells": {
+        "2": {
+          "val": "7.0",
+          "link": null
+        },
+        "3": {
+          "val": "🎬  Video",
+          "link": null
+        },
+        "4": {
+          "val": "Building an Agent from Scratch",
+          "link": null
+        },
+        "5": {
+          "val": "Tự xây dựng một AI Agent từ đầu",
+          "link": null
+        },
+        "6": {
+          "val": "youtube.com  ↗",
+          "link": "https://youtube.com/watch?v=xzXdLRUyjUg"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 14,
+      "cells": {
+        "2": {
+          "val": "8.0",
+          "link": null
+        },
+        "3": {
+          "val": "🎬  Video",
+          "link": null
+        },
+        "4": {
+          "val": "Philo Agents",
+          "link": null
+        },
+        "5": {
+          "val": "Chuỗi video tìm hiểu về AI Agent",
+          "link": null
+        },
+        "6": {
+          "val": "youtube.com  ↗",
+          "link": "https://youtube.com/playlist?list=PLacQJwuclt_sV-tfZmpT1Ov6jldHl30NR"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 15,
+      "cells": {
+        "2": {
+          "val": "9.0",
+          "link": null
+        },
+        "3": {
+          "val": "💻  GitHub",
+          "link": null
+        },
+        "4": {
+          "val": "GenAI Agents",
+          "link": null
+        },
+        "5": {
+          "val": "Tài nguyên thực hành và bộ sưu tập ví dụ xây dựng AI Agent",
+          "link": null
+        },
+        "6": {
+          "val": "github.com  ↗",
+          "link": "https://github.com/NirDiamant/GenAI_Agents"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 16,
+      "cells": {
+        "2": {
+          "val": "10.0",
+          "link": null
+        },
+        "3": {
+          "val": "💻  GitHub",
+          "link": null
+        },
+        "4": {
+          "val": "Microsoft AI Agents for Beginners",
+          "link": null
+        },
+        "5": {
+          "val": "Tài liệu nhập môn AI Agent dành cho người mới",
+          "link": null
+        },
+        "6": {
+          "val": "github.com  ↗",
+          "link": "https://github.com/microsoft/ai-agents-for-beginners"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 17,
+      "cells": {
+        "2": {
+          "val": "11.0",
+          "link": null
+        },
+        "3": {
+          "val": "💻  GitHub",
+          "link": null
+        },
+        "4": {
+          "val": "Prompt Engineering Guide",
+          "link": null
+        },
+        "5": {
+          "val": "Hướng dẫn kỹ thuật viết và tối ưu prompt",
+          "link": null
+        },
+        "6": {
+          "val": "github.com  ↗",
+          "link": "https://github.com/dair-ai/Prompt-Engineering-Guide"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 18,
+      "cells": {
+        "2": {
+          "val": "12.0",
+          "link": null
+        },
+        "3": {
+          "val": "💻  GitHub",
+          "link": null
+        },
+        "4": {
+          "val": "Hands-On Large Language Models",
+          "link": null
+        },
+        "5": {
+          "val": "Học về LLM thông qua thực hành",
+          "link": null
+        },
+        "6": {
+          "val": "github.com  ↗",
+          "link": "https://github.com/HandsOnLLM/Hands-On-Large-Language-Models"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 19,
+      "cells": {
+        "2": {
+          "val": "13.0",
+          "link": null
+        },
+        "3": {
+          "val": "💻  GitHub",
+          "link": null
+        },
+        "4": {
+          "val": "Made with ML",
+          "link": null
+        },
+        "5": {
+          "val": "Thực hành xây dựng và triển khai hệ thống Machine Learning",
+          "link": null
+        },
+        "6": {
+          "val": "github.com  ↗",
+          "link": "https://github.com/GokuMohandas/Made-With-ML"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 20,
+      "cells": {
+        "2": {
+          "val": "14.0",
+          "link": null
+        },
+        "3": {
+          "val": "💻  GitHub",
+          "link": null
+        },
+        "4": {
+          "val": "Hands-On AI Engineering",
+          "link": null
+        },
+        "5": {
+          "val": "Tài nguyên thực hành kỹ thuật AI",
+          "link": null
+        },
+        "6": {
+          "val": "github.com  ↗",
+          "link": "https://github.com/Sumanth077/Hands-On-AI-Engineering"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 21,
+      "cells": {
+        "2": {
+          "val": "15.0",
+          "link": null
+        },
+        "3": {
+          "val": "💻  GitHub",
+          "link": null
+        },
+        "4": {
+          "val": "Awesome Generative AI Guide",
+          "link": null
+        },
+        "5": {
+          "val": "Bộ sưu tập tài nguyên về Generative AI",
+          "link": null
+        },
+        "6": {
+          "val": "github.com  ↗",
+          "link": "https://github.com/aishwaryanr/awesome-generative-ai-guide"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 22,
+      "cells": {
+        "2": {
+          "val": "16.0",
+          "link": null
+        },
+        "3": {
+          "val": "💻  GitHub",
+          "link": null
+        },
+        "4": {
+          "val": "Designing Machine Learning Systems",
+          "link": null
+        },
+        "5": {
+          "val": "Tài liệu về thiết kế hệ thống Machine Learning",
+          "link": null
+        },
+        "6": {
+          "val": "github.com  ↗",
+          "link": "https://github.com/chiphuyen/dmls-book"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 23,
+      "cells": {
+        "2": {
+          "val": "17.0",
+          "link": null
+        },
+        "3": {
+          "val": "💻  GitHub",
+          "link": null
+        },
+        "4": {
+          "val": "Machine Learning for Beginners",
+          "link": null
+        },
+        "5": {
+          "val": "Tài liệu nhập môn Machine Learning",
+          "link": null
+        },
+        "6": {
+          "val": "github.com  ↗",
+          "link": "https://github.com/microsoft/ML-For-Beginners"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 24,
+      "cells": {
+        "2": {
+          "val": "18.0",
+          "link": null
+        },
+        "3": {
+          "val": "💻  GitHub",
+          "link": null
+        },
+        "4": {
+          "val": "LLM Course",
+          "link": null
+        },
+        "5": {
+          "val": "Lộ trình học về mô hình ngôn ngữ lớn",
+          "link": null
+        },
+        "6": {
+          "val": "github.com  ↗",
+          "link": "https://github.com/mlabonne/llm-course"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 25,
+      "cells": {
+        "2": {
+          "val": "19.0",
+          "link": null
+        },
+        "3": {
+          "val": "📘  Tài liệu hướng dẫn",
+          "link": null
+        },
+        "4": {
+          "val": "Google's Agent Whitepaper",
+          "link": null
+        },
+        "5": {
+          "val": "Tài liệu chuyên sâu của Google về AI Agent",
+          "link": null
+        },
+        "6": {
+          "val": "kaggle.com  ↗",
+          "link": "https://kaggle.com/whitepaper-agents"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 26,
+      "cells": {
+        "2": {
+          "val": "20.0",
+          "link": null
+        },
+        "3": {
+          "val": "📘  Tài liệu hướng dẫn",
+          "link": null
+        },
+        "4": {
+          "val": "Google's Agent Companion",
+          "link": null
+        },
+        "5": {
+          "val": "Tài liệu bổ trợ giúp hiểu rõ hơn về AI Agent",
+          "link": null
+        },
+        "6": {
+          "val": "kaggle.com  ↗",
+          "link": "https://kaggle.com/whitepaper-agent-companion"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 27,
+      "cells": {
+        "2": {
+          "val": "21.0",
+          "link": null
+        },
+        "3": {
+          "val": "📘  Tài liệu hướng dẫn",
+          "link": null
+        },
+        "4": {
+          "val": "Building Effective Agents by Anthropic",
+          "link": null
+        },
+        "5": {
+          "val": "Hướng dẫn xây dựng AI Agent hiệu quả từ Anthropic",
+          "link": null
+        },
+        "6": {
+          "val": "anthropic.com  ↗",
+          "link": "https://anthropic.com/engineering/building-effective-agents"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 28,
+      "cells": {
+        "2": {
+          "val": "22.0",
+          "link": null
+        },
+        "3": {
+          "val": "📘  Tài liệu hướng dẫn",
+          "link": null
+        },
+        "4": {
+          "val": "Claude Code Agentic Coding Practices",
+          "link": null
+        },
+        "5": {
+          "val": "Phương pháp lập trình theo hướng AI Agent với Claude Code",
+          "link": null
+        },
+        "6": {
+          "val": "code.claude.com  ↗",
+          "link": "https://code.claude.com/docs/en/best-practices"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 29,
+      "cells": {
+        "2": {
+          "val": "23.0",
+          "link": null
+        },
+        "3": {
+          "val": "📘  Tài liệu hướng dẫn",
+          "link": null
+        },
+        "4": {
+          "val": "OpenAI's Practical Guide to Building Agents",
+          "link": null
+        },
+        "5": {
+          "val": "Hướng dẫn thực tiễn của OpenAI về xây dựng AI Agent",
+          "link": null
+        },
+        "6": {
+          "val": "cdn.openai.com  ↗",
+          "link": "https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 30,
+      "cells": {
+        "2": {
+          "val": "24.0",
+          "link": null
+        },
+        "3": {
+          "val": "📚  Sách",
+          "link": null
+        },
+        "4": {
+          "val": "Understanding Deep Learning",
+          "link": null
+        },
+        "5": {
+          "val": "Hiểu sâu về Deep Learning",
+          "link": null
+        },
+        "6": {
+          "val": "udlbook.github.io  ↗",
+          "link": "https://udlbook.github.io/udlbook/"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 31,
+      "cells": {
+        "2": {
+          "val": "25.0",
+          "link": null
+        },
+        "3": {
+          "val": "📚  Sách",
+          "link": null
+        },
+        "4": {
+          "val": "Building an LLM from Scratch",
+          "link": null
+        },
+        "5": {
+          "val": "Xây dựng mô hình ngôn ngữ lớn từ đầu",
+          "link": null
+        },
+        "6": {
+          "val": "manning.com  ↗",
+          "link": "https://manning.com/books/build-a-large-language-model-from-scratch"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 32,
+      "cells": {
+        "2": {
+          "val": "26.0",
+          "link": null
+        },
+        "3": {
+          "val": "📚  Sách",
+          "link": null
+        },
+        "4": {
+          "val": "The LLM Engineering Handbook",
+          "link": null
+        },
+        "5": {
+          "val": "Cẩm nang kỹ thuật xây dựng ứng dụng LLM",
+          "link": null
+        },
+        "6": {
+          "val": "oreilly.com  ↗",
+          "link": "https://oreilly.com/library/view/llm-engineers-handbook/9781836200079/"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 33,
+      "cells": {
+        "2": {
+          "val": "27.0",
+          "link": null
+        },
+        "3": {
+          "val": "📚  Sách",
+          "link": null
+        },
+        "4": {
+          "val": "AI Agents: The Definitive Guide",
+          "link": null
+        },
+        "5": {
+          "val": "Hướng dẫn toàn diện về AI Agent",
+          "link": null
+        },
+        "6": {
+          "val": "oreilly.com  ↗",
+          "link": "https://oreilly.com/library/view/ai-agents-the/0642572247775/"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 34,
+      "cells": {
+        "2": {
+          "val": "28.0",
+          "link": null
+        },
+        "3": {
+          "val": "📚  Sách",
+          "link": null
+        },
+        "4": {
+          "val": "Building Applications with AI Agents",
+          "link": null
+        },
+        "5": {
+          "val": "Xây dựng ứng dụng với AI Agent",
+          "link": null
+        },
+        "6": {
+          "val": "oreilly.com  ↗",
+          "link": "https://oreilly.com/library/view/building-applications-with/9781098176495/"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 35,
+      "cells": {
+        "2": {
+          "val": "29.0",
+          "link": null
+        },
+        "3": {
+          "val": "📚  Sách",
+          "link": null
+        },
+        "4": {
+          "val": "AI Agents with MCP",
+          "link": null
+        },
+        "5": {
+          "val": "Xây dựng AI Agent với MCP",
+          "link": null
+        },
+        "6": {
+          "val": "oreilly.com  ↗",
+          "link": "https://oreilly.com/library/view/ai-agents-with/9798341639546/"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 36,
+      "cells": {
+        "2": {
+          "val": "30.0",
+          "link": null
+        },
+        "3": {
+          "val": "📚  Sách",
+          "link": null
+        },
+        "4": {
+          "val": "AI Engineering",
+          "link": null
+        },
+        "5": {
+          "val": "Kỹ thuật xây dựng và triển khai ứng dụng AI",
+          "link": null
+        },
+        "6": {
+          "val": "oreilly.com  ↗",
+          "link": "https://oreilly.com/library/view/ai-engineering/9781098166298/"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 37,
+      "cells": {
+        "2": {
+          "val": "31.0",
+          "link": null
+        },
+        "3": {
+          "val": "🔬  Bài nghiên cứu",
+          "link": null
+        },
+        "4": {
+          "val": "ReAct",
+          "link": null
+        },
+        "5": {
+          "val": "Phương pháp kết hợp suy luận và hành động trong AI",
+          "link": null
+        },
+        "6": {
+          "val": "arxiv.org  ↗",
+          "link": "https://arxiv.org/abs/2210.03629"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 38,
+      "cells": {
+        "2": {
+          "val": "32.0",
+          "link": null
+        },
+        "3": {
+          "val": "🔬  Bài nghiên cứu",
+          "link": null
+        },
+        "4": {
+          "val": "Generative Agents",
+          "link": null
+        },
+        "5": {
+          "val": "Tác nhân mô phỏng hành vi và tương tác xã hội",
+          "link": null
+        },
+        "6": {
+          "val": "arxiv.org  ↗",
+          "link": "https://arxiv.org/abs/2304.03442"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 39,
+      "cells": {
+        "2": {
+          "val": "33.0",
+          "link": null
+        },
+        "3": {
+          "val": "🔬  Bài nghiên cứu",
+          "link": null
+        },
+        "4": {
+          "val": "Toolformer",
+          "link": null
+        },
+        "5": {
+          "val": "Mô hình ngôn ngữ tự học cách sử dụng công cụ",
+          "link": null
+        },
+        "6": {
+          "val": "proceedings.neurips.cc  ↗",
+          "link": "https://proceedings.neurips.cc/paper_files/paper/2023/file/d842425e4bf79ba039352da0f658a906-Paper-Conference.pdf"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 40,
+      "cells": {
+        "2": {
+          "val": "34.0",
+          "link": null
+        },
+        "3": {
+          "val": "🔬  Bài nghiên cứu",
+          "link": null
+        },
+        "4": {
+          "val": "Chain-of-Thought Prompting",
+          "link": null
+        },
+        "5": {
+          "val": "Kỹ thuật prompting theo chuỗi suy luận",
+          "link": null
+        },
+        "6": {
+          "val": "arxiv.org  ↗",
+          "link": "https://arxiv.org/pdf/2201.11903"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 41,
+      "cells": {
+        "2": {
+          "val": "35.0",
+          "link": null
+        },
+        "3": {
+          "val": "🎓  Khóa học",
+          "link": null
+        },
+        "4": {
+          "val": "Data Analytics Foundation Plus",
+          "link": null
+        },
+        "5": {
+          "val": "Lộ trình Data Analyst từ cơ bản đến nâng cao: SQL, Power BI, Python, Azure (116 giờ)",
+          "link": null
+        },
+        "6": {
+          "val": "datapot.edu.vn  ↗",
+          "link": "https://datapot.edu.vn/lp/dafp-group/?utm_campaign=FBG_POST_DAFP_IB&utm_content=PDF"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 42,
+      "cells": {
+        "2": {
+          "val": "36.0",
+          "link": null
+        },
+        "3": {
+          "val": "🎓  Khóa học",
+          "link": null
+        },
+        "4": {
+          "val": "Combo SQL: From Zero to Job-Ready",
+          "link": null
+        },
+        "5": {
+          "val": "Truy vấn dữ liệu với T-SQL từ cơ bản đến nâng cao, theo giáo trình Microsoft",
+          "link": null
+        },
+        "6": {
+          "val": "datapot.edu.vn  ↗",
+          "link": "https://datapot.edu.vn/lp/sql/?utm_campaign=FBG_POST_SQL_IB&utm_content=PDF"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 43,
+      "cells": {
+        "2": {
+          "val": "37.0",
+          "link": null
+        },
+        "3": {
+          "val": "🎓  Khóa học",
+          "link": null
+        },
+        "4": {
+          "val": "Agentic AI for Data Analytics",
+          "link": null
+        },
+        "5": {
+          "val": "Ứng dụng AI Agent vào toàn bộ quy trình phân tích dữ liệu và Power BI",
+          "link": null
+        },
+        "6": {
+          "val": "datapot.edu.vn  ↗",
+          "link": "https://datapot.edu.vn/lp/agentic-ai-v3/?utm_campaign=FBG_POST_AADA_IB&utm_content=PDF"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 44,
+      "cells": {
+        "2": {
+          "val": "38.0",
+          "link": null
+        },
+        "3": {
+          "val": "🎓  Khóa học",
+          "link": null
+        },
+        "4": {
+          "val": "Power BI từ cơ bản đến nâng cao",
+          "link": null
+        },
+        "5": {
+          "val": "PL-300 và Power BI Advanced Data Modeling & Visualization",
+          "link": null
+        },
+        "6": {
+          "val": "datapot.edu.vn  ↗",
+          "link": "https://datapot.edu.vn/lp/powerbi-group/?utm_campaign=FBG_POST_PBI_IB&utm_content=PDF"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 45,
+      "cells": {
+        "2": {
+          "val": "39.0",
+          "link": null
+        },
+        "3": {
+          "val": "🎓  Khóa học",
+          "link": null
+        },
+        "4": {
+          "val": "Power Platform: Power Automate, Power Apps & Power BI",
+          "link": null
+        },
+        "5": {
+          "val": "Tự động hóa quy trình, xây ứng dụng không cần code và trực quan hóa dữ liệu",
+          "link": null
+        },
+        "6": {
+          "val": "datapot.edu.vn  ↗",
+          "link": "https://datapot.edu.vn/lp/powerautomate-group/?utm_campaign=FBG_POST_PAUME_IB&utm_content=PDF"
+        },
+        "7": {
+          "val": "Chưa học",
+          "link": null
+        }
+      }
+    },
+    {
+      "row": 47,
+      "cells": {
+        "2": {
+          "val": "Ghi chú: mục “GenAI Agents” bị lặp 2 lần trong bản gốc nên đã gộp làm một.",
+          "link": null
+        }
+      }
+    }
+  ]
+}

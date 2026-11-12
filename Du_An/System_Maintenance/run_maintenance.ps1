@@ -1,112 +1,145 @@
+# Windows System Maintenance Script
 $ErrorActionPreference = 'SilentlyContinue'
 
-$cDriveBefore = Get-CimInstance Win32_LogicalDisk -Filter "DeviceID='C:'" | Select-Object DeviceID, Size, FreeSpace
+Write-Host "=========================================="
+Write-Host "1. MEASURING & CLEANING TEMP DIRECTORIES"
+Write-Host "=========================================="
+
+$userTemp = $env:TEMP
+$winTemp = 'C:\Windows\Temp'
 
 function Get-FolderStats($path) {
-    if (Test-Path $path) {
-        $files = Get-ChildItem -Path $path -Recurse -Force -ErrorAction SilentlyContinue
-        $size = ($files | Measure-Object -Property Length -Sum -ErrorAction SilentlyContinue).Sum
-        $count = ($files | Measure-Object).Count
-        if ($null -eq $size) { $size = 0 }
-        return [PSCustomObject]@{ Path = $path; Count = $count; SizeBytes = [int64]$size }
+    if (-not (Test-Path -Path $path)) {
+        return [PSCustomObject]@{ Count = 0; SizeMB = 0.0 }
     }
-    return [PSCustomObject]@{ Path = $path; Count = 0; SizeBytes = 0 }
+    $files = Get-ChildItem -Path $path -Recurse -Force -File -ErrorAction SilentlyContinue
+    $count = ($files | Measure-Object).Count
+    $sumBytes = ($files | Measure-Object -Property Length -Sum).Sum
+    if (-not $sumBytes) { $sumBytes = 0 }
+    return [PSCustomObject]@{
+        Count = $count
+        SizeMB = [math]::Round(($sumBytes / 1MB), 2)
+    }
 }
 
-$userTempStatsBefore = Get-FolderStats $env:TEMP
-$winTempStatsBefore = Get-FolderStats 'C:\Windows\Temp'
+$userBefore = Get-FolderStats $userTemp
+$winBefore = Get-FolderStats $winTemp
 
-# 1. Clean User Temp
-$userTempDeleted = 0
-$userTempLocked = 0
-Get-ChildItem -Path $env:TEMP -Force -ErrorAction SilentlyContinue | ForEach-Object {
+Write-Host ("User Temp Path: {0}" -f $userTemp)
+Write-Host ("  Before: {0} files ({1} MB)" -f $userBefore.Count, $userBefore.SizeMB)
+Write-Host ("Windows Temp Path: {0}" -f $winTemp)
+Write-Host ("  Before: {0} files ({1} MB)" -f $winBefore.Count, $winBefore.SizeMB)
+
+# Perform Deletion
+$deletedUserCount = 0
+Get-ChildItem -Path $userTemp -Force -Recurse -ErrorAction SilentlyContinue | ForEach-Object {
     try {
-        Remove-Item -Path $_.FullName -Recurse -Force -ErrorAction Stop
-        $userTempDeleted++
+        Remove-Item -LiteralPath $_.FullName -Recurse -Force -ErrorAction Stop
+        $deletedUserCount++
     } catch {
-        $userTempLocked++
+        # File is locked / in use by running process
     }
 }
 
-# Clean Windows Temp
-$winTempDeleted = 0
-$winTempLocked = 0
-Get-ChildItem -Path 'C:\Windows\Temp' -Force -ErrorAction SilentlyContinue | ForEach-Object {
+$deletedWinCount = 0
+Get-ChildItem -Path $winTemp -Force -Recurse -ErrorAction SilentlyContinue | ForEach-Object {
     try {
-        Remove-Item -Path $_.FullName -Recurse -Force -ErrorAction Stop
-        $winTempDeleted++
+        Remove-Item -LiteralPath $_.FullName -Recurse -Force -ErrorAction Stop
+        $deletedWinCount++
     } catch {
-        $winTempLocked++
+        # File is locked / in use by system service
     }
 }
 
-$userTempStatsAfter = Get-FolderStats $env:TEMP
-$winTempStatsAfter = Get-FolderStats 'C:\Windows\Temp'
+$userAfter = Get-FolderStats $userTemp
+$winAfter = Get-FolderStats $winTemp
 
-# 2. Flush DNS
-$dnsRaw = ipconfig /flushdns
-$dnsResult = ($dnsRaw | Where-Object { $_.Trim() -ne '' }) -join ' | '
+$userFreed = [math]::Max(0, [math]::Round(($userBefore.SizeMB - $userAfter.SizeMB), 2))
+$winFreed = [math]::Max(0, [math]::Round(($winBefore.SizeMB - $winAfter.SizeMB), 2))
+$totalFreed = [math]::Round(($userFreed + $winFreed), 2)
 
-# 3. Disk After
-$cDriveAfter = Get-CimInstance Win32_LogicalDisk -Filter "DeviceID='C:'" | Select-Object DeviceID, Size, FreeSpace
+Write-Host ""
+Write-Host ("User Temp After: {0} files ({1} MB) | Freed: {2} MB" -f $userAfter.Count, $userAfter.SizeMB, $userFreed)
+Write-Host ("Windows Temp After: {0} files ({1} MB) | Freed: {2} MB" -f $winAfter.Count, $winAfter.SizeMB, $winFreed)
+Write-Host ("Total Temp Space Reclaimed: {0} MB" -f $totalFreed)
 
-# OS & RAM Info
+Write-Host ""
+Write-Host "=========================================="
+Write-Host "2. FLUSHING DNS CACHE"
+Write-Host "=========================================="
+$flushResult = ipconfig /flushdns
+$flushResult | ForEach-Object { Write-Host $_ }
+
+Write-Host ""
+Write-Host "=========================================="
+Write-Host "3. DISK SPACE & SYSTEM RESOURCES"
+Write-Host "=========================================="
+
+# Disk C
+$driveC = Get-CimInstance Win32_LogicalDisk -Filter "DeviceID='C:'"
+$totalDiskGB = [math]::Round($driveC.Size / 1GB, 2)
+$freeDiskGB = [math]::Round($driveC.FreeSpace / 1GB, 2)
+$usedDiskGB = [math]::Round(($driveC.Size - $driveC.FreeSpace) / 1GB, 2)
+$percentFree = [math]::Round(($driveC.FreeSpace / $driveC.Size) * 100, 2)
+$percentUsed = [math]::Round((($driveC.Size - $driveC.FreeSpace) / $driveC.Size) * 100, 2)
+
+Write-Host ("Drive C: Capacity: {0} GB | Used: {1} GB ({2}%) | Free: {3} GB ({4}%)" -f $totalDiskGB, $usedDiskGB, $percentUsed, $freeDiskGB, $percentFree)
+
+# RAM
 $os = Get-CimInstance Win32_OperatingSystem
-$totalRamMB = [math]::Round($os.TotalVisibleMemorySize / 1024, 2)
-$freeRamMB = [math]::Round($os.FreePhysicalMemory / 1024, 2)
-$usedRamMB = [math]::Round($totalRamMB - $freeRamMB, 2)
-$ramPercentUsed = [math]::Round(($usedRamMB / $totalRamMB) * 100, 2)
+$totalRAMGB = [math]::Round($os.TotalVisibleMemorySize / 1MB / 1024, 2)
+$freeRAMGB = [math]::Round($os.FreePhysicalMemory / 1MB / 1024, 2)
+$usedRAMGB = [math]::Round($totalRAMGB - $freeRAMGB, 2)
+$ramPercentUsed = [math]::Round(($usedRAMGB / $totalRAMGB) * 100, 2)
 
-# Top RAM Processes
-$topRam = Get-Process | Sort-Object WorkingSet -Descending | Select-Object -First 10 Id, ProcessName, @{Name='RAM_MB';Expression={[math]::Round($_.WorkingSet / 1MB, 2)}}, @{Name='CPU_Sec';Expression={[math]::Round($_.CPU, 2)}}
+Write-Host ("RAM: Total: {0} GB | Used: {1} GB ({2}%) | Free: {3} GB" -f $totalRAMGB, $usedRAMGB, $ramPercentUsed, $freeRAMGB)
 
-# Top CPU Processes
-$topCpu = Get-Process | Where-Object { $_.CPU -gt 0 } | Sort-Object CPU -Descending | Select-Object -First 10 Id, ProcessName, @{Name='RAM_MB';Expression={[math]::Round($_.WorkingSet / 1MB, 2)}}, @{Name='CPU_Sec';Expression={[math]::Round($_.CPU, 2)}}
+Write-Host ""
+Write-Host "=========================================="
+Write-Host "4. TOP PROCESSES BY MEMORY (RAM)"
+Write-Host "=========================================="
+Get-Process | Where-Object { $_.WorkingSet64 -gt 50MB } |
+    Sort-Object WorkingSet64 -Descending |
+    Select-Object -First 10 Id, ProcessName,
+        @{Name='RAM (MB)'; Expression={[math]::Round($_.WorkingSet64 / 1MB, 1)}},
+        @{Name='CPU (s)'; Expression={[math]::Round($_.CPU, 1)}},
+        @{Name='Path'; Expression={try { $_.Path } catch { "N/A" }}} |
+    Format-Table -AutoSize
 
-# Suspicious / High resource processes check (e.g. processes without file description or running from temp/unusual paths)
-$heavyProcs = Get-Process | Where-Object { $_.WorkingSet -gt 500MB -or $_.CPU -gt 100 } | Select-Object -First 15 Id, ProcessName, @{Name='RAM_MB';Expression={[math]::Round($_.WorkingSet / 1MB, 2)}}, @{Name='CPU_Sec';Expression={[math]::Round($_.CPU, 2)}}, Path, Description
+Write-Host "=========================================="
+Write-Host "5. TOP PROCESSES BY CPU USAGE"
+Write-Host "=========================================="
+Get-Process | Where-Object { $_.CPU -gt 5 } |
+    Sort-Object CPU -Descending |
+    Select-Object -First 10 Id, ProcessName,
+        @{Name='CPU (s)'; Expression={[math]::Round($_.CPU, 1)}},
+        @{Name='RAM (MB)'; Expression={[math]::Round($_.WorkingSet64 / 1MB, 1)}},
+        @{Name='Path'; Expression={try { $_.Path } catch { "N/A" }}} |
+    Format-Table -AutoSize
 
-$report = [PSCustomObject]@{
-    DriveBefore = @{
-        TotalGB = [math]::Round($cDriveBefore.Size / 1GB, 2)
-        FreeGB = [math]::Round($cDriveBefore.FreeSpace / 1GB, 2)
-        UsedGB = [math]::Round(($cDriveBefore.Size - $cDriveBefore.FreeSpace) / 1GB, 2)
-        PercentFree = [math]::Round(($cDriveBefore.FreeSpace / $cDriveBefore.Size) * 100, 2)
+Write-Host "=========================================="
+Write-Host "6. ANOMALY / UNUSUAL PROCESS SCAN"
+Write-Host "=========================================="
+# Scan for processes running from AppData or Temp, or without Company / Description
+$suspicious = Get-Process | ForEach-Object {
+    $proc = $_
+    $path = ""
+    try { $path = $proc.Path } catch {}
+    if ($path) {
+        if ($path -match "\\(Temp|AppData\\Local\\Temp)\\" -or ($path -match "AppData" -and $path -notmatch "(Google|Microsoft|Programs|npm|nvm|JetBrains|Cursor|Anthropic|Gemini|Code)")) {
+            [PSCustomObject]@{
+                Id = $proc.Id
+                Name = $proc.ProcessName
+                Path = $path
+                RAM_MB = [math]::Round($proc.WorkingSet64 / 1MB, 1)
+            }
+        }
     }
-    DriveAfter = @{
-        TotalGB = [math]::Round($cDriveAfter.Size / 1GB, 2)
-        FreeGB = [math]::Round($cDriveAfter.FreeSpace / 1GB, 2)
-        UsedGB = [math]::Round(($cDriveAfter.Size - $cDriveAfter.FreeSpace) / 1GB, 2)
-        PercentFree = [math]::Round(($cDriveAfter.FreeSpace / $cDriveAfter.Size) * 100, 2)
-    }
-    UserTemp = @{
-        BeforeMB = [math]::Round($userTempStatsBefore.SizeBytes / 1MB, 2)
-        AfterMB = [math]::Round($userTempStatsAfter.SizeBytes / 1MB, 2)
-        CleanedMB = [math]::Round(($userTempStatsBefore.SizeBytes - $userTempStatsAfter.SizeBytes) / 1MB, 2)
-        ItemsBefore = $userTempStatsBefore.Count
-        ItemsAfter = $userTempStatsAfter.Count
-        DeletedTopLevel = $userTempDeleted
-        LockedTopLevel = $userTempLocked
-    }
-    WinTemp = @{
-        BeforeMB = [math]::Round($winTempStatsBefore.SizeBytes / 1MB, 2)
-        AfterMB = [math]::Round($winTempStatsAfter.SizeBytes / 1MB, 2)
-        CleanedMB = [math]::Round(($winTempStatsBefore.SizeBytes - $winTempStatsAfter.SizeBytes) / 1MB, 2)
-        ItemsBefore = $winTempStatsBefore.Count
-        ItemsAfter = $winTempStatsAfter.Count
-        DeletedTopLevel = $winTempDeleted
-        LockedTopLevel = $winTempLocked
-    }
-    DnsResult = $dnsResult
-    Memory = @{
-        TotalGB = [math]::Round($totalRamMB / 1024, 2)
-        UsedGB = [math]::Round($usedRamMB / 1024, 2)
-        FreeGB = [math]::Round($freeRamMB / 1024, 2)
-        PercentUsed = $ramPercentUsed
-    }
-    TopRam = $topRam
-    TopCpu = $topCpu
-    HeavyProcesses = $heavyProcs
 }
 
-$report | ConvertTo-Json -Depth 6
+if ($suspicious) {
+    Write-Host "Alert: Processes running from unusual temporary locations:"
+    $suspicious | Format-Table -AutoSize
+} else {
+    Write-Host "No anomalous processes detected in temp/untrusted locations."
+}

@@ -4,6 +4,53 @@ Nhật ký ghi lại toàn bộ hoạt động kiểm tra, rà soát bảo mật
 
 ---
 
+## 📅 Phiên Sao Lưu: 2026-11-12 18:55:00 (GMT+7)
+
+- **Kho lưu trữ đích**: [`NikolaTesla59/Quan`](https://github.com/NikolaTesla59/Quan)
+- **Tài khoản xác thực**: `NikolaTesla59` (Quân)
+- **Phương thức xác thực**: GitHub Personal Access Token (PAT) cấu hình qua biến môi trường (`$env:GITHUB_TOKEN`)
+- **Trạng thái**: ✅ Hoàn thành đồng bộ an toàn (Success)
+- **Hành động**: Tự động rà soát toàn bộ thư mục dự án & nghiên cứu, phát hiện thay đổi và commit/push đồng bộ lên nhánh `main`
+
+### 📊 Thống Kê Dữ Liệu Đồng Bộ
+
+| Phân Loại | Tên Thư Mục / Chủ Đề | Số Tệp | Dung Lượng | Trạng Thái / Thay Đổi Chi Tiết |
+| :--- | :--- | :---: | :---: | :--- |
+| **Dự Án** | `Du_An/Unified_AI_Command_Center` | 8 | 0.04 MB | **MỚI**: Trung tâm điều phối AI tổng hợp đa dịch vụ xây dựng trên nền tảng FastAPI hiện đại (`app.py`), tích hợp các module: Quant Finance (`backtest.py`, `portfolio.py`, `time_series.py`), Nha khoa Pakse (`finance.py`, `marketing_ai.py`, `operations.py`), YouTube Studio UI (`studio_ui.py`) |
+| **Dự Án** | `Du_An/Quant_Finance_Framework` | 4 | 0.02 MB | **MỚI**: Khung tài chính định lượng chuyên sâu (`app.py`) tích hợp các động cơ tính toán độc lập: Tối ưu hóa danh mục đầu tư (`portfolio_optimizer.py`), Kiểm thử chiến lược giao dịch (`backtester.py`), và Dự báo chuỗi thời gian tài chính (`time_series_ai.py`) |
+| **Dự Án** | `Du_An/Pakse_Dental_Framework` | 4 | 0.02 MB | **MỚI**: Khung ứng dụng điều hành phòng khám nha khoa Pakse (`app.py`): Mô hình tài chính nha khoa (`financial_model.py`), Trợ lý tiếp thị & AI Copilot (`copilot_and_marketing.py`), Tối ưu hóa vận hành lâm sàng (`operations_optimizer.py`) |
+| **Dự Án** | `Du_An/PDF_to_YouTube_Studio` | 8 | 0.05 MB | **MỚI**: Bộ công cụ tự động hóa pipeline chuyển đổi tài liệu nghiên cứu / sách PDF thành video trình chiếu YouTube chất lượng cao: lõi xử lý văn bản PDF (`pdf_reader.py`), thiết kế slide nghệ thuật (`slide_artist.py`), dựng video hoàn chỉnh (`video_composer.py`), tổng hợp giọng đọc AI (`voice_engine.py`), giao diện kéo thả (`cli_drag_drop.py`), sinh video dài (`generate_1hour_video.py`) |
+| **Dự Án** | `Du_An/System_Maintenance` | 16 | 0.04 MB | **NÂNG CẤP ĐỘT PHÁ (16 CÔNG CỤ)**: Bổ sung 9 kịch bản bảo trì & tối ưu hóa chuyên sâu: `advanced_maintenance.ps1`, `verify.ps1`, `get_ram.ps1`, `optimize_network.ps1`, `cleanup_background.ps1`, `check_background.ps1`, `apply_optimizations.py`, `execute_xiaomi_optimization.py`, `debloat.py` bên cạnh 7 công cụ đã có |
+| **Dự Án** | `Du_An/Vietstock_Screener` | 12 | 1.08 MB | **CẬP NHẬT**: Bản PRO Excel `Bo_Loc_Co_Phieu_Vietstock_Khung_Tieu_Chi_PRO.xlsx` 232.85 KB (cập nhật mới nhất ngày 12/11/2026, làm mới danh mục lọc cổ phiếu chuẩn 169 mã cổ phiếu tinh hoa & biên an toàn upside), cập nhật script lọc `auto_update_screener.py` (84.48 KB) cùng đầy đủ hệ thống truy vấn `stocks.db` |
+| **Nghiên Cứu** | `Nghien_Cuu/Cong_Tac_Dao_Tao_Va_Van_Ban` | 8 | 0.12 MB | **MỚI**: Hồ sơ công tác đào tạo, quản lý sinh viên và kỹ thuật văn bản học: Bảng tổng hợp cam kết chất lượng đào tạo (`BANG_TONG_HOP_CAM_KET_CHAT_LUONG_LOP_4A.xlsx`), danh sách sinh viên chuẩn hóa (`student_list.docx`), kịch bản lập chỉ mục tự động triết học Hegel (`insert_toc_to_hegel.py`, `rebuild_toc_hegel_v3.py`), công cụ kiểm toán & trích xuất (`populate_excel.py`, `audit_and_fix.py`, `verify_students.py`) |
+| **Nghiên Cứu** | `Nghien_Cuu/So_Tay_BHTCNPM` | 4 | 0.05 MB | **MỚI**: Hệ thống số hóa & bóc tách cấu trúc sổ tay BHTCNPM (`chapters.json`, `inspect_chapters.py`, `scan_c.py`, `get_specs.ps1`) |
+| **Nghiên Cứu** | `Nghien_Cuu/Quan_Tri_Rui_Ro_Agribank_MB` | 44 | 8.54 MB | **CẬP NHẬT CHUYÊN SÂU**: Bổ sung sơ đồ trực quan phân tích chuyên sâu mới `So_do_3_Co_che_Khoan_muc_3_Agribank_MB.png` cùng 9 kịch bản tự động hóa và cẩm nang bảo vệ luận văn: `build_qa_defense_handbook.py`, `build_exact_single_qa.py`, `build_final_master_doc.py`, `build_full_part2_with_agri_mb.py`, `build_part2_word_doc.py`, `build_pure_qa_doc.py`, `build_unified_single_qa.py`, `make_diagrams.py`, `rebuild_all_formats.py` |
+| **Nghiên Cứu** | `Nghien_Cuu/So_Tay_Nghe_Thuat` | 4 | 1.65 MB | **CẬP NHẬT**: Bổ sung bộ công cụ biên soạn ấn bản văn bản học tiếng Việt `generate_vietnamese_edition.py` và `book_builder.py` bên cạnh 2 ấn bản hoàn chỉnh Word và PDF |
+| **Nghiên Cứu** | `Nghien_Cuu/Tai_Lieu_Hoc_Tap` | 9 | 0.12 MB | **CẬP NHẬT**: Bổ sung Lộ trình phát triển AI Agent thực chiến (`roadmap_ai_agent.xlsx`, `roadmap_data.json`) bên cạnh các quy chuẩn tư duy phản biện, kỹ thuật lập trình và phân tích kỹ năng agent |
+| **Nghiên Cứu** | `Nghien_Cuu/Tieu_Luan_Hoc_Thuat` | 6 | 0.22 MB | **CẬP NHẬT**: Bổ sung kịch bản nghiên cứu giải phóng mặt bằng & định giá đất đai `build_land_clearance_paper.py` và kịch bản bài luận học thuật kinh tế v4 `generate_contest_essay_v4.py` |
+| **Nghiên Cứu** | `Nghien_Cuu/NEU_Textbook_Builder` | 28 | 1.11 MB | Hệ thống số hóa & tự động hóa biên soạn 10 bộ giáo trình kinh tế & tài chính chuẩn Đại học Kinh tế Quốc dân (NEU) |
+| **Nghiên Cứu** | `Nghien_Cuu/Tuyen_Tap_Thi_Ca_Viet_Trung` | 32 | 0.65 MB | Hệ thống số hóa văn bản học & tự động hóa biên soạn tuyển tập thi ca Đường - Tống, thơ Nôm trung đại và Thơ Mới Việt Nam |
+| **Nghiên Cứu** | `Nghien_Cuu/Kinh_Te_Hoc_He_Thong` | 13 | 11.23 MB | Chuyên khảo Kinh tế học hệ thống (Word, PDF, LaTeX, HTML, sơ đồ Mermaid) |
+| **Nghiên Cứu** | `Nghien_Cuu/Laos_BoP_Research` | 6 | 0.47 MB | Báo cáo nghiên cứu Cán cân thanh toán Lào (v3, v4, phân tích hoàn chỉnh & pháp lý) |
+| **Nghiên Cứu** | `Nghien_Cuu/Du_An_Nha_Khoa_Pakse` | 10 | 4.59 MB | Hồ sơ dự án đầu tư phòng khám nha khoa Pakse (Slide thuyết trình, mô hình tài chính) |
+| **Dự Án** | `Du_An/NhaKhoa_LaoViet_Pakse` | 6 | 0.13 MB | Toàn bộ mã nguồn giao diện website phòng khám nha khoa Lào - Việt |
+| **Dự Án** | `Du_An/Video_AI_Tools` | 4 | 0.49 MB | Bộ công cụ AI tự động tạo video ngắn và phân tích kịch bản video |
+| **Dự Án** | `Du_An/LLM_Orchestrator` | 3 | < 0.01 MB | Khung điều phối đa mô hình LLM (mã nguồn, requirements, .env.example) |
+| **Dự Án** | `Du_An/Doc2Slide_App` | 4 | 0.07 MB | Mã nguồn ứng dụng tự động chuyển tài liệu Word sang PowerPoint |
+| **Hệ Thống** | `README.md`, `.gitignore`, `NHAT_KY_SAO_LUU.md` | 3 | 0.05 MB | Cập nhật cấu trúc thư mục toàn diện, nhật ký kiểm toán an toàn và quy tắc bảo vệ Git |
+| **TỔNG CỘNG** | **21 Module & Thư Mục** | **236 tệp** | **~30.75 MB** | **Tối ưu hóa tuyệt đối, kiểm toán sạch 100%, đáp ứng chuẩn bảo mật Git & GitHub** |
+
+### 🔒 Kiểm Soát An Toàn & Bảo Mật (Safety & Sanitization Audit)
+1. **Bảo mật Bí mật & Token**:
+   - Tệp `.env` trong `llm_orchestrator` và các tệp môi trường được bảo vệ nghiêm ngặt bằng `.gitignore`.
+   - Đã quét tự động toàn bộ mã nguồn và tệp văn bản: 0 khóa API cứng, 0 token nhạy cảm trong mã nguồn commit.
+   - Token GitHub trong môi trường thực thi được cô lập an toàn qua Header Base64/Credential Helper, không hiển thị trong nhật ký công khai hoặc lịch sử git remote.
+2. **Loại trừ rác & Tối ưu hiệu năng**:
+   - Loại trừ hoàn toàn `venv/`, `__pycache__/`, `node_modules/`, file tạm MS Office `~$*`, bộ file video kết xuất dung lượng lớn (`.mp4`, `temp/`, `output/` trong `PDF_to_YouTube_Studio`), driver nhị phân và PDF quét thô nặng.
+   - Dung lượng toàn bộ kho lưu trữ ~30.75 MB (236 tệp), file lớn nhất ~3.56 MB, hoàn toàn đáp ứng ngưỡng khuyến nghị của GitHub (<100MB).
+
+---
+
 
 ## 📅 Phiên Sao Lưu: 2026-10-29 19:05:00 (GMT+7)
 

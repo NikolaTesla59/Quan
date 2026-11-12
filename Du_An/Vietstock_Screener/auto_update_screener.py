@@ -84,7 +84,7 @@ try:
                     df.at[idx, 'EPS_4Q'] = float(f_item['EPS'])
                 if 'BVPS' in f_item and f_item['BVPS'] is not None and float(f_item['BVPS']) > 0:
                     df.at[idx, 'BVPS_val'] = float(f_item['BVPS'])
-                if 'AuditedStatus' in f_item and f_item['AuditedStatus']:
+                if 'AuditedStatus' in f_item and f_item['AuditedStatus'] and f_item['AuditedStatus'] not in ['Chưa kiểm toán', '']:
                     df.at[idx, 'AuditedStatus'] = str(f_item['AuditedStatus'])
                 updated_count += 1
         print(f"-> Đã đồng bộ BCTC mới từ Vietstock cho {updated_count} mã.")
@@ -355,7 +355,7 @@ def evaluate_all_gates(row):
     elif audit in ['Soát xét', 'Kiểm toán']:
         gate_audit = "ĐẠT (BCTC sạch)"
     else:
-        gate_audit = "CỜ VÀNG (Chưa soát xét)"
+        gate_audit = "ĐẠT (BCTC hợp lệ)"
         
     if profit > 0 and bvps > 0 and roe >= 5.0:
         gate_survival = "ĐẠT (Tài chính vững)"
