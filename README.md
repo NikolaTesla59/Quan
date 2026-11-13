@@ -31,16 +31,19 @@ Hệ thống lưu trữ, quản lý mã nguồn và tài liệu nghiên cứu c�
 - **`Pakse_Dental_Framework/`**: Khung ứng dụng điều hành phòng khám nha khoa Pakse (`app.py`): Mô hình tài chính nha khoa (`financial_model.py`), Trợ lý tiếp thị & AI Copilot (`copilot_and_marketing.py`), Tối ưu hóa vận hành lâm sàng (`operations_optimization.py`).
 - **`PDF_to_YouTube_Studio/`**: Bộ công cụ tự động hóa pipeline chuyển đổi tài liệu nghiên cứu / sách PDF thành video trình chiếu YouTube chất lượng cao: lõi xử lý văn bản PDF (`pdf_reader.py`), thiết kế slide nghệ thuật (`slide_artist.py`), dựng video hoàn chỉnh (`video_composer.py`), và tổng hợp giọng đọc AI (`voice_engine.py`).
 - **`Vietstock_Screener/`**: Hệ thống bộ lọc cổ phiếu theo khung tiêu chí cổng chặn, độ nhạy chu kỳ kinh doanh và đạo đức ban lãnh đạo:
-  - Bản PRO Excel tự động cập nhật (`Bo_Loc_Co_Phieu_Vietstock_Khung_Tieu_Chi_PRO.xlsx`) chuẩn 169 mã cổ phiếu tinh hoa & biên an toàn upside (phiên bản cập nhật mới nhất ngày 12/11/2026).
+  - Bản PRO Excel tự động cập nhật (`Bo_Loc_Co_Phieu_Vietstock_Khung_Tieu_Chi_PRO.xlsx`) chuẩn 169 mã cổ phiếu tinh hoa & biên an toàn upside (phiên bản cập nhật mới nhất ngày 13/11/2026).
+  - Công cụ trích xuất điểm nhấn cổ phiếu theo tiêu chí định lượng (`extract_highlights.py`).
   - Công cụ tìm kiếm & truy vấn mã chứng khoán (`find_tickers.py`, `query_stocks.py`).
   - Script cập nhật tự động hàng ngày (`auto_update_screener.py`), phân tích top cổ phiếu (`analyze_top.py`), trích xuất tổng hợp (`get_summary.py`), cơ sở dữ liệu định chế (`stocks.db`) và công cụ chẩn đoán (`diagnostic.py`, `import_to_sqlite.py`).
-- **`System_Maintenance/`**: Bộ công cụ toàn diện 16 kịch bản PowerShell & Python tự động bảo trì, tối ưu hóa hệ điều hành, dọn dẹp rác, xóa cache DNS, chẩn đoán sức khỏe phần cứng CPU/RAM/Disk, tinh chỉnh mạng và tối ưu hóa tài nguyên nền:
+- **`System_Maintenance/`**: Bộ công cụ toàn diện 17 kịch bản PowerShell & Python tự động bảo trì, tối ưu hóa hệ điều hành, dọn dẹp rác, xóa cache DNS, chẩn đoán sức khỏe phần cứng CPU/RAM/Disk, tinh chỉnh mạng và tối ưu hóa tài nguyên nền:
+  - `maintenance.ps1`: Kịch bản bảo trì nâng cấp 5 giai đoạn (kiểm tra dung lượng User/Win Temp trước & sau, xử lý file khóa an toàn, Flush DNS, giám sát dung lượng ổ C, và báo cáo Top 10 tiến trình chiếm CPU/RAM).
+  - `check_details.ps1`: Kịch bản kiểm tra chi tiết thông tin tiến trình và dòng lệnh thực thi của hệ điều hành.
   - `advanced_maintenance.ps1`: Kịch bản bảo trì nâng cao toàn diện.
   - `run_maintenance.ps1`, `verify.ps1`, `get_ram.ps1`: Bộ công cụ điều hành và giám sát tài nguyên RAM.
   - `optimize_network.ps1`: Tối ưu hóa kết nối mạng và độ trễ.
   - `cleanup_background.ps1`, `check_background.ps1`: Quản lý tiến trình chạy ngầm.
   - `apply_optimizations.py`, `execute_xiaomi_optimization.py`, `debloat.py`: Bộ tinh chỉnh hệ thống sâu.
-  - `system_maintenance.ps1`, `optimize_system.ps1`, `diagnose_perf.ps1`, `get_system_specs.ps1`, `maintenance.ps1`, `sys_maintenance.ps1`.
+  - `system_maintenance.ps1`, `optimize_system.ps1`, `diagnose_perf.ps1`, `get_system_specs.ps1`, `sys_maintenance.ps1`.
 - **`NhaKhoa_LaoViet_Pakse/`**: Giao diện website đầy đủ cho phòng khám nha khoa Lào - Việt tại Pakse (trang chủ, bảng giá, đội ngũ bác sĩ, dịch vụ răng sứ, implant, liên hệ).
 - **`Video_AI_Tools/`**: Bộ công cụ tự động hóa sáng tạo video ngắn (Shorts/Reels) và phân tích kịch bản video AI.
 - **`LLM_Orchestrator/`**: Khung điều phối đa mô hình ngôn ngữ lớn (LLM Orchestration) linh hoạt.
