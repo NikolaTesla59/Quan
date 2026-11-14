@@ -4,6 +4,36 @@ Nhật ký ghi lại toàn bộ hoạt động kiểm tra, rà soát bảo mật
 
 ---
 
+## 📅 Phiên Sao Lưu: 2026-11-14 18:15:00 (GMT+7)
+
+- **Kho lưu trữ đích**: [`NikolaTesla59/Quan`](https://github.com/NikolaTesla59/Quan)
+- **Tài khoản xác thực**: `NikolaTesla59` (Quân)
+- **Phương thức xác thực**: GitHub Personal Access Token (PAT) cấu hình qua biến môi trường (`$env:GITHUB_TOKEN`)
+- **Trạng thái**: ✅ Hoàn thành đồng bộ an toàn (Success)
+- **Hành động**: Tự động rà soát toàn bộ thư mục dự án & nghiên cứu, phát hiện thay đổi mới và commit/push đồng bộ lên nhánh `main`
+
+### 📊 Thống Kê Dữ Liệu Đồng Bộ
+
+| Phân Loại | Tên Thư Mục / Chủ Đề | Số Tệp | Dung Lượng | Trạng Thái / Thay Đổi Chi Tiết |
+| :--- | :--- | :---: | :---: | :--- |
+| **Dự Án** | `Du_An/Local_AI_Node_Snapdragon` | 23 | 0.05 MB | **KHỞI TẠO SUITE MỚI**: Hệ thống điện toán biên biến điện thoại Xiaomi 12S Pro (Snapdragon 8+ Gen 1, 12GB RAM) thành trạm suy luận AI cục bộ qua Termux & llama.cpp (Qwen 2.5 Coder 7B Instruct). Bao gồm: ứng dụng chat CLI stream thông minh `chat.py`, kịch bản kết nối 1-click `connect_ai_node.bat`, kiểm thử stream TPS `test_ai_stream.py`, kiểm thử node `test_ai_node.py`, kịch bản Termux ADB `launch_termux_ai.py`, `setup_ai.sh`, `start_ai.sh`, `run_ai.sh`, cùng 14 script kiểm tra và tài liệu `README.md` |
+| **Dự Án** | `Du_An/Vietstock_Screener` | 13 | 1.09 MB | **CẬP NHẬT DỮ LIỆU PRO MỚI**: Cập nhật bản PRO Excel `Bo_Loc_Co_Phieu_Vietstock_Khung_Tieu_Chi_PRO.xlsx` (233.02 KB, cập nhật mới ngày 14/11/2026 với 169 mã cổ phiếu tinh hoa, lọc định giá P/E, P/B, upside và chỉ số tài chính) |
+| **Dự Án** | `Du_An/System_Maintenance` | 26 | 0.05 MB | **BỔ SUNG BỘ CÔNG CỤ MẠNG & CHẨN ĐOÁN**: Thêm thư mục `network_tools/` (9 kịch bản): chẩn đoán proxy `check_proxy_status.py`, kiểm tra VPN/Psiphon `check_vpn.py`, `check_psiphon.py`, công cụ tải & kiểm định `download_urbanvpn.py`, `download_psiphon.py`, `find_urban_links.py`, `find_urban_exe.py`, công cụ giải mã và kiểm định `deobf_validator.py`, `run_deobf.js` |
+| **Nghiên Cứu** | `Nghien_Cuu/Tuyen_Tap_Thi_Ca_Viet_Trung` | 36 | 0.73 MB | **BỔ SUNG KHO DỮ LIỆU VĂN HỌC INTERNET ARCHIVE**: Cập nhật 4 tệp dữ liệu kiểm kê và trích xuất tác giả: `current_literature_inventory.json` (15.55 KB), `ia_authors_viet.json` (57.54 KB), `ia_search_samples.json` (5.83 KB), `search_batch2_ia.json` (6.52 KB) |
+| **Hệ Thống** | `README.md`, `NHAT_KY_SAO_LUU.md` | 2 | 0.08 MB | Cập nhật tài liệu kiến trúc dự án và bổ sung nhật ký sao lưu an toàn phiên ngày 14/11/2026 |
+| **TỔNG CỘNG** | **22 Module & Thư Mục** | **274 tệp** | **~30.85 MB** | **Tối ưu hóa tuyệt đối, kiểm toán sạch 100%, đáp ứng chuẩn bảo mật Git & GitHub** |
+
+### 🔒 Kiểm Soát An Toàn & Bảo Mật (Safety & Sanitization Audit)
+1. **Bảo mật Bí mật & Token**:
+   - Đã quét tự động toàn bộ mã nguồn và tệp văn bản vừa thêm: 0 khóa API cứng, 0 token nhạy cảm (`ghp_`, `sk-`, `AIzaSy`), 0 private key.
+   - Toàn bộ các file `.env`, tệp môi trường, key/cert được bảo vệ nghiêm ngặt qua `.gitignore`.
+   - Token GitHub trong môi trường thực thi được cô lập an toàn, không hiển thị trong nhật ký công khai hoặc lịch sử git remote.
+2. **Loại trừ rác & Tối ưu hiệu năng**:
+   - Loại trừ hoàn toàn `venv/`, `__pycache__/`, `node_modules/`, file tạm MS Office `~$*`, các file nén nặng (`llama_src.tar.gz`), log màn hình và ảnh chụp screenshot tạm thời.
+   - Dung lượng toàn bộ kho lưu trữ ~30.85 MB (274 tệp), tệp lớn nhất ~3.56 MB, hoàn toàn đáp ứng ngưỡng tối ưu khuyến nghị của GitHub (<100MB).
+
+---
+
 ## 📅 Phiên Sao Lưu: 2026-11-13 18:10:00 (GMT+7)
 
 - **Kho lưu trữ đích**: [`NikolaTesla59/Quan`](https://github.com/NikolaTesla59/Quan)
