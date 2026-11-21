@@ -4,6 +4,35 @@ Nhật ký ghi lại toàn bộ hoạt động kiểm tra, rà soát bảo mật
 
 ---
 
+## 📅 Phiên Sao Lưu: 2026-11-21 18:15:00 (GMT+7)
+
+- **Kho lưu trữ đích**: [`NikolaTesla59/Quan`](https://github.com/NikolaTesla59/Quan)
+- **Tài khoản xác thực**: `NikolaTesla59` (Quân)
+- **Phương thức xác thực**: GitHub Personal Access Token (PAT) cấu hình qua biến môi trường (`$env:GITHUB_TOKEN`)
+- **Trạng thái**: ✅ Hoàn thành đồng bộ an toàn (Success)
+- **Hành động**: Tự động rà soát toàn bộ thư mục dự án & nghiên cứu, phát hiện thay đổi mới và commit/push đồng bộ lên nhánh `main`
+
+### 📊 Thống Kê Dữ Liệu Đồng Bộ
+
+| Phân Loại | Tên Thư Mục / Chủ Đề | Số Tệp | Dung Lượng | Trạng Thái / Thay Đổi Chi Tiết |
+| :--- | :--- | :---: | :---: | :--- |
+| **Dự Án** | `Du_An/Vietstock_Screener` | 13 | 1.09 MB | **CẬP NHẬT DỮ LIỆU ĐỊNH GIÁ & BỘ LỌC PRO (21/11/2026)**: Cập nhật bản PRO Excel `Bo_Loc_Co_Phieu_Vietstock_Khung_Tieu_Chi_PRO.xlsx` (232.95 KB, 169 mã cổ phiếu tinh hoa, cập nhật hệ số định giá P/E, P/B, biên an toàn upside và thông số giao dịch tài chính mới nhất) |
+| **Dự Án** | `Du_An/System_Maintenance` | 29 | 0.06 MB | **NÂNG CẤP BẢO TRÌ 6 GIAI ĐOẠN & BỔ SUNG BỘ CÔNG CỤ MẠNG**: Cập nhật sâu `run_maintenance.ps1` (6.75 KB) với 6 giai đoạn: đo lường dung lượng ổ C trước & sau, dọn dẹp Temp, thống kê hệ thống (OS Build, Uptime, % RAM), Top 10 tiến trình chiếm Working Set & CPU, tầm soát tiến trình chạy từ thư mục Temp/untrusted, và Flush DNS; Bổ sung vào `network_tools/` 3 kịch bản mới: đo tốc độ tải Cloudflare `speed_test.ps1`, quét thiết bị LAN `scan_lan.ps1`, và chẩn đoán toàn diện kết nối / cổng AI node `diag_network.ps1` |
+| **Nghiên Cứu** | `Nghien_Cuu/Du_An_Nha_Khoa_Pakse` | 66 | 18.35 MB | **KHỞI TẠO PHÂN HỆ THIẾT KẾ 3D HÀ NỘI - LÀO (PAKSE)**: Bổ sung thư mục chuyên biệt `Thiet_Ke_3D_HaNoi_Lao/` (56 tệp, ~13.76 MB) số hóa tối ưu hóa từ hồ sơ 133 MB gốc: 4 kịch bản tự động hóa (`inspect_pdf.py`, `check_pages.py`, `render_pages.py`, `make_collages.py`), 5 bảng tiếp xúc tổng quan 3x3 `collages/` (~0.93 MB), 46 trang bản vẽ phối cảnh độ nét cao `ban_ve_3d/` (~12.82 MB), và tài liệu thuyết minh kiến trúc `README.md` |
+| **Hệ Thống** | `README.md`, `NHAT_KY_SAO_LUU.md` | 2 | 0.09 MB | Cập nhật tài liệu kiến trúc dự án và ghi nhận nhật ký kiểm toán an toàn phiên ngày 21/11/2026 |
+| **TỔNG CỘNG** | **23 Module & Thư Mục** | **333 tệp** | **~44.11 MB** | **Tối ưu hóa tuyệt đối, kiểm toán sạch 100%, đáp ứng chuẩn bảo mật Git & GitHub** |
+
+### 🔒 Kiểm Soát An Toàn & Bảo Mật (Safety & Sanitization Audit)
+1. **Bảo mật Bí mật & Token**:
+   - Đã quét tự động toàn bộ mã nguồn và tệp văn bản vừa thêm: 0 khóa API cứng, 0 token nhạy cảm (`ghp_`, `sk-`, `AIzaSy`), 0 private key.
+   - Toàn bộ các file `.env`, tệp môi trường, key/cert được bảo vệ nghiêm ngặt qua `.gitignore`.
+   - Token GitHub trong môi trường thực thi được cô lập an toàn, không hiển thị trong nhật ký công khai hoặc lịch sử git remote.
+2. **Loại trừ rác & Tối ưu hiệu năng**:
+   - Loại trừ hoàn toàn `venv/`, `__pycache__/`, `node_modules/`, file tạm MS Office `~$*`, tệp PDF gốc vượt ngưỡng 100MB (`hstk 3D nk HA NOI LAO 18-11.pdf` ~133MB được tối ưu hóa sang ảnh chi tiết và collage).
+   - Dung lượng toàn bộ kho lưu trữ ~44.11 MB (333 tệp), tệp lớn nhất ~3.40 MB, hoàn toàn đáp ứng ngưỡng tối ưu khuyến nghị của GitHub (<100MB).
+
+---
+
 ## 📅 Phiên Sao Lưu: 2026-11-14 18:15:00 (GMT+7)
 
 - **Kho lưu trữ đích**: [`NikolaTesla59/Quan`](https://github.com/NikolaTesla59/Quan)
